@@ -3,29 +3,29 @@ import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, 
 
 const Tokenomics = () => {
   const allocationData = [
-    { name: 'Liquidity Pool', value: 30, color: '#3b82f6' },
-    { name: 'Public Sale (IDO)', value: 15, color: '#06b6d4' },
+    { name: 'Liquidity Pool', value: 30, color: '#2563eb' },
+    { name: 'Public Sale (IDO)', value: 15, color: '#0ea5e9' },
     { name: 'Bonding Curve Pre-Sale', value: 15, color: '#8b5cf6' },
     { name: 'Founder Allocation', value: 13, color: '#10b981' },
     { name: 'Reserve', value: 10, color: '#f59e0b' },
+    { name: 'Staking Rewards', value: 7, color: '#ec4899' },
     { name: 'Community & Marketing', value: 5, color: '#ef4444' },
-    { name: 'Private Sale', value: 5, color: '#6366f1' },
-    { name: 'Staking Rewards', value: 5, color: '#ec4899' },
+    { name: 'Private Sale', value: 3, color: '#6366f1' },
     { name: 'Team Allocation', value: 2, color: '#84cc16' }
   ];
 
   const revenueData = [
-    { name: 'Reflections', value: 1, color: '#3b82f6' },
-    { name: 'Auto-Liquidity', value: 1.5, color: '#06b6d4' },
+    { name: 'Reflections', value: 1, color: '#2563eb' },
+    { name: 'Auto-Liquidity', value: 1.5, color: '#0ea5e9' },
     { name: 'Burn', value: 0.5, color: '#ef4444' }
   ];
 
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
       return (
-        <div className="bg-white p-3 border rounded-lg shadow-lg">
-          <p className="font-semibold">{payload[0].name}</p>
-          <p className="text-blue-600">{payload[0].value}%</p>
+        <div className="bg-white/95 backdrop-blur-sm p-4 border border-gray-200 rounded-xl shadow-xl">
+          <p className="font-semibold text-gray-900">{payload[0].name}</p>
+          <p className="text-blue-600 font-bold">{payload[0].value}%</p>
         </div>
       );
     }
@@ -33,43 +33,43 @@ const Tokenomics = () => {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section id="tokenomics" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Tokenomics
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Sustainable, community-driven economics designed for long-term value creation 
-            and ecosystem growth
+            and ecosystem growth with optimized allocation structure
           </p>
         </div>
 
         {/* Token Overview */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 text-center">
-            <h3 className="text-2xl font-bold text-blue-600 mb-2">1B</h3>
-            <p className="text-gray-700">Total Supply</p>
+          <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-8 text-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <h3 className="text-3xl font-bold mb-2">1B</h3>
+            <p className="text-blue-100 font-medium">Total Supply</p>
           </div>
-          <div className="bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-xl p-6 text-center">
-            <h3 className="text-2xl font-bold text-cyan-600 mb-2">BLINK</h3>
-            <p className="text-gray-700">Token Symbol</p>
+          <div className="bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl p-8 text-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <h3 className="text-3xl font-bold mb-2">BLINK</h3>
+            <p className="text-cyan-100 font-medium">Token Symbol</p>
           </div>
-          <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 text-center">
-            <h3 className="text-2xl font-bold text-purple-600 mb-2">3%</h3>
-            <p className="text-gray-700">Transaction Tax</p>
+          <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-8 text-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <h3 className="text-3xl font-bold mb-2">3%</h3>
+            <p className="text-purple-100 font-medium">Transaction Tax</p>
           </div>
-          <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center">
-            <h3 className="text-2xl font-bold text-green-600 mb-2">ERC-20</h3>
-            <p className="text-gray-700">Initial Standard</p>
+          <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl p-8 text-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <h3 className="text-3xl font-bold mb-2">ERC-20</h3>
+            <p className="text-emerald-100 font-medium">Initial Standard</p>
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {/* Token Allocation Chart */}
-          <div className="bg-gray-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              Token Allocation
+          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+              Token Allocation Distribution
             </h3>
             <div className="h-80">
               <ResponsiveContainer width="100%" height="100%">
@@ -78,8 +78,8 @@ const Tokenomics = () => {
                     data={allocationData}
                     cx="50%"
                     cy="50%"
-                    innerRadius={60}
-                    outerRadius={120}
+                    innerRadius={70}
+                    outerRadius={130}
                     paddingAngle={2}
                     dataKey="value"
                   >
@@ -91,32 +91,43 @@ const Tokenomics = () => {
                 </PieChart>
               </ResponsiveContainer>
             </div>
-            <div className="grid grid-cols-1 gap-2 mt-4">
+            <div className="grid grid-cols-1 gap-3 mt-6">
               {allocationData.map((item, index) => (
-                <div key={index} className="flex items-center">
-                  <div 
-                    className="w-4 h-4 rounded mr-3" 
-                    style={{ backgroundColor: item.color }}
-                  ></div>
-                  <span className="text-sm text-gray-700 flex-1">{item.name}</span>
-                  <span className="text-sm font-semibold text-gray-900">{item.value}%</span>
+                <div key={index} className="flex items-center justify-between p-3 rounded-xl bg-gray-50/80 hover:bg-gray-100/80 transition-colors">
+                  <div className="flex items-center">
+                    <div 
+                      className="w-4 h-4 rounded-full mr-3 shadow-sm" 
+                      style={{ backgroundColor: item.color }}
+                    ></div>
+                    <span className="text-sm font-medium text-gray-700">{item.name}</span>
+                  </div>
+                  <span className="text-sm font-bold text-gray-900">{item.value}%</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Transaction Tax Breakdown */}
-          <div className="bg-gray-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              Transaction Tax (3%)
+          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+              Transaction Tax Breakdown (3%)
             </h3>
             <div className="h-80">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={revenueData}>
-                  <XAxis dataKey="name" />
-                  <YAxis />
-                  <Tooltip />
-                  <Bar dataKey="value" radius={[4, 4, 0, 0]}>
+                <BarChart data={revenueData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+                  <XAxis 
+                    dataKey="name" 
+                    axisLine={false}
+                    tickLine={false}
+                    tick={{ fontSize: 12, fill: '#6b7280' }}
+                  />
+                  <YAxis 
+                    axisLine={false}
+                    tickLine={false}
+                    tick={{ fontSize: 12, fill: '#6b7280' }}
+                  />
+                  <Tooltip content={<CustomTooltip />} />
+                  <Bar dataKey="value" radius={[8, 8, 0, 0]}>
                     {revenueData.map((entry, index) => (
                       <Cell key={`cell-${index}`} fill={entry.color} />
                     ))}
@@ -125,24 +136,24 @@ const Tokenomics = () => {
               </ResponsiveContainer>
             </div>
             <div className="space-y-4 mt-6">
-              <div className="bg-white rounded-lg p-4">
+              <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-4 border border-blue-200">
                 <div className="flex items-center mb-2">
-                  <div className="w-4 h-4 bg-blue-500 rounded mr-3"></div>
-                  <span className="font-semibold">Reflections (1%)</span>
+                  <div className="w-4 h-4 bg-blue-500 rounded-full mr-3 shadow-sm"></div>
+                  <span className="font-semibold text-gray-900">Reflections (1%)</span>
                 </div>
                 <p className="text-sm text-gray-600">Auto-distributed to all BLINK holders proportionally</p>
               </div>
-              <div className="bg-white rounded-lg p-4">
+              <div className="bg-gradient-to-r from-cyan-50 to-cyan-100 rounded-xl p-4 border border-cyan-200">
                 <div className="flex items-center mb-2">
-                  <div className="w-4 h-4 bg-cyan-500 rounded mr-3"></div>
-                  <span className="font-semibold">Auto-Liquidity (1.5%)</span>
+                  <div className="w-4 h-4 bg-cyan-500 rounded-full mr-3 shadow-sm"></div>
+                  <span className="font-semibold text-gray-900">Auto-Liquidity (1.5%)</span>
                 </div>
                 <p className="text-sm text-gray-600">Sent to liquidity pool for deeper trading</p>
               </div>
-              <div className="bg-white rounded-lg p-4">
+              <div className="bg-gradient-to-r from-red-50 to-red-100 rounded-xl p-4 border border-red-200">
                 <div className="flex items-center mb-2">
-                  <div className="w-4 h-4 bg-red-500 rounded mr-3"></div>
-                  <span className="font-semibold">Burn (0.5%)</span>
+                  <div className="w-4 h-4 bg-red-500 rounded-full mr-3 shadow-sm"></div>
+                  <span className="font-semibold text-gray-900">Burn (0.5%)</span>
                 </div>
                 <p className="text-sm text-gray-600">Permanently removed from circulation</p>
               </div>
@@ -151,34 +162,63 @@ const Tokenomics = () => {
         </div>
 
         {/* Vesting Schedule */}
-        <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+        <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 rounded-3xl p-10 text-white shadow-2xl">
+          <h3 className="text-3xl font-bold mb-10 text-center text-white">
             Vesting Schedule
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white rounded-xl p-6">
-              <h4 className="font-semibold text-gray-900 mb-2">Founder Allocation</h4>
-              <p className="text-sm text-gray-600 mb-3">130M BLINK (13%)</p>
-              <div className="space-y-1 text-sm">
-                <div>• 6-month cliff period</div>
-                <div>• Linear vesting over 24 months</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <h4 className="font-bold text-white mb-3 text-lg">Founder Allocation</h4>
+              <p className="text-blue-200 mb-4 font-medium">130M BLINK (13%)</p>
+              <div className="space-y-2 text-sm text-gray-200">
+                <div className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                  6-month cliff period
+                </div>
+                <div className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                  Linear vesting over 24 months
+                </div>
               </div>
             </div>
-            <div className="bg-white rounded-xl p-6">
-              <h4 className="font-semibold text-gray-900 mb-2">Team Allocation</h4>
-              <p className="text-sm text-gray-600 mb-3">20M BLINK (2%)</p>
-              <div className="space-y-1 text-sm">
-                <div>• 6-month cliff period</div>
-                <div>• Linear vesting over 24 months</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <h4 className="font-bold text-white mb-3 text-lg">Team Allocation</h4>
+              <p className="text-emerald-200 mb-4 font-medium">20M BLINK (2%)</p>
+              <div className="space-y-2 text-sm text-gray-200">
+                <div className="flex items-center">
+                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-2"></span>
+                  6-month cliff period
+                </div>
+                <div className="flex items-center">
+                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-2"></span>
+                  Linear vesting over 24 months
+                </div>
               </div>
             </div>
-            <div className="bg-white rounded-xl p-6">
-              <h4 className="font-semibold text-gray-900 mb-2">Private Sale</h4>
-              <p className="text-sm text-gray-600 mb-3">50M BLINK (5%)</p>
-              <div className="space-y-1 text-sm">
-                <div>• 3-month cliff period</div>
-                <div>• Linear vesting over 6 months</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <h4 className="font-bold text-white mb-3 text-lg">Private Sale</h4>
+              <p className="text-purple-200 mb-4 font-medium">30M BLINK (3%)</p>
+              <div className="space-y-2 text-sm text-gray-200">
+                <div className="flex items-center">
+                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                  3-month cliff period
+                </div>
+                <div className="flex items-center">
+                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                  Linear vesting over 6 months
+                </div>
               </div>
+            </div>
+          </div>
+          
+          {/* Additional Vesting Info */}
+          <div className="mt-10 bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+            <h4 className="font-bold text-white mb-4 text-center">Staking Rewards Program</h4>
+            <div className="text-center">
+              <p className="text-pink-200 mb-2 font-medium text-lg">70M BLINK (7%)</p>
+              <p className="text-sm text-gray-300">
+                Distributed over 3 years to incentivize long-term holding and network participation
+              </p>
             </div>
           </div>
         </div>
