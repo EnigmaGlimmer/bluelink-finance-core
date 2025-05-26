@@ -52,7 +52,7 @@ const Tokenomics = () => {
             <p className="text-blue-100 font-medium">Total Supply</p>
           </div>
           <div className="bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl p-8 text-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-            <h3 className="text-3xl font-bold mb-2">BLINK</h3>
+            <h3 className="text-3xl font-bold mb-2">BLT</h3>
             <p className="text-cyan-100 font-medium">Token Symbol</p>
           </div>
           <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-8 text-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
@@ -141,7 +141,7 @@ const Tokenomics = () => {
                   <div className="w-4 h-4 bg-blue-500 rounded-full mr-3 shadow-sm"></div>
                   <span className="font-semibold text-gray-900">Reflections (1%)</span>
                 </div>
-                <p className="text-sm text-gray-600">Auto-distributed to all BLINK holders proportionally</p>
+                <p className="text-sm text-gray-600">Auto-distributed to all BLT holders proportionally</p>
               </div>
               <div className="bg-gradient-to-r from-cyan-50 to-cyan-100 rounded-xl p-4 border border-cyan-200">
                 <div className="flex items-center mb-2">
@@ -169,7 +169,7 @@ const Tokenomics = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
               <h4 className="font-bold text-white mb-3 text-lg">Founder Allocation</h4>
-              <p className="text-blue-200 mb-4 font-medium">130M BLINK (13%)</p>
+              <p className="text-blue-200 mb-4 font-medium">130M BLT (13%)</p>
               <div className="space-y-2 text-sm text-gray-200">
                 <div className="flex items-center">
                   <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
@@ -183,7 +183,7 @@ const Tokenomics = () => {
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
               <h4 className="font-bold text-white mb-3 text-lg">Team Allocation</h4>
-              <p className="text-emerald-200 mb-4 font-medium">20M BLINK (2%)</p>
+              <p className="text-emerald-200 mb-4 font-medium">20M BLT (2%)</p>
               <div className="space-y-2 text-sm text-gray-200">
                 <div className="flex items-center">
                   <span className="w-2 h-2 bg-emerald-400 rounded-full mr-2"></span>
@@ -197,7 +197,7 @@ const Tokenomics = () => {
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
               <h4 className="font-bold text-white mb-3 text-lg">Private Sale</h4>
-              <p className="text-purple-200 mb-4 font-medium">30M BLINK (3%)</p>
+              <p className="text-purple-200 mb-4 font-medium">30M BLT (3%)</p>
               <div className="space-y-2 text-sm text-gray-200">
                 <div className="flex items-center">
                   <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
@@ -215,7 +215,7 @@ const Tokenomics = () => {
           <div className="mt-10 bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
             <h4 className="font-bold text-white mb-4 text-center">Staking Rewards Program</h4>
             <div className="text-center">
-              <p className="text-pink-200 mb-2 font-medium text-lg">70M BLINK (7%)</p>
+              <p className="text-pink-200 mb-2 font-medium text-lg">70M BLT (7%)</p>
               <p className="text-sm text-gray-300">
                 Distributed over 3 years to incentivize long-term holding and network participation
               </p>

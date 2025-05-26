@@ -17,7 +17,7 @@ const PresaleModal = ({ isOpen, onClose }: PresaleModalProps) => {
   const [walletAddress, setWalletAddress] = useState("");
   const [copied, setCopied] = useState(false);
 
-  const blinkPrice = {
+  const BLTPrice = {
     USDT: 0.085,
     ETH: 0.000028
   };
@@ -41,9 +41,9 @@ const PresaleModal = ({ isOpen, onClose }: PresaleModalProps) => {
     }
   };
 
-  const calculateBlinkTokens = () => {
+  const calculateBLTTokens = () => {
     if (!amount) return 0;
-    return (parseFloat(amount) / blinkPrice[selectedCurrency]).toFixed(2);
+    return (parseFloat(amount) / BLTPrice[selectedCurrency]).toFixed(2);
   };
 
   const copyAddress = () => {
@@ -58,7 +58,7 @@ const PresaleModal = ({ isOpen, onClose }: PresaleModalProps) => {
       return;
     }
     // Here you would integrate with actual smart contract
-    alert(`Purchase of ${calculateBlinkTokens()} BLINK tokens initiated!`);
+    alert(`Purchase of ${calculateBLTTokens()} BLT tokens initiated!`);
   };
 
   return (
@@ -66,7 +66,7 @@ const PresaleModal = ({ isOpen, onClose }: PresaleModalProps) => {
       <DialogContent className="max-w-md mx-auto bg-slate-900 border-slate-700 text-white">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-center text-cyan-400">
-            Buy BLINK Tokens
+            Buy BLT Tokens
           </DialogTitle>
         </DialogHeader>
 
@@ -107,7 +107,7 @@ const PresaleModal = ({ isOpen, onClose }: PresaleModalProps) => {
                 >
                   <div className="font-semibold">{currency}</div>
                   <div className="text-xs text-gray-400">
-                    ${blinkPrice[currency as keyof typeof blinkPrice]} per BLINK
+                    ${BLTPrice[currency as keyof typeof BLTPrice]} per BLT
                   </div>
                 </button>
               ))}
@@ -128,7 +128,7 @@ const PresaleModal = ({ isOpen, onClose }: PresaleModalProps) => {
             />
             {amount && (
               <p className="text-sm text-cyan-400">
-                ≈ {calculateBlinkTokens()} BLINK tokens
+                ≈ {calculateBLTTokens()} BLT tokens
               </p>
             )}
           </div>
@@ -163,7 +163,7 @@ const PresaleModal = ({ isOpen, onClose }: PresaleModalProps) => {
             disabled={!isWalletConnected || !amount}
             className="w-full bg-cyan-600 hover:bg-cyan-700 text-white py-3 disabled:opacity-50"
           >
-            Purchase BLINK Tokens
+            Purchase BLT Tokens
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
 

@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, TrendingUp, Shield, Globe } from "lucide-react";
+import { ArrowRight, TrendingUp, Shield, Globe, ArrowDown } from "lucide-react";
 import { useState } from "react";
 import PresaleModal from "./PresaleModal";
 
@@ -31,13 +31,13 @@ const Hero = () => {
       
       <div className="relative z-10 container mx-auto px-6 text-center text-white">
         {/* Company Logo */}
-        <div className="mb-8 flex justify-center">
+        {/* <div className="mb-8 flex justify-center">
           <img 
             src="/lovable-uploads/73ed770f-97f5-48ce-82da-40ff54317af3.png" 
             alt="BlueLink Logo" 
             className="h-24 w-auto animate-fade-in drop-shadow-2xl"
           />
-        </div>
+        </div> */}
 
         {/* Main Heading */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in leading-tight">
@@ -56,23 +56,23 @@ const Hero = () => {
 
         {/* Professional Subtitle */}
         <p className="text-lg md:text-xl mb-12 max-w-4xl mx-auto text-gray-300 animate-fade-in delay-300 leading-relaxed">
-          BlueLink Blockchain Foundation presents a regulated ecosystem combining exchange operations, 
-          tokenized stocks, and blockchain banking infrastructure powered by BLINK token.
+          <span className="text-blue-400">BlueLink Blockchain Foundation </span> presents a regulated ecosystem combining exchange operations, 
+          tokenized stocks, and blockchain banking infrastructure powered by BLT token.
         </p>
 
         {/* Key Metrics Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-5xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 animate-fade-in delay-500 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105">
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 animate-fade-in hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105">
             <TrendingUp className="h-10 w-10 mx-auto mb-4 text-blue-400" />
-            <div className="text-3xl font-bold text-white mb-2">$57M+</div>
+            <div className="text-3xl font-bold text-white mb-2">$56M+</div>
             <div className="text-sm text-gray-300 uppercase tracking-wider">Target Raise</div>
           </div>
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 animate-fade-in delay-700 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105">
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 animate-fade-in hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105">
             <Shield className="h-10 w-10 mx-auto mb-4 text-emerald-400" />
             <div className="text-3xl font-bold text-white mb-2">Regulated</div>
             <div className="text-sm text-gray-300 uppercase tracking-wider">Dubai & Cayman</div>
           </div>
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 animate-fade-in delay-900 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105">
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 animate-fade-in hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105">
             <Globe className="h-10 w-10 mx-auto mb-4 text-indigo-400" />
             <div className="text-3xl font-bold text-white mb-2">10,000+</div>
             <div className="text-sm text-gray-300 uppercase tracking-wider">TPS Blockchain</div>
@@ -83,8 +83,9 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in delay-1000">
           <Button 
             size="lg" 
-            onClick={() => setIsPresaleModalOpen(true)}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105"
+            // onClick={() => setIsPresaleModalOpen(true)}
+            onClick={()=>scrollToSection('#presale')}
+            className="bg-blue-500 hover:bg-blue-600 text-white px-10 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105"
           >
             Join Presale
             <ArrowRight className="ml-3 h-5 w-5" />
@@ -92,9 +93,20 @@ const Hero = () => {
           <Button 
             size="lg" 
             variant="outline" 
-            className="border-2 border-white/20 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 hover:border-white/40"
+            className="border-2 border-white/20 text-black hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 hover:border-white/40"
           >
-            Read Whitepaper
+            Whitepaper
+            <ArrowDown className="ml-3 h-5 w-5" />
+
+          </Button>
+          <Button 
+            size="lg" 
+            variant="outline" 
+            className="border-2 border-white/20 text-black hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 hover:border-white/40"
+          >
+            Audit Report
+            <ArrowDown className="ml-3 h-5 w-5" />
+
           </Button>
         </div>
       </div>

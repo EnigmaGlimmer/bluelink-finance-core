@@ -10,23 +10,20 @@ const FAQ = () => {
   const faqs = [
     {
       question: "What makes BlueLink different from other crypto projects?",
-      answer: "BlueLink combines three key innovations: a regulated exchange for crypto and tokenized stocks, a high-performance blockchain with 10,000+ TPS, and integrated banking services. Our dual-jurisdiction structure (Dubai + Cayman) ensures regulatory compliance while our utility token (BLINK) powers the entire ecosystem."
+      answer: "BlueLink combines three key innovations: a regulated exchange for crypto and tokenized stocks, a high-performance blockchain with 10,000+ TPS, and integrated banking services. Our dual-jurisdiction structure (Dubai + Cayman) ensures regulatory compliance while our utility token (BLT) powers the entire ecosystem."
     },
     {
       question: "How does the tokenized stock trading work?",
       answer: "Our tokenized stocks are backed 1:1 by real shares held in custody by licensed broker-dealers. All tokenized stock purchases must be made using BlueLink Coin, creating a closed-loop ecosystem. Trades settle T+0 on our blockchain while the underlying shares settle T+1 traditionally."
     },
     {
-      question: "What are the benefits of holding BLINK tokens?",
-      answer: "BLINK holders receive: 1% reflections from all transactions, reduced trading fees on the exchange, exclusive access to tokenized stock markets, staking rewards up to 15% APY, governance voting rights, and priority access to new features and products."
+      question: "What are the benefits of holding BLT tokens?",
+      answer: "BLT holders receive: 1% reflections from all transactions, reduced trading fees on the exchange, exclusive access to tokenized stock markets, staking rewards up to 15% APY, governance voting rights, and priority access to new features and products."
     },
-    {
-      question: "Which countries are excluded from BlueLink services?",
-      answer: "To ensure regulatory compliance, we exclude users from the United States, China, Japan, Canada, India, and Thailand. All other jurisdictions can access our full suite of services after completing KYC/AML verification."
-    },
+  
     {
       question: "When will the BlueLink Exchange launch?",
-      answer: "According to our roadmap, the BlueLink Exchange is scheduled to launch in Q3 2025, alongside our blockchain mainnet. The tokenized stock exchange and migration from BLINK to BlueLink Coin will follow in Q4 2025."
+      answer: "According to our roadmap, the BlueLink Exchange is scheduled to launch in Q3 2025, alongside our blockchain mainnet. The tokenized stock exchange and migration from BLT to BlueLink Coin will follow in Q4 2025."
     },
     {
       question: "How secure is the BlueLink ecosystem?",
@@ -38,12 +35,12 @@ const FAQ = () => {
     },
     {
       question: "How can I participate in the presale?",
-      answer: "The bonding curve pre-sale is currently active, offering 150M BLINK tokens at prices from $0.085 to $0.25. To participate, complete our KYC process, ensure you're not from an excluded jurisdiction, and follow the instructions on our presale portal."
+      answer: "The bonding curve pre-sale is currently active, offering 150M BLT tokens at prices from $0.085 to $0.25. To participate, complete our KYC process, ensure you're not from an excluded jurisdiction, and follow the instructions on our presale portal."
     }
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section id="faq" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -87,16 +84,20 @@ const FAQ = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="mailto:support@bluelinkblockchain.com" 
+                target="_blank"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
               >
                 Email Support
               </a>
               <a 
-                href="#" 
+                href="https://t.me/bluelinkblockchain" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-colors"
               >
                 Join Telegram
               </a>
+
             </div>
           </div>
         </div>

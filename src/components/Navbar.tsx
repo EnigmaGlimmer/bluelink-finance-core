@@ -12,7 +12,7 @@ const Navbar = () => {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Features", href: "#features" },
-    { name: "Team", href: "#team" },
+    // { name: "Team", href: "#team" },
     { name: "Presale", href: "#presale" },
     { name: "Tokenomics", href: "#tokenomics" },
     { name: "Roadmap", href: "#roadmap" },
@@ -34,14 +34,16 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center space-x-3">
+              <a href="#">
               <img 
                 src="/lovable-uploads/73ed770f-97f5-48ce-82da-40ff54317af3.png" 
                 alt="BlueLink Logo" 
                 className="h-10 w-auto"
               />
-              <div className="font-bold text-xl text-slate-900">
+              </a>
+              {/* <div className="font-bold text-xl text-slate-900">
                 BlueLink Blockchain Foundation
-              </div>
+              </div> */}
             </div>
 
             {/* Desktop Navigation */}
@@ -60,8 +62,9 @@ const Navbar = () => {
             {/* CTA Button */}
             <div className="hidden lg:flex">
               <Button 
-                onClick={() => setIsPresaleModalOpen(true)}
-                className="bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:shadow-lg transition-all duration-200"
+                // onClick={() => setIsPresaleModalOpen(true)}
+                onClick={()=>scrollToSection('#presale')}
+                className="bg-blue-500 hover:bg-blue-600 text-white shadow-md hover:shadow-lg transition-all duration-200"
               >
                 Join Presale
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -91,7 +94,8 @@ const Navbar = () => {
                   </button>
                 ))}
                 <Button 
-                  onClick={() => setIsPresaleModalOpen(true)}
+                  // onClick={() => setIsPresaleModalOpen(true)}
+                  onClick={()=>scrollToSection('#presale')}
                   className="bg-blue-600 hover:bg-blue-700 text-white mt-4"
                 >
                   Join Presale

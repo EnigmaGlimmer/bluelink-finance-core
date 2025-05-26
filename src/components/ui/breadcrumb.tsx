@@ -39,7 +39,7 @@ const BreadcrumbItem = React.forwardRef<
 ))
 BreadcrumbItem.displayName = "BreadcrumbItem"
 
-const BreadcrumbLink = React.forwardRef<
+const BreadcrumBLT = React.forwardRef<
   HTMLAnchorElement,
   React.ComponentPropsWithoutRef<"a"> & {
     asChild?: boolean
@@ -55,7 +55,7 @@ const BreadcrumbLink = React.forwardRef<
     />
   )
 })
-BreadcrumbLink.displayName = "BreadcrumbLink"
+BreadcrumBLT.displayName = "BreadcrumBLT"
 
 const BreadcrumbPage = React.forwardRef<
   HTMLSpanElement,
@@ -108,7 +108,7 @@ export {
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
-  BreadcrumbLink,
+  BreadcrumBLT,
   BreadcrumbPage,
   BreadcrumbSeparator,
   BreadcrumbEllipsis,

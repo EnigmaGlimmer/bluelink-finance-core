@@ -5,28 +5,28 @@ import { Card, CardContent } from "@/components/ui/card";
 const Team = () => {
   const teamMembers = [
     {
-      name: "Dr. Sarah Chen",
+      name: "Mykhailo Semeniuk",
       role: "Chief Executive Officer",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=400&h=400&fit=crop&crop=face",
-      bio: "Former Goldman Sachs VP with 15+ years in blockchain and fintech",
-      linkedin: "#",
-      twitter: "#"
+      // bio: "Former Goldman Sachs VP with 15+ years in blockchain and fintech",
+      // linkedin: "#",
+      // twitter: "#"
     },
     {
-      name: "Marcus Rodriguez",
-      role: "Chief Technology Officer",
+      name: "",
+      role: "Co-Founder",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      bio: "Ex-Ethereum core developer and blockchain architecture expert",
-      linkedin: "#",
-      github: "#"
+      // bio: "Ex-Ethereum core developer and blockchain architecture expert",
+      // linkedin: "#",
+      // github: "#"
     },
     {
-      name: "Elena Volkov",
+      name: "Vladyslav Shevchenko",
       role: "Chief Financial Officer",
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face",
-      bio: "Former JP Morgan Managing Director specializing in digital assets",
-      linkedin: "#",
-      twitter: "#"
+      // bio: "Former JP Morgan Managing Director specializing in digital assets",
+      // linkedin: "#",
+      // twitter: "#"
     },
     {
       name: "James Park",
@@ -89,7 +89,7 @@ const Team = () => {
                 <p className="text-slate-600 text-sm leading-relaxed mb-6">{member.bio}</p>
 
                 {/* Social Links */}
-                <div className="flex justify-center space-x-4">
+                {/* <div className="flex justify-center space-x-4">
                   {member.linkedin && (
                     <a
                       href={member.linkedin}
@@ -117,24 +117,14 @@ const Team = () => {
                       <Github className="h-5 w-5" />
                     </a>
                   )}
-                </div>
+                </div> */}
               </CardContent>
             </Card>
           ))}
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <p className="text-lg text-slate-600 mb-6">
-            Interested in joining our world-class team?
-          </p>
-          <a
-            href="#careers"
-            className="inline-flex items-center px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors duration-200 shadow-lg hover:shadow-xl"
-          >
-            View Open Positions
-          </a>
-        </div>
+       
       </div>
     </section>
   );

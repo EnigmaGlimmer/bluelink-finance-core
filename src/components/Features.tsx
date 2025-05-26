@@ -7,7 +7,7 @@ const Features = () => {
       icon: Coins,
       title: "Tokenized Stock Trading",
       description: "Trade real-world stocks as blockchain tokens, backed 1:1 by actual shares with T+0 settlement",
-      highlight: "BLINK-Only Trading"
+      highlight: "BLT-Only Trading"
     },
     {
       icon: TrendingUp,
@@ -30,7 +30,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="features" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -66,57 +66,11 @@ const Features = () => {
         </div>
 
         {/* Regulatory Compliance Section */}
-        <div className="mt-16 bg-white rounded-2xl p-8 md:p-12 shadow-lg">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Regulatory Excellence
-            </h3>
-            <p className="text-lg text-gray-600">
-              Built from the ground up with compliance and legal clarity as our foundation
-            </p>
-          </div>
+  
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <h4 className="text-xl font-semibold text-gray-900">Supported Regions</h4>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-green-50 p-4 rounded-lg">
-                  <div className="text-green-600 font-semibold">✓ Europe</div>
-                  <div className="text-sm text-gray-600">Full compliance</div>
-                </div>
-                <div className="bg-green-50 p-4 rounded-lg">
-                  <div className="text-green-600 font-semibold">✓ Asia-Pacific</div>
-                  <div className="text-sm text-gray-600">Regulatory aligned</div>
-                </div>
-                <div className="bg-green-50 p-4 rounded-lg">
-                  <div className="text-green-600 font-semibold">✓ Middle East</div>
-                  <div className="text-sm text-gray-600">Dubai licensed</div>
-                </div>
-                <div className="bg-green-50 p-4 rounded-lg">
-                  <div className="text-green-600 font-semibold">✓ Latin America</div>
-                  <div className="text-sm text-gray-600">Growth markets</div>
-                </div>
-              </div>
-            </div>
 
-            <div className="space-y-6">
-              <h4 className="text-xl font-semibold text-gray-900">Excluded Jurisdictions</h4>
-              <div className="bg-red-50 p-4 rounded-lg">
-                <p className="text-sm text-gray-600 mb-3">
-                  For regulatory clarity, we exclude high-risk jurisdictions:
-                </p>
-                <div className="text-red-600 text-sm space-y-1">
-                  <div>• United States</div>
-                  <div>• China</div>
-                  <div>• Japan</div>
-                  <div>• Canada</div>
-                  <div>• India</div>
-                  <div>• Thailand</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+   
+
       </div>
     </section>
   );

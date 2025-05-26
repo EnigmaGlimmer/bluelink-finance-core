@@ -28,11 +28,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Ecosystem</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">BlueLink Exchange</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">BlueLink Blockchain</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Tokenized Stocks</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Banking System</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Staking</a></li>
+              <li className="text-gray-400 hover:text-white transition-colors">BlueLink Exchange</li>
+              <li className="text-gray-400 hover:text-white transition-colors">BlueLink Blockchain</li>
+              <li className="text-gray-400 hover:text-white transition-colors">Tokenized Stocks</li>
+              <li className="text-gray-400 hover:text-white transition-colors">Banking System</li>
+              <li className="text-gray-400 hover:text-white transition-colors">Staking</li>
             </ul>
           </div>
 
@@ -56,17 +56,28 @@ const Footer = () => {
                 <Mail className="h-5 w-5 mr-3" />
                 info@bluelinkblockchain.com
               </a>
-              <a href="#" className="flex items-center text-gray-400 hover:text-white transition-colors">
+              <a
+              href="https://t.me/bluelinkblockchain"  
+              target="_blank"
+              className="flex items-center text-gray-400 hover:text-white transition-colors">
                 <MessageCircle className="h-5 w-5 mr-3" />
                 Telegram Community
               </a>
-              <a href="#" className="flex items-center text-gray-400 hover:text-white transition-colors">
+              <a
+              href="https://x.com/Bluelink2025" 
+              target="_blank"
+              className="flex items-center text-gray-400 hover:text-white transition-colors">
                 <Twitter className="h-5 w-5 mr-3" />
-                @BlueLink_Official
+                BlueLink2025                
               </a>
-              <a href="#" className="flex items-center text-gray-400 hover:text-white transition-colors">
+
+              <a
+             href="https://bluelinkblockchain.com" 
+             target="_blank"
+              
+              className="flex items-center text-gray-400 hover:text-white transition-colors">
                 <Globe className="h-5 w-5 mr-3" />
-                bluelinkblockchain.com
+                www.bluelinkblockchain.com
               </a>
             </div>
           </div>
@@ -85,7 +96,6 @@ const Footer = () => {
             <div>
               <h4 className="font-semibold mb-4">Regulatory Compliance</h4>
               <div className="text-sm text-gray-400 space-y-2">
-                <p>Excluded Jurisdictions: US, China, Japan, Canada, India, Thailand</p>
                 <p>All users subject to KYC/AML verification</p>
               </div>
             </div>
@@ -108,7 +118,7 @@ const Footer = () => {
         <div className="mt-8 p-4 bg-gray-800 rounded-lg">
           <p className="text-xs text-gray-400 leading-relaxed">
             <strong>Disclaimer:</strong> This website contains forward-looking statements and projections. 
-            BLINK tokens may be considered securities in certain jurisdictions. Please consult with legal 
+            BLT tokens may be considered securities in certain jurisdictions. Please consult with legal 
             and financial advisors before participating. Cryptocurrency investments carry significant risk 
             and may result in total loss of capital. Past performance does not guarantee future results.
           </p>

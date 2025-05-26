@@ -45,7 +45,7 @@ const Presale = () => {
             BlueLink Token Presale
           </h2>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            Join the future of decentralized finance. Get BLINK tokens at exclusive presale prices 
+            Join the future of decentralized finance. Get BLT tokens at exclusive presale prices 
             before public launch.
           </p>
         </div>
@@ -82,9 +82,9 @@ const Presale = () => {
             <div className="text-green-400 text-sm uppercase tracking-wider mb-3 font-semibold">Phase 1</div>
             <h4 className="text-2xl font-bold text-white mb-4">Private Sale</h4>
             <div className="space-y-3 text-gray-200">
-              <div className="text-lg">50M BLINK</div>
+              <div className="text-lg">30M BLT</div>
               <div className="text-3xl font-bold text-cyan-300">$0.045 - $0.048</div>
-              <div className="text-sm text-gray-400">~$2.25M Target</div>
+              <div className="text-sm text-gray-400">~$1.4M Target</div>
             </div>
             <div className="mt-6 bg-green-500 text-white px-6 py-3 rounded-full text-sm font-semibold">
               Completed
@@ -96,7 +96,7 @@ const Presale = () => {
             <div className="text-cyan-300 text-sm uppercase tracking-wider mb-3 font-semibold">Phase 2 - Active</div>
             <h4 className="text-2xl font-bold text-white mb-4">Bonding Curve Pre-Sale</h4>
             <div className="space-y-3 text-gray-200">
-              <div className="text-lg">150M BLINK</div>
+              <div className="text-lg">150M BLT</div>
               <div className="text-3xl font-bold text-cyan-300">$0.085 → $0.25</div>
               <div className="text-sm text-gray-400">~$12.75M - $20M</div>
             </div>
@@ -109,7 +109,7 @@ const Presale = () => {
             <div className="text-gray-400 text-sm uppercase tracking-wider mb-3 font-semibold">Phase 3</div>
             <h4 className="text-2xl font-bold text-white mb-4">Public Sale (IDO)</h4>
             <div className="space-y-3 text-gray-200">
-              <div className="text-lg">150M BLINK</div>
+              <div className="text-lg">150M BLT</div>
               <div className="text-3xl font-bold text-cyan-300">$0.28</div>
               <div className="text-sm text-gray-400">~$42M Target</div>
             </div>
@@ -122,7 +122,7 @@ const Presale = () => {
         {/* Professional Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
           {[
-            { icon: Target, value: "$57M+", label: "Total Raise Target" },
+            { icon: Target, value: "$56M+", label: "Total Raise Target" },
             { icon: DollarSign, value: "1B", label: "Total Supply" },
             { icon: Users, value: "5,000+", label: "Early Supporters" },
             { icon: Clock, value: "Q3 2025", label: "Exchange Launch" }
