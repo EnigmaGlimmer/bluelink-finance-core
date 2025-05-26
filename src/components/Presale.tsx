@@ -12,23 +12,45 @@ const Presale = () => {
   });
 
   useEffect(() => {
+    const savedEndTime = localStorage.getItem('presaleEndTime');
+    let endTime: number;
+
+    if (savedEndTime) {
+      endTime = parseInt(savedEndTime, 10);
+    } else {
+      // Calculate end time based on current time + initial countdown duration
+      const now = new Date().getTime();
+      endTime = now + (
+        45 * 24 * 60 * 60 * 1000 + 
+        12 * 60 * 60 * 1000 + 
+        30 * 60 * 1000 + 
+        15 * 1000
+      );
+      localStorage.setItem('presaleEndTime', endTime.toString());
+    }
+
     const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev.seconds > 0) {
-          return { ...prev, seconds: prev.seconds - 1 };
-        } else if (prev.minutes > 0) {
-          return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
-        } else if (prev.hours > 0) {
-          return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
-        } else if (prev.days > 0) {
-          return { ...prev, days: prev.days - 1, hours: 23, minutes: 59, seconds: 59 };
-        }
-        return prev;
-      });
+      const now = new Date().getTime();
+      const distance = endTime - now;
+
+      if (distance <= 0) {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        localStorage.removeItem('presaleEndTime');
+        clearInterval(timer);
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      setTimeLeft({ days, hours, minutes, seconds });
     }, 1000);
 
     return () => clearInterval(timer);
   }, []);
+
 
   return (
     <section id="presale" className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 relative overflow-hidden">

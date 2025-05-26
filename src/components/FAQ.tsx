@@ -91,13 +91,11 @@ const FAQ = () => {
               </a>
               <a 
                 href="https://t.me/bluelinkblockchain" 
-                target="_blank" 
-                rel="noopener noreferrer"
+                target="_blank"
                 className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-colors"
               >
                 Join Telegram
               </a>
-
             </div>
           </div>
         </div>

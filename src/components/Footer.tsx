@@ -52,7 +52,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Connect</h3>
             <div className="space-y-4">
-              <a href="mailto:info@bluelinkblockchain.com" className="flex items-center text-gray-400 hover:text-white transition-colors">
+              <a
+              href="mailto:info@bluelinkblockchain.com"
+              target="_blank"
+              className="flex items-center text-gray-400 hover:text-white transition-colors">
                 <Mail className="h-5 w-5 mr-3" />
                 info@bluelinkblockchain.com
               </a>
