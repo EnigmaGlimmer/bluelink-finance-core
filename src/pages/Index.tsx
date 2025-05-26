@@ -1,4 +1,5 @@
 
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Tokenomics from "@/components/Tokenomics";
 import Roadmap from "@/components/Roadmap";
@@ -10,7 +11,8 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
+    <div className="min-h-screen bg-white">
+      <Navbar />
       <Hero />
       <About />
       <Features />
