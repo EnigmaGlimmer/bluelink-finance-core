@@ -13,8 +13,7 @@ const Footer = () => {
                 src="/lovable-uploads/73ed770f-97f5-48ce-82da-40ff54317af3.png" 
                 alt="BlueLink Logo" 
                 className="h-8 w-auto mr-3"
-              />
-              <span className="text-xl font-bold">BlueLink</span>
+              />  
             </div>
             <p className="text-gray-400 mb-6">
               Redefining global finance through blockchain innovation and regulatory excellence.
@@ -40,11 +39,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Resources</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Whitepaper</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Documentation</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Audit Reports</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Roadmap</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+              <li className="text-gray-400 hover:text-white transition-colors">Whitepaper</li>
+              <li className="text-gray-400 hover:text-white transition-colors">Documentation</li>
+              <li className="text-gray-400 hover:text-white transition-colors">Audit Reports</li>
+              <li className="text-gray-400 hover:text-white transition-colors">Roadmap</li>
+              <li className="text-gray-400 hover:text-white transition-colors">Blog</li>
             </ul>
           </div>
 
