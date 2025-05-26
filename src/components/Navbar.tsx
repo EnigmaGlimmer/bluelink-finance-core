@@ -2,9 +2,11 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ArrowRight } from "lucide-react";
+import PresaleModal from "./PresaleModal";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isPresaleModalOpen, setIsPresaleModalOpen] = useState(false);
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -26,79 +28,87 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/73ed770f-97f5-48ce-82da-40ff54317af3.png" 
-              alt="BlueLink Logo" 
-              className="h-10 w-auto"
-            />
-            <div className="font-bold text-xl text-slate-900">
-              BlueLink Blockchain Foundation
+    <>
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div className="container mx-auto px-6">
+          <div className="flex items-center justify-between h-16">
+            {/* Logo */}
+            <div className="flex items-center space-x-3">
+              <img 
+                src="/lovable-uploads/73ed770f-97f5-48ce-82da-40ff54317af3.png" 
+                alt="BlueLink Logo" 
+                className="h-10 w-auto"
+              />
+              <div className="font-bold text-xl text-slate-900">
+                BlueLink Blockchain Foundation
+              </div>
             </div>
-          </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-200"
-              >
-                {item.name}
-              </button>
-            ))}
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden lg:flex">
-            <Button 
-              onClick={() => scrollToSection("#presale")}
-              className="bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:shadow-lg transition-all duration-200"
-            >
-              Join Presale
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-slate-700"
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="lg:hidden py-4 border-t border-slate-200">
-            <div className="flex flex-col space-y-4">
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-8">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-left text-slate-700 hover:text-blue-600 font-medium py-2"
+                  className="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-200"
                 >
                   {item.name}
                 </button>
               ))}
+            </div>
+
+            {/* CTA Button */}
+            <div className="hidden lg:flex">
               <Button 
-                onClick={() => scrollToSection("#presale")}
-                className="bg-blue-600 hover:bg-blue-700 text-white mt-4"
+                onClick={() => setIsPresaleModalOpen(true)}
+                className="bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:shadow-lg transition-all duration-200"
               >
                 Join Presale
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="lg:hidden p-2 text-slate-700"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
           </div>
-        )}
-      </div>
-    </nav>
+
+          {/* Mobile Menu */}
+          {isOpen && (
+            <div className="lg:hidden py-4 border-t border-slate-200">
+              <div className="flex flex-col space-y-4">
+                {navItems.map((item) => (
+                  <button
+                    key={item.name}
+                    onClick={() => scrollToSection(item.href)}
+                    className="text-left text-slate-700 hover:text-blue-600 font-medium py-2"
+                  >
+                    {item.name}
+                  </button>
+                ))}
+                <Button 
+                  onClick={() => setIsPresaleModalOpen(true)}
+                  className="bg-blue-600 hover:bg-blue-700 text-white mt-4"
+                >
+                  Join Presale
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+          )}
+        </div>
+      </nav>
+
+      {/* Presale Modal */}
+      <PresaleModal 
+        isOpen={isPresaleModalOpen} 
+        onClose={() => setIsPresaleModalOpen(false)} 
+      />
+    </>
   );
 };
 

@@ -1,8 +1,19 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Shield, Globe } from "lucide-react";
+import { useState } from "react";
+import PresaleModal from "./PresaleModal";
 
 const Hero = () => {
+  const [isPresaleModalOpen, setIsPresaleModalOpen] = useState(false);
+
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Modern Professional Background */}
@@ -70,7 +81,11 @@ const Hero = () => {
 
         {/* CTA Section */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in delay-1000">
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+          <Button 
+            size="lg" 
+            onClick={() => setIsPresaleModalOpen(true)}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105"
+          >
             Join Presale
             <ArrowRight className="ml-3 h-5 w-5" />
           </Button>
@@ -83,6 +98,12 @@ const Hero = () => {
           </Button>
         </div>
       </div>
+
+      {/* Presale Modal */}
+      <PresaleModal 
+        isOpen={isPresaleModalOpen} 
+        onClose={() => setIsPresaleModalOpen(false)} 
+      />
     </section>
   );
 };
