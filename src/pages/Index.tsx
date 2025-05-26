@@ -6,6 +6,7 @@ import Roadmap from "@/components/Roadmap";
 import Features from "@/components/Features";
 import Presale from "@/components/Presale";
 import About from "@/components/About";
+import Team from "@/components/Team";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
@@ -16,6 +17,7 @@ const Index = () => {
       <Hero />
       <About />
       <Features />
+      <Team />
       <Presale />
       <Tokenomics />
       <Roadmap />

@@ -10,6 +10,7 @@ const Navbar = () => {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Features", href: "#features" },
+    { name: "Team", href: "#team" },
     { name: "Presale", href: "#presale" },
     { name: "Tokenomics", href: "#tokenomics" },
     { name: "Roadmap", href: "#roadmap" },
@@ -25,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -35,7 +36,7 @@ const Navbar = () => {
               alt="BlueLink Logo" 
               className="h-10 w-auto"
             />
-            <div className="font-bold text-xl text-gray-900">
+            <div className="font-bold text-xl text-slate-900">
               BlueLink Blockchain Foundation
             </div>
           </div>
@@ -46,7 +47,7 @@ const Navbar = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                className="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-200"
               >
                 {item.name}
               </button>
@@ -57,7 +58,7 @@ const Navbar = () => {
           <div className="hidden lg:flex">
             <Button 
               onClick={() => scrollToSection("#presale")}
-              className="bg-blue-600 hover:bg-blue-700 text-white"
+              className="bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:shadow-lg transition-all duration-200"
             >
               Join Presale
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -67,7 +68,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-gray-700"
+            className="lg:hidden p-2 text-slate-700"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -75,13 +76,13 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-200">
+          <div className="lg:hidden py-4 border-t border-slate-200">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-left text-gray-700 hover:text-blue-600 font-medium py-2"
+                  className="text-left text-slate-700 hover:text-blue-600 font-medium py-2"
                 >
                   {item.name}
                 </button>
