@@ -1,5 +1,9 @@
 
 import { Mail, MessageCircle, Twitter, Globe } from "lucide-react";
+import privacyPolicyPdf from '.././assets/BlueLink_Privacy_Policy.pdf';
+import termsOfServices from '.././assets/BlueLink_Terms_of_Service.pdf';
+import riskDisclosure from '.././assets/BlueLink_Risk_Disclosure.pdf';
+
 
 const Footer = () => {
   return (
@@ -110,9 +114,18 @@ const Footer = () => {
             © 2025 BlueLink Blockchain Foundation. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Risk Disclosure</a>
+            <a
+            href={privacyPolicyPdf}
+            target="_blank"
+            className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+            <a
+            href={termsOfServices}
+            target="_blank"
+            className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+            <a
+            href={riskDisclosure} 
+            target="_blank"
+            className="text-gray-400 hover:text-white text-sm transition-colors">Risk Disclosure</a>
           </div>
         </div>
 
