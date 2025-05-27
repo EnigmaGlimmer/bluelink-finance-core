@@ -102,7 +102,7 @@ const Hero = () => {
           <Button 
             size="lg" 
             variant="outline" 
-            className="border-2 border-white/20 text-black hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 hover:border-white/40"
+            className="border-2 border-white/20 text-black hover:bg-white/10 my-5 px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 hover:border-white/40"
           >
             Audit Report
             <ArrowDown className="ml-3 h-5 w-5" />
