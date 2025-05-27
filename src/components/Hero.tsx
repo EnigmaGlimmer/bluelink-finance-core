@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Shield, Globe, ArrowDown } from "lucide-react";
 import { useState } from "react";
 import PresaleModal from "./PresaleModal";
+import whitepaper from ".././assets/BlueLink_Whitepaper_v12.pdf"
 
 const Hero = () => {
   const [isPresaleModalOpen, setIsPresaleModalOpen] = useState(false);
@@ -90,24 +91,24 @@ const Hero = () => {
             Join Presale
             <ArrowRight className="ml-3 h-5 w-5" />
           </Button>
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="border-2 border-white/20 text-black hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 hover:border-white/40"
-          >
+          <a 
+            href={whitepaper}
+            target="_blank" 
+            rel="noopener noreferrer"
+            download
+            className="inline-flex items-center bg-white justify-center border-2 border-white/20 text-black hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 hover:border-white/40"          >
             Whitepaper
             <ArrowDown className="ml-3 h-5 w-5" />
 
-          </Button>
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="border-2 border-white/20 text-black hover:bg-white/10 my-5 px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 hover:border-white/40"
+          </a>
+          <a
+          href="#"
+          onClick={(e) => e.preventDefault()} // prevents navigation
+          className="inline-flex items-center justify-center border-2 border-white/20 text-black bg-white/30 text-opacity-50 cursor-not-allowed px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300"
           >
-            Audit Report
-            <ArrowDown className="ml-3 h-5 w-5" />
-
-          </Button>
+          Audit Report
+         <ArrowDown className="ml-3 h-5 w-5" />
+        </a>
         </div>
       </div>
 
