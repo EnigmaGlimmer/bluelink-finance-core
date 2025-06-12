@@ -96,7 +96,7 @@ const Footer = () => {
               <h4 className="font-semibold mb-4">Legal Structure</h4>
               <div className="text-sm text-gray-400 space-y-2">
                 <p>🇦🇪 BlueLink Blockchain Services - Dubai, UAE</p>
-                <p>🇰🇾 BlueLink Blockchain Foundation - Cayman Islands</p>
+                <p>🇰🇾 BlueLink Blockchain Foundation - British Virgin Islands</p>
               </div>
             </div>
             <div>

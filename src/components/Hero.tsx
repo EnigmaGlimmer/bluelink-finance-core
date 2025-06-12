@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Shield, Globe, ArrowDown } from "lucide-react";
 import { useState } from "react";
 import PresaleModal from "./PresaleModal";
-import whitepaper from ".././assets/BlueLink_Whitepaper_v12.pdf"
+import whitepaper from ".././assets/BlueLink_Whitepaper_v14.pdf"
 
 const Hero = () => {
   const [isPresaleModalOpen, setIsPresaleModalOpen] = useState(false);
@@ -71,7 +71,7 @@ const Hero = () => {
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 animate-fade-in hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105">
             <Shield className="h-10 w-10 mx-auto mb-4 text-emerald-400" />
             <div className="text-3xl font-bold text-white mb-2">Regulated</div>
-            <div className="text-sm text-gray-300 uppercase tracking-wider">Dubai & Cayman</div>
+            <div className="text-sm text-gray-300 uppercase tracking-wider">Dubai & BVI</div>
           </div>
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 animate-fade-in hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105">
             <Globe className="h-10 w-10 mx-auto mb-4 text-indigo-400" />

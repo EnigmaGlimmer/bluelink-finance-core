@@ -10,7 +10,7 @@ const FAQ = () => {
   const faqs = [
     {
       question: "What makes BlueLink different from other crypto projects?",
-      answer: "BlueLink combines three key innovations: a regulated exchange for crypto and tokenized stocks, a high-performance blockchain with 10,000+ TPS, and integrated banking services. Our dual-jurisdiction structure (Dubai + Cayman) ensures regulatory compliance while our utility token (BLT) powers the entire ecosystem."
+      answer: "BlueLink combines three key innovations: a regulated exchange for crypto and tokenized stocks, a high-performance blockchain with 10,000+ TPS, and integrated banking services. Our dual-jurisdiction structure (Dubai + BVI) ensures regulatory compliance while our utility token (BLT) powers the entire ecosystem."
     },
     {
       question: "How does the tokenized stock trading work?",

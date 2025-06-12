@@ -52,7 +52,7 @@ const About = () => {
             </div>
             <h3 className="text-xl font-semibold mb-2">Global Compliance</h3>
             <p className="text-gray-600">
-              Regulated in Dubai and Cayman Islands for maximum legal clarity
+              Regulated in Dubai and British Virgin Islands for maximum legal clarity
             </p>
           </div>
         </div>
@@ -92,7 +92,7 @@ const About = () => {
                     <div className="text-sm text-gray-600">Operations & Development</div>
                   </div>
                   <div>
-                    <div className="text-lg font-semibold text-blue-600">🇰🇾 Cayman Foundation</div>
+                    <div className="text-lg font-semibold text-blue-600">British Virgin Islands Foundation</div>
                     <div className="text-sm text-gray-600">Token Issuance & Governance</div>
                   </div>
                 </div>
