@@ -8,43 +8,60 @@ const Roadmap = () => {
       title: "Foundation & Development",
       status: "in-progress",
       items: [
-        "Finalize development architecture",
-        "Complete smart contract audits",
-        "Prepare for token launch",
-        "Regulatory compliance setup"
+        "Finalize system architecture and modular design",
+        "Complete smart contract and infrastructure audits",
+        "Deploy ERC-20 launch infrastructure",
+        "Set up legal, regulatory, and compliance framework"
       ]
     },
     {
       quarter: "Q3 2025",
-      title: "Launch & Expansion",
+      title: "Pre-Launch Execution",
       status: "upcoming",
       items: [
-        "Conduct private/pre/public sales",
-        "Launch BlueLink Exchange",
-        "Deploy BlueLink Blockchain",
-        "Begin airdrop campaign"
+        "Conduct Private and Pre-Sale fundraising",
+        "Launch BlueLink Exchange Testnet (Alpha)",
+        "Deploy Blockchain Testnet with validator onboarding",
+        "Initiate airdrop program and global marketing"
       ]
     },
     {
       quarter: "Q4 2025",
-      title: "Advanced Features",
+      title: "Mainnet & Public Launch",
       status: "planned",
       items: [
-        "Enable staking mechanisms",
+        "Deploy Mainnet with validator consensus",
+        "Conduct IDO and finalize token distribution",
         "Launch tokenized stock exchange",
         "Migrate BLT to BlueLink Coin",
-        "Activate DAO governance"
+        "Launch fiat banking suite with debit integration",
+        "Enable staking, slashing, and delegation"
       ]
     },
     {
-      quarter: "2026+",
-      title: "Ecosystem Expansion",
-      status: "future",
+      quarter: "Q1 2026",
+      title: "Ecosystem Optimization",
+      status: "future-1",
       items: [
-        "Self-banking features integration",
+        "Expand validator and staking participation",
         "Stock option utilities",
-        "Cross-chain interoperability",
-        "Global regulatory expansion"
+        "Launch DAO Grant Program for developers",
+        "Global regulatory expansion",
+        "Roll out core DeFi (lending, farming, swaps)",
+        "Publish DAO treasury and governance dashboard"
+      ]
+    },
+        {
+      quarter: "Q2 2026+",
+      title: "Product & Institutional Expansion",
+      status: "future-2",
+      items: [
+        "Launch mobile app with full fiat-crypto features",
+        "Support RWAs: real estate, bonds, and assets",
+        "Launch DAO Grant Program for developers",
+        "Release BlueLink Launchpad for startups",
+        "Integrate institutional APIs and trading tools",
+        "Publish DAO treasury and governance dashboard"
       ]
     }
   ];
@@ -54,7 +71,8 @@ const Roadmap = () => {
       case "in-progress": return "bg-blue-500";
       case "upcoming": return "bg-orange-500";
       case "planned": return "bg-purple-500";
-      case "future": return "bg-gray-400";
+      case "future-1": return "bg-blue-400";
+      case "future-2": return "bg-green-300";
       default: return "bg-gray-400";
     }
   };

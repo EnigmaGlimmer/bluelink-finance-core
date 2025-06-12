@@ -109,7 +109,7 @@ const Presale = () => {
               <div className="text-sm text-gray-400">~$1.4M Target</div>
             </div>
             <div className="mt-6 bg-green-500 text-white px-6 py-3 rounded-full text-sm font-semibold">
-              Completed
+              In Progress
             </div>
           </div>
 
@@ -147,7 +147,7 @@ const Presale = () => {
             { icon: Target, value: "$56M+", label: "Total Raise Target" },
             { icon: DollarSign, value: "1B", label: "Total Supply" },
             { icon: Users, value: "5,000+", label: "Early Supporters" },
-            { icon: Clock, value: "Q3 2025", label: "Exchange Launch" }
+            { icon: Clock, value: "Q4 2025", label: "Exchange Launch" }
           ].map((stat, index) => (
             <div key={index} className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <stat.icon className="h-10 w-10 text-cyan-400 mx-auto mb-4" />

@@ -23,7 +23,7 @@ const FAQ = () => {
   
     {
       question: "When will the BlueLink Exchange launch?",
-      answer: "According to our roadmap, the BlueLink Exchange is scheduled to launch in Q3 2025, alongside our blockchain mainnet. The tokenized stock exchange and migration from BLT to BlueLink Coin will follow in Q4 2025."
+      answer: "According to our roadmap, the BlueLink Exchange is scheduled to launch in Q4 2025, alongside our blockchain mainnet. The tokenized stock exchange and migration from BLT to BlueLink Coin will follow in Q4 2025."
     },
     {
       question: "How secure is the BlueLink ecosystem?",

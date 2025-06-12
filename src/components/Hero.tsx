@@ -2,8 +2,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Shield, Globe, ArrowDown } from "lucide-react";
 import { useState } from "react";
+import { Mail } from "lucide-react";
+import emailjs from "@emailjs/browser";
+import { toast } from "@/components/ui/use-toast";
 import PresaleModal from "./PresaleModal";
 import whitepaper from ".././assets/BlueLink_Whitepaper_v14.pdf"
+
 
 const Hero = () => {
   const [isPresaleModalOpen, setIsPresaleModalOpen] = useState(false);
@@ -14,6 +18,7 @@ const Hero = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+  
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
