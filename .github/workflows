@@ -1,0 +1,35 @@
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # runs at midnight every day (UTC)
+  workflow_dispatch: # allows you to manually trigger the workflow
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your fork
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0 # get all history
+
+      - name: Set up git
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+
+      - name: Add upstream
+        run: |
+          git remote add upstream https://github.com/Zhong-SHE/bluelink-finance-core.git
+          git fetch upstream
+
+      - name: Merge upstream changes
+        run: |
+          git checkout main
+          git merge upstream/main --allow-unrelated-histories -m "Sync fork with upstream"
+
+      - name: Push changes to your fork
+        run: |
+          git push origin main
