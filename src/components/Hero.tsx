@@ -2,9 +2,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Shield, Globe, ArrowDown } from "lucide-react";
 import { useState } from "react";
-import { Mail } from "lucide-react";
-import emailjs from "@emailjs/browser";
-import { toast } from "@/components/ui/use-toast";
 import PresaleModal from "./PresaleModal";
 import whitepaper from ".././assets/BlueLink_Whitepaper_v14.pdf"
 
