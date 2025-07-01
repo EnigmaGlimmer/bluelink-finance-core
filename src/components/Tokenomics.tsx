@@ -1,4 +1,3 @@
-
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
 
 const Tokenomics = () => {
@@ -23,7 +22,7 @@ const Tokenomics = () => {
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
       return (
-        <div className="bg-white/95 backdrop-blur-sm p-4 border border-gray-200 rounded-xl shadow-xl">
+        <div className="bg-white/95 backdrop-blur-sm p-4 border border-sky-200 rounded-xl shadow-xl">
           <p className="font-semibold text-gray-900">{payload[0].name}</p>
           <p className="text-blue-600 font-bold">{payload[0].value}%</p>
         </div>
@@ -33,9 +32,9 @@ const Tokenomics = () => {
   };
 
   return (
-    <section id="tokenomics" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <section id="tokenomics" className="py-20 bg-gradient-to-br from-sky-50 via-sky-100 to-white">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Tokenomics
           </h2>
@@ -47,19 +46,19 @@ const Tokenomics = () => {
 
         {/* Token Overview */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-          <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-8 text-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+          <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-8 text-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in">
             <h3 className="text-3xl font-bold mb-2">1B</h3>
             <p className="text-blue-100 font-medium">Total Supply</p>
           </div>
-          <div className="bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl p-8 text-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+          <div className="bg-gradient-to-br from-sky-500 to-sky-600 rounded-2xl p-8 text-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in">
             <h3 className="text-3xl font-bold mb-2">BLT</h3>
-            <p className="text-cyan-100 font-medium">Token Symbol</p>
+            <p className="text-sky-100 font-medium">Token Symbol</p>
           </div>
-          <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-8 text-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+          <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-8 text-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in">
             <h3 className="text-3xl font-bold mb-2">3%</h3>
             <p className="text-purple-100 font-medium">Transaction Tax</p>
           </div>
-          <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl p-8 text-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+          <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl p-8 text-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in">
             <h3 className="text-3xl font-bold mb-2">ERC-20</h3>
             <p className="text-emerald-100 font-medium">Initial Standard</p>
           </div>
@@ -67,7 +66,7 @@ const Tokenomics = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {/* Token Allocation Chart */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20">
+          <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-sky-200 animate-scale-in">
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
               Token Allocation Distribution
             </h3>
@@ -93,7 +92,7 @@ const Tokenomics = () => {
             </div>
             <div className="grid grid-cols-1 gap-3 mt-6">
               {allocationData.map((item, index) => (
-                <div key={index} className="flex items-center justify-between p-3 rounded-xl bg-gray-50/80 hover:bg-gray-100/80 transition-colors">
+                <div key={index} className="flex items-center justify-between p-3 rounded-xl bg-sky-50/80 hover:bg-sky-100/80 transition-colors">
                   <div className="flex items-center">
                     <div 
                       className="w-4 h-4 rounded-full mr-3 shadow-sm" 
@@ -108,7 +107,7 @@ const Tokenomics = () => {
           </div>
 
           {/* Transaction Tax Breakdown */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20">
+          <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-sky-200 animate-scale-in">
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
               Transaction Tax Breakdown (3%)
             </h3>
@@ -162,49 +161,49 @@ const Tokenomics = () => {
         </div>
 
         {/* Vesting Schedule */}
-        <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 rounded-3xl p-10 text-white shadow-2xl">
+        <div className="bg-gradient-to-br from-blue-500 via-sky-500 to-blue-600 rounded-3xl p-10 text-white shadow-2xl animate-fade-in">
           <h3 className="text-3xl font-bold mb-10 text-center text-white">
             Vesting Schedule
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30 hover:bg-white/25 transition-all duration-300">
               <h4 className="font-bold text-white mb-3 text-lg">Founder Allocation</h4>
-              <p className="text-blue-200 mb-4 font-medium">130M BLT (13%)</p>
-              <div className="space-y-2 text-sm text-gray-200">
+              <p className="text-blue-100 mb-4 font-medium">130M BLT (13%)</p>
+              <div className="space-y-2 text-sm text-blue-50">
                 <div className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                  <span className="w-2 h-2 bg-blue-200 rounded-full mr-2"></span>
                   6-month cliff period
                 </div>
                 <div className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                  <span className="w-2 h-2 bg-blue-200 rounded-full mr-2"></span>
                   Linear vesting over 24 months
                 </div>
               </div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30 hover:bg-white/25 transition-all duration-300">
               <h4 className="font-bold text-white mb-3 text-lg">Team Allocation</h4>
-              <p className="text-emerald-200 mb-4 font-medium">20M BLT (2%)</p>
-              <div className="space-y-2 text-sm text-gray-200">
+              <p className="text-emerald-100 mb-4 font-medium">20M BLT (2%)</p>
+              <div className="space-y-2 text-sm text-blue-50">
                 <div className="flex items-center">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-2"></span>
+                  <span className="w-2 h-2 bg-emerald-200 rounded-full mr-2"></span>
                   6-month cliff period
                 </div>
                 <div className="flex items-center">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-2"></span>
+                  <span className="w-2 h-2 bg-emerald-200 rounded-full mr-2"></span>
                   Linear vesting over 24 months
                 </div>
               </div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30 hover:bg-white/25 transition-all duration-300">
               <h4 className="font-bold text-white mb-3 text-lg">Private Sale</h4>
-              <p className="text-purple-200 mb-4 font-medium">30M BLT (3%)</p>
-              <div className="space-y-2 text-sm text-gray-200">
+              <p className="text-purple-100 mb-4 font-medium">30M BLT (3%)</p>
+              <div className="space-y-2 text-sm text-blue-50">
                 <div className="flex items-center">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                  <span className="w-2 h-2 bg-purple-200 rounded-full mr-2"></span>
                   3-month cliff period
                 </div>
                 <div className="flex items-center">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                  <span className="w-2 h-2 bg-purple-200 rounded-full mr-2"></span>
                   Linear vesting over 6 months
                 </div>
               </div>
@@ -212,11 +211,11 @@ const Tokenomics = () => {
           </div>
           
           {/* Additional Vesting Info */}
-          <div className="mt-10 bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+          <div className="mt-10 bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
             <h4 className="font-bold text-white mb-4 text-center">Staking Rewards Program</h4>
             <div className="text-center">
-              <p className="text-pink-200 mb-2 font-medium text-lg">70M BLT (7%)</p>
-              <p className="text-sm text-gray-300">
+              <p className="text-blue-100 mb-2 font-medium text-lg">70M BLT (7%)</p>
+              <p className="text-sm text-blue-50">
                 Distributed over 3 years to incentivize long-term holding and network participation
               </p>
             </div>
