@@ -4,7 +4,6 @@ import privacyPolicyPdf from '.././assets/BlueLink_Privacy_Policy.pdf';
 import termsOfServices from '.././assets/BlueLink_Terms_of_Service.pdf';
 import riskDisclosure from '.././assets/BlueLink_Risk_Disclosure.pdf';
 
-
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
@@ -95,8 +94,9 @@ const Footer = () => {
             <div>
               <h4 className="font-semibold mb-4">Legal Structure</h4>
               <div className="text-sm text-gray-400 space-y-2">
-                <p>🇦🇪 BlueLink Blockchain Services - Dubai, UAE</p>
-                <p>🇰🇾 BlueLink Blockchain Foundation - British Virgin Islands</p>
+                <p>BlueLink Blockchain Services operates under a dual-jurisdiction strategy:</p>
+                <p>🇦🇪 Dubai: Operational HQ for exchange development, ecosystem management, and strategic partnerships.</p>
+                <p>🇻🇬 BVI: Legal structure optimised for token issuance, governance, and regulatory flexibility.</p>
               </div>
             </div>
             <div>
@@ -111,7 +111,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2025 BlueLink Blockchain Foundation. All rights reserved.
+            © 2025 BlueLink Blockchain Services. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a

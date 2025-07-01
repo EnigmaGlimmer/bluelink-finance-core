@@ -8,7 +8,6 @@ import { toast } from "@/components/ui/use-toast";
 import PresaleModal from "./PresaleModal";
 import whitepaper from ".././assets/BlueLink_Whitepaper_v14.pdf"
 
-
 const Hero = () => {
   const [isPresaleModalOpen, setIsPresaleModalOpen] = useState(false);
 
@@ -19,7 +18,6 @@ const Hero = () => {
     }
   };
   
-
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Modern Professional Background */}
@@ -36,15 +34,6 @@ const Hero = () => {
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-indigo-400/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
       
       <div className="relative z-10 container mx-auto px-6 text-center text-white">
-        {/* Company Logo */}
-        {/* <div className="mb-8 flex justify-center">
-          <img 
-            src="/lovable-uploads/73ed770f-97f5-48ce-82da-40ff54317af3.png" 
-            alt="BlueLink Logo" 
-            className="h-24 w-auto animate-fade-in drop-shadow-2xl"
-          />
-        </div> */}
-
         {/* Main Heading */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in leading-tight">
           The Future of
@@ -62,7 +51,7 @@ const Hero = () => {
 
         {/* Professional Subtitle */}
         <p className="text-lg md:text-xl mb-12 max-w-4xl mx-auto text-gray-300 animate-fade-in delay-300 leading-relaxed">
-          <span className="text-blue-400">BlueLink Blockchain Foundation </span> presents a regulated ecosystem combining exchange operations, 
+          <span className="text-blue-400">BlueLink Blockchain Services </span> presents a regulated ecosystem combining exchange operations, 
           tokenized stocks, and blockchain banking infrastructure powered by BLT token.
         </p>
 
@@ -89,7 +78,6 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in delay-1000">
           <Button 
             size="lg" 
-            // onClick={() => setIsPresaleModalOpen(true)}
             onClick={()=>scrollToSection('#presale')}
             className="bg-blue-500 hover:bg-blue-600 text-white px-10 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105"
           >
@@ -104,16 +92,16 @@ const Hero = () => {
             className="inline-flex items-center bg-white justify-center border-2 border-white/20 text-black hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 hover:border-white/40"          >
             Whitepaper
             <ArrowDown className="ml-3 h-5 w-5" />
-
           </a>
-          <a
-          href="#"
-          onClick={(e) => e.preventDefault()} // prevents navigation
-          className="inline-flex items-center justify-center border-2 border-white/20 text-black bg-white/30 text-opacity-50 cursor-not-allowed px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300"
+          <a 
+            href="https://github.com/solidproof/projects/tree/main/2025/BlueLink%20Blockchain"
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center border-2 border-white/20 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 hover:border-white/40"
           >
-          Audit Report
-         <ArrowDown className="ml-3 h-5 w-5" />
-        </a>
+            Audit Report
+            <ArrowDown className="ml-3 h-5 w-5" />
+          </a>
         </div>
       </div>
 

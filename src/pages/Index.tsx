@@ -9,6 +9,7 @@ import About from "@/components/About";
 import Team from "@/components/Team";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import Waitlist from "@/components/Waitlist";
 
 const Index = () => {
   return (
@@ -17,8 +18,8 @@ const Index = () => {
       <Hero />
       <About />
       <Features />
-      {/* <Team /> */}
       <Presale />
+      <Waitlist />
       <Tokenomics />
       <Roadmap />
       <FAQ />
