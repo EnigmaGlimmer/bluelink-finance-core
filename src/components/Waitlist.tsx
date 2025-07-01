@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -55,7 +54,7 @@ const Waitlist = () => {
     try {
       console.log("Sending request to Google Apps Script...");
       
-      const response = await fetch('https://script.google.com/macros/s/AKfycbwP2QhGhFgQTaoRcNTc3AZOPFOzhYUzAFIxrp8nh5KWhwCKZliqya5PXfdMS5l1HvYORw/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbw0IXwAMNpMmwiqv9Ni4RYlohO7P-5Nl0F7BPm0PJwx2pSCg1GGA93mcBEeYHGoWL5n1w/exec', {
         method: 'POST',
         mode: 'cors',
         headers: {
