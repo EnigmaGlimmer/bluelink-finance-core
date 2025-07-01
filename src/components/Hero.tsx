@@ -91,7 +91,7 @@ const Hero = () => {
             <ArrowDown className="ml-3 h-5 w-5" />
           </a>
           <a 
-            href="https://github.com/solidproof/projects/tree/main/2025/BlueLink%20Blockchain"
+            href="https://app.solidproof.io/projects/bluelink"
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center border-2 border-white/20 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 hover:border-white/40"
