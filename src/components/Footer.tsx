@@ -6,108 +6,136 @@ import riskDisclosure from '.././assets/BlueLink_Risk_Disclosure.pdf';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-sky-100 via-sky-200 to-sky-300 text-gray-800">
-      <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in">
+    <footer className="bg-gradient-to-br from-gray-800 via-gray-900 to-slate-900 text-white">
+      <div className="container mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 animate-fade-in">
           {/* Company Info */}
-          <div className="md:col-span-1">
-            <div className="flex items-center mb-4">
+          <div>
+            <div className="flex items-center mb-6">
               <img 
                 src="/lovable-uploads/73ed770f-97f5-48ce-82da-40ff54317af3.png" 
                 alt="BlueLink Logo" 
                 className="h-8 w-auto mr-3"
               />  
             </div>
-            <p className="text-gray-700 mb-4 text-sm">
+            <p className="text-gray-300 mb-6">
               Redefining global finance through blockchain innovation and regulatory excellence.
             </p>
-            <p className="text-sm text-blue-600 font-semibold">
+            <p className="text-sm text-gray-400">
               "Today's Success, Tomorrow's Solution"
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-700">Resources</h3>
-            <ul className="space-y-2 text-sm">
-              <li className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">Whitepaper</li>
-              <li className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">Documentation</li>
-              <li className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">Audit Reports</li>
-              <li className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">Roadmap</li>
+            <h3 className="text-lg font-semibold mb-6 text-sky-300">Ecosystem</h3>
+            <ul className="space-y-3">
+              <li className="text-gray-300 hover:text-sky-300 transition-colors cursor-pointer">BlueLink Exchange</li>
+              <li className="text-gray-300 hover:text-sky-300 transition-colors cursor-pointer">BlueLink Blockchain</li>
+              <li className="text-gray-300 hover:text-sky-300 transition-colors cursor-pointer">Tokenized Stocks</li>
+              <li className="text-gray-300 hover:text-sky-300 transition-colors cursor-pointer">Banking System</li>
+              <li className="text-gray-300 hover:text-sky-300 transition-colors cursor-pointer">Staking</li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 text-sky-300">Resources</h3>
+            <ul className="space-y-3">
+              <li className="text-gray-300 hover:text-sky-300 transition-colors cursor-pointer">Whitepaper</li>
+              <li className="text-gray-300 hover:text-sky-300 transition-colors cursor-pointer">Documentation</li>
+              <li className="text-gray-300 hover:text-sky-300 transition-colors cursor-pointer">Audit Reports</li>
+              <li className="text-gray-300 hover:text-sky-300 transition-colors cursor-pointer">Roadmap</li>
+              <li className="text-gray-300 hover:text-sky-300 transition-colors cursor-pointer">Blog</li>
             </ul>
           </div>
 
           {/* Contact & Social */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-700">Connect</h3>
-            <div className="space-y-3 text-sm">
+            <h3 className="text-lg font-semibold mb-6 text-sky-300">Connect</h3>
+            <div className="space-y-4">
               <a
-                href="mailto:info@bluelinkblockchain.com"
-                target="_blank"
-                className="flex items-center text-gray-700 hover:text-blue-600 transition-colors">
-                <Mail className="h-4 w-4 mr-2" />
+              href="mailto:info@bluelinkblockchain.com"
+              target="_blank"
+              className="flex items-center text-gray-300 hover:text-sky-300 transition-colors">
+                <Mail className="h-5 w-5 mr-3" />
                 info@bluelinkblockchain.com
               </a>
               <a
-                href="https://t.me/bluelinkblockchain"  
-                target="_blank"
-                className="flex items-center text-gray-700 hover:text-blue-600 transition-colors">
-                <MessageCircle className="h-4 w-4 mr-2" />
-                Telegram
+              href="https://t.me/bluelinkblockchain"  
+              target="_blank"
+              className="flex items-center text-gray-300 hover:text-sky-300 transition-colors">
+                <MessageCircle className="h-5 w-5 mr-3" />
+                Telegram Community
               </a>
               <a
-                href="https://x.com/Bluelink2025" 
-                target="_blank"
-                className="flex items-center text-gray-700 hover:text-blue-600 transition-colors">
-                <Twitter className="h-4 w-4 mr-2" />
-                @BlueLink2025                
+              href="https://x.com/Bluelink2025" 
+              target="_blank"
+              className="flex items-center text-gray-300 hover:text-sky-300 transition-colors">
+                <Twitter className="h-5 w-5 mr-3" />
+                BlueLink2025                
               </a>
+
               <a
-                href="https://bluelinkblockchain.com" 
-                target="_blank"
-                className="flex items-center text-gray-700 hover:text-blue-600 transition-colors">
-                <Globe className="h-4 w-4 mr-2" />
-                Website
+             href="https://bluelinkblockchain.com" 
+             target="_blank"
+              
+              className="flex items-center text-gray-300 hover:text-sky-300 transition-colors">
+                <Globe className="h-5 w-5 mr-3" />
+                www.bluelinkblockchain.com
               </a>
             </div>
           </div>
         </div>
 
-        {/* Legal Notice */}
-        <div className="border-t border-sky-300 mt-8 pt-6 animate-fade-in">
-          <div className="text-center mb-4">
-            <p className="text-sm text-gray-600 mb-2">
-              🇦🇪 Dubai Operations | 🇻🇬 BVI Legal Structure | Regulated & Compliant
-            </p>
+        {/* Legal & Compliance */}
+        <div className="border-t border-gray-700 mt-12 pt-8 animate-fade-in">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="font-semibold mb-4 text-sky-300">Legal Structure</h4>
+              <div className="text-sm text-gray-300 space-y-2">
+                <p>BlueLink Blockchain Services operates under a dual-jurisdiction strategy:</p>
+                <p>🇦🇪 Dubai: Operational HQ for exchange development, ecosystem management, and strategic partnerships.</p>
+                <p>🇻🇬 BVI: Legal structure optimised for token issuance, governance, and regulatory flexibility.</p>
+              </div>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4 text-sky-300">Regulatory Compliance</h4>
+              <div className="text-sm text-gray-300 space-y-2">
+                <p>All users subject to KYC/AML verification</p>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-sky-300 mt-6 pt-6 flex flex-col md:flex-row justify-between items-center animate-fade-in">
-          <p className="text-gray-600 text-sm mb-4 md:mb-0">
+        <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center animate-fade-in">
+          <p className="text-gray-300 text-sm">
             © 2025 BlueLink Blockchain Services. All rights reserved.
           </p>
-          <div className="flex space-x-4">
+          <div className="flex space-x-6 mt-4 md:mt-0">
             <a
-              href={privacyPolicyPdf}
-              target="_blank"
-              className="text-gray-600 hover:text-blue-600 text-sm transition-colors">Privacy</a>
+            href={privacyPolicyPdf}
+            target="_blank"
+            className="text-gray-300 hover:text-sky-300 text-sm transition-colors">Privacy Policy</a>
             <a
-              href={termsOfServices}
-              target="_blank"
-              className="text-gray-600 hover:text-blue-600 text-sm transition-colors">Terms</a>
+            href={termsOfServices}
+            target="_blank"
+            className="text-gray-300 hover:text-sky-300 text-sm transition-colors">Terms of Service</a>
             <a
-              href={riskDisclosure} 
-              target="_blank"
-              className="text-gray-600 hover:text-blue-600 text-sm transition-colors">Risk Disclosure</a>
+            href={riskDisclosure} 
+            target="_blank"
+            className="text-gray-300 hover:text-sky-300 text-sm transition-colors">Risk Disclosure</a>
           </div>
         </div>
 
         {/* Disclaimer */}
-        <div className="mt-6 p-4 bg-white/50 rounded-lg animate-fade-in">
-          <p className="text-xs text-gray-500 text-center leading-relaxed">
-            <strong>Disclaimer:</strong> Cryptocurrency investments carry significant risk. 
-            Please consult with legal and financial advisors before participating.
+        <div className="mt-8 p-4 bg-gray-800/50 rounded-lg animate-fade-in">
+          <p className="text-xs text-gray-400 leading-relaxed">
+            <strong>Disclaimer:</strong> This website contains forward-looking statements and projections. 
+            BLT tokens may be considered securities in certain jurisdictions. Please consult with legal 
+            and financial advisors before participating. Cryptocurrency investments carry significant risk 
+            and may result in total loss of capital. Past performance does not guarantee future results.
           </p>
         </div>
       </div>
