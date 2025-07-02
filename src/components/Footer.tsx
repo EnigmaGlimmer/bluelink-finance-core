@@ -1,5 +1,8 @@
 
 import { Mail, MessageCircle, Twitter, Globe } from "lucide-react";
+import privacyPolicyPdf from "../assets/BlueLink_Privacy_Policy.pdf";
+import termsOfServices from "../assets/BlueLink_Terms_of_Service.pdf";
+import riskDisclosure from "../assets/BlueLink_Risk_Disclosure.pdf";
 
 const Footer = () => {
   return (
@@ -62,20 +65,46 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="border-t border-sky-300 mt-8 pt-6 text-center animate-fade-in">
-          <p className="text-gray-600 text-sm">
+        {/* Legal Documents & Copyright */}
+        <div className="border-t border-sky-300 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center animate-fade-in">
+          <p className="text-gray-600 text-sm mb-4 md:mb-0">
             © 2025 BlueLink Blockchain Services. All rights reserved.
           </p>
+          <div className="flex space-x-6">
+            <a
+              href={privacyPolicyPdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-blue-600 text-sm transition-colors"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href={termsOfServices}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-blue-600 text-sm transition-colors"
+            >
+              Terms of Service
+            </a>
+            <a
+              href={riskDisclosure}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-blue-600 text-sm transition-colors"
+            >
+              Risk Disclosure
+            </a>
+          </div>
         </div>
 
-        {/* Essential Legal Disclaimer */}
+        {/* Legal Disclaimer */}
         <div className="mt-6">
           <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg animate-fade-in">
             <p className="text-xs text-gray-600 text-center leading-relaxed">
               <strong>Investment Risk Warning:</strong> Cryptocurrency investments carry significant risk. 
               Digital assets are highly volatile and may lose value. Only invest what you can afford to lose. 
-              Not available to US persons or restricted jurisdictions.
+              Not available to US persons or restricted jurisdictions. Please read our Risk Disclosure document before participating.
             </p>
           </div>
         </div>
