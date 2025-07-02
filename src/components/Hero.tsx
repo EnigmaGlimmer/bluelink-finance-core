@@ -86,7 +86,7 @@ const Hero = () => {
             href="https://app.solidproof.io/projects/bluelink"
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center border-2 border-sky-200 text-sky-700 hover:bg-sky-50 px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 hover:border-sky-300 shadow-md"
+            className="inline-flex items-center justify-center border-2 bg-white border-sky-200 text-sky-700 hover:bg-sky-50 px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 hover:border-sky-300 shadow-md"
           >
             Audit Report
             <ArrowDown className="ml-3 h-5 w-5" />
