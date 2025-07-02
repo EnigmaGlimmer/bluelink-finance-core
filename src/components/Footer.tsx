@@ -1,15 +1,18 @@
 import { Mail, MessageCircle, Twitter, Globe } from "lucide-react";
+<<<<<<< HEAD
 import privacyPolicyPdf from ".././assets/BlueLink_Privacy_Policy.pdf";
 import termsOfServices from ".././assets/BlueLink_Terms_of_Service.pdf";
 import riskDisclosure from ".././assets/BlueLink_Risk_Disclosure.pdf";
+=======
+>>>>>>> 6720a2b495d36d334d75ce52185420d94ac01677
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-sky-100 via-sky-200 to-sky-300 text-gray-800">
+    <footer className="bg-gradient-to-br from-sky-50 via-sky-100 to-sky-200 text-gray-800">
       <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
           {/* Company Info */}
-          <div className="md:col-span-1">
+          <div>
             <div className="flex items-center mb-4">
               <img
                 src="/lovable-uploads/73ed770f-97f5-48ce-82da-40ff54317af3.png"
@@ -17,17 +20,26 @@ const Footer = () => {
                 className="h-8 w-auto mr-3"
               />
             </div>
+<<<<<<< HEAD
             <p className="text-gray-700 mb-4 text-sm">
               Redefining global finance through blockchain innovation and
               regulatory excellence.
+=======
+            <p className="text-gray-700 mb-4">
+              Redefining global finance through blockchain innovation and regulatory excellence.
+>>>>>>> 6720a2b495d36d334d75ce52185420d94ac01677
             </p>
-            <p className="text-sm text-blue-600 font-semibold">
+            <p className="text-sm text-blue-600 font-semibold mb-4">
               "Today's Success, Tomorrow's Solution"
+            </p>
+            <p className="text-sm text-gray-600">
+              🇻🇬 British Virgin Islands | Regulated & Compliant
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Contact */}
           <div>
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4 text-blue-700">
               Resources
             </h3>
@@ -53,6 +65,10 @@ const Footer = () => {
               Connect
             </h3>
             <div className="space-y-3 text-sm">
+=======
+            <h3 className="text-lg font-semibold mb-4 text-blue-700">Contact Us</h3>
+            <div className="space-y-3">
+>>>>>>> 6720a2b495d36d334d75ce52185420d94ac01677
               <a
                 href="mailto:info@bluelinkblockchain.com"
                 target="_blank"
@@ -99,6 +115,7 @@ const Footer = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Legal Notice */}
         <div className="border-t border-sky-300 mt-8 pt-6 animate-fade-in">
           <div className="text-center mb-4">
@@ -146,6 +163,24 @@ const Footer = () => {
             significant risk. Please consult with legal and financial advisors
             before participating.
           </p>
+=======
+        {/* Copyright */}
+        <div className="border-t border-sky-300 mt-8 pt-6 text-center animate-fade-in">
+          <p className="text-gray-600 text-sm">
+            © 2025 BlueLink Blockchain Services. All rights reserved.
+          </p>
+        </div>
+
+        {/* Essential Legal Disclaimer */}
+        <div className="mt-6">
+          <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg animate-fade-in">
+            <p className="text-xs text-gray-600 text-center leading-relaxed">
+              <strong>Investment Risk Warning:</strong> Cryptocurrency investments carry significant risk. 
+              Digital assets are highly volatile and may lose value. Only invest what you can afford to lose. 
+              Not available to US persons or restricted jurisdictions.
+            </p>
+          </div>
+>>>>>>> 6720a2b495d36d334d75ce52185420d94ac01677
         </div>
       </div>
     </footer>
