@@ -13,7 +13,7 @@ const Navbar = () => {
     { name: "About", href: "#about" },
     { name: "Features", href: "#features" },
     { name: "Presale", href: "#presale" },
-    { name: "Waitlist", href: "#waitlist" },
+    { name: "Waitlist", href: "#Waitlist" },
     { name: "Tokenomics", href: "#tokenomics" },
     { name: "Roadmap", href: "#roadmap" },
     { name: "FAQ", href: "#faq" },

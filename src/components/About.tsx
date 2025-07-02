@@ -92,7 +92,7 @@ const About = () => {
                     <div className="text-sm text-gray-600">Operations & Development</div>
                   </div>
                   <div>
-                    <div className="text-lg font-semibold text-blue-600">British Virgin Islands Foundation</div>
+                    <div className="text-lg font-semibold text-blue-600">British Virgin Islands</div>
                     <div className="text-sm text-gray-600">Token Issuance & Governance</div>
                   </div>
                 </div>

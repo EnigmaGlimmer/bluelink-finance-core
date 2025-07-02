@@ -25,7 +25,7 @@ const Hero = () => {
         {/* Main Heading */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in leading-tight text-gray-900">
           The Future of
-          <span className="block bg-gradient-to-r from-blue-600 to-sky-600 bg-clip-text text-transparent">
+          <span className="block bg-gradient-to-r from-blue-600 to-sky-200 bg-clip-text text-transparent">
             Digital Finance
           </span>
         </h1>

@@ -51,7 +51,7 @@ const Tokenomics = () => {
             <p className="text-blue-100 font-medium">Total Supply</p>
           </div>
           <div className="bg-gradient-to-br from-sky-500 to-sky-600 rounded-2xl p-8 text-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in">
-            <h3 className="text-3xl font-bold mb-2">BLT</h3>
+            <h3 className="text-3xl font-bold mb-2">$BLT</h3>
             <p className="text-sky-100 font-medium">Token Symbol</p>
           </div>
           <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-8 text-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in">
