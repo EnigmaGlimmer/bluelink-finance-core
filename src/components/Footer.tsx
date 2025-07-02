@@ -6,7 +6,7 @@ import riskDisclosure from '.././assets/BlueLink_Risk_Disclosure.pdf';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-sky-100 via-sky-200 to-sky-300 text-gray-800">
+    <footer className="bg-gradient-to-br from-sky-50 via-sky-100 to-sky-200 text-gray-800">
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in">
           {/* Company Info */}
@@ -26,20 +26,32 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Legal & Resources */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-700">Resources</h3>
+            <h3 className="text-lg font-semibold mb-4 text-blue-700">Legal & Resources</h3>
             <ul className="space-y-2 text-sm">
+              <li>
+                <a href={privacyPolicyPdf} target="_blank" className="text-gray-700 hover:text-blue-600 transition-colors">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href={termsOfServices} target="_blank" className="text-gray-700 hover:text-blue-600 transition-colors">
+                  Terms of Service
+                </a>
+              </li>
+              <li>
+                <a href={riskDisclosure} target="_blank" className="text-gray-700 hover:text-blue-600 transition-colors">
+                  Risk Disclosure
+                </a>
+              </li>
               <li className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">Whitepaper</li>
-              <li className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">Documentation</li>
-              <li className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">Audit Reports</li>
-              <li className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">Roadmap</li>
             </ul>
           </div>
 
-          {/* Contact & Social */}
+          {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-700">Connect</h3>
+            <h3 className="text-lg font-semibold mb-4 text-blue-700">Contact</h3>
             <div className="space-y-3 text-sm">
               <a
                 href="mailto:info@bluelinkblockchain.com"
@@ -73,42 +85,51 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Legal Notice */}
+        {/* Legal Jurisdiction */}
         <div className="border-t border-sky-300 mt-8 pt-6 animate-fade-in">
           <div className="text-center mb-4">
             <p className="text-sm text-gray-600 mb-2">
-              🇦🇪 Dubai Operations | 🇻🇬 BVI Legal Structure | Regulated & Compliant
+              🇻🇬 British Virgin Islands Jurisdiction | Regulated & Compliant
+            </p>
+            <p className="text-xs text-gray-500">
+              BlueLink Blockchain Services is incorporated in the British Virgin Islands
             </p>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-sky-300 mt-6 pt-6 flex flex-col md:flex-row justify-between items-center animate-fade-in">
-          <p className="text-gray-600 text-sm mb-4 md:mb-0">
+        {/* Copyright */}
+        <div className="border-t border-sky-300 mt-6 pt-6 text-center animate-fade-in">
+          <p className="text-gray-600 text-sm">
             © 2025 BlueLink Blockchain Services. All rights reserved.
           </p>
-          <div className="flex space-x-4">
-            <a
-              href={privacyPolicyPdf}
-              target="_blank"
-              className="text-gray-600 hover:text-blue-600 text-sm transition-colors">Privacy</a>
-            <a
-              href={termsOfServices}
-              target="_blank"
-              className="text-gray-600 hover:text-blue-600 text-sm transition-colors">Terms</a>
-            <a
-              href={riskDisclosure} 
-              target="_blank"
-              className="text-gray-600 hover:text-blue-600 text-sm transition-colors">Risk Disclosure</a>
-          </div>
         </div>
 
-        {/* Disclaimer */}
-        <div className="mt-6 p-4 bg-white/50 rounded-lg animate-fade-in">
-          <p className="text-xs text-gray-500 text-center leading-relaxed">
-            <strong>Disclaimer:</strong> Cryptocurrency investments carry significant risk. 
-            Please consult with legal and financial advisors before participating.
-          </p>
+        {/* Legal Disclaimers */}
+        <div className="mt-6 space-y-4">
+          {/* Investment Warning */}
+          <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg animate-fade-in">
+            <p className="text-xs text-gray-600 text-center leading-relaxed">
+              <strong>Investment Risk Warning:</strong> Cryptocurrency investments carry significant risk of loss. 
+              Digital assets are highly volatile and may lose substantial value. Only invest what you can afford to lose.
+            </p>
+          </div>
+
+          {/* Regulatory Disclaimer */}
+          <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg animate-fade-in">
+            <p className="text-xs text-gray-600 text-center leading-relaxed">
+              <strong>Regulatory Notice:</strong> This token offering may not be available to residents of certain jurisdictions. 
+              Please consult with legal and financial advisors before participating. Not available to US persons.
+            </p>
+          </div>
+
+          {/* General Disclaimer */}
+          <div className="p-4 bg-gray-50 border border-gray-200 rounded-lg animate-fade-in">
+            <p className="text-xs text-gray-500 text-center leading-relaxed">
+              <strong>General Disclaimer:</strong> This website and token offering are for informational purposes only and do not constitute 
+              investment advice, financial advice, trading advice, or any other sort of advice. Please conduct your own research and 
+              consult with qualified professionals before making any investment decisions.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
