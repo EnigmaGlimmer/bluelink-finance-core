@@ -141,7 +141,7 @@ const Roadmap = () => {
         </div>
 
         {/* Vision Statement */}
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-center text-white">
+        <div className="mt-16 bg-gradient-to-r from-blue-600 to-sky-600 rounded-2xl p-8 md:p-12 text-center text-white">
           <h3 className="text-3xl font-bold mb-4">Our Long-term Vision</h3>
           <p className="text-xl mb-6 max-w-4xl mx-auto">
             "To merge the strengths of Binance and Nasdaq into a next-generation Web3 financial ecosystem, 
