@@ -102,9 +102,9 @@ const Roadmap = () => {
 
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500 rounded-full hidden lg:block"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-sky-500 to-sky-200 rounded-full hidden lg:block"></div>
 
-          <div className="space-y-12">
+          <div className="space-y-1">
             {quarters.map((quarter, index) => (
               <div key={index} className={`flex flex-col lg:flex-row items-center ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
                 {/* Content Card */}
