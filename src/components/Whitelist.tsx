@@ -13,7 +13,7 @@ import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
 import { Mail, User, MessageSquare, Link, CheckCircle } from "lucide-react";
 
-const Waitlist = () => {
+const Whitelist = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -104,21 +104,19 @@ const Waitlist = () => {
         toast({
           title: "Success!",
           description:
-            "You've been added to our waitlist. We'll be in touch soon!",
+            "You've been added to our Whitelist. We'll be in touch soon!",
         });
-      } 
-      else if (result.result === "already_registered") {
-  toast({
-    title: "Already Registered",
-    description: "This email is already on our waitlist.",
-    variant: "destructive",
-  });
-}
-      else {
+      } else if (result.result === "already_registered") {
+        toast({
+          title: "Already Registered",
+          description: "This email is already on our Whitelist.",
+          variant: "destructive",
+        });
+      } else {
         throw new Error(result.message || "Unknown error");
       }
     } catch (error) {
-      console.error("Waitlist submission error:", error);
+      console.error("Whitelist submission error:", error);
       toast({
         title: "Submission Failed",
         description: "Please try again or contact our support team.",
@@ -141,7 +139,7 @@ const Waitlist = () => {
                   Welcome to BlueLink!
                 </h2>
                 <p className="text-lg text-gray-600 mb-6">
-                  You've successfully joined our exclusive waitlist. We'll keep
+                  You've successfully joined our exclusive Whitelist. We'll keep
                   you updated on our progress and early access opportunities.
                 </p>
                 <Button
@@ -159,11 +157,17 @@ const Waitlist = () => {
   }
 
   return (
-    <section id="Waitlist" className="py-20 bg-gradient-to-br from-sky-50 via-white to-sky-100">
+    <section
+      id="Whitelist"
+      className="py-20 bg-gradient-to-br from-sky-50 via-white to-sky-100"
+    >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Join Our Exclusive Waitlist
+          <h2
+            className="text-4xl font-bold text-sky-600 mb-4 animate-pulse"
+          >
+            {" "}
+            Join Our Exclusive Whitelist
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Be among the first to access BlueLink Blockchain Services ecosystem.
@@ -221,7 +225,7 @@ const Waitlist = () => {
                   label="Social Links (Optional)"
                   name="social"
                   type="text"
-                  placeholder="LinkedIn, Twitter, etc."
+                  placeholder="LinkedIn, Twitter, Telegram, etc."
                   value={formData.social}
                   onChange={handleInputChange}
                   disabled={isSubmitting}
@@ -232,13 +236,13 @@ const Waitlist = () => {
                   disabled={isSubmitting}
                   className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed animate-fade-in"
                 >
-                  {isSubmitting ? "Submitting..." : "Join Waitlist"}
+                  {isSubmitting ? "Submitting..." : "Join Whitelist"}
                 </Button>
               </form>
 
               <div className="mt-6 text-center animate-fade-in">
                 <p className="text-sm text-gray-500">
-                  By joining our waitlist, you agree to receive updates about
+                  By joining our Whitelist, you agree to receive updates about
                   BlueLink Blockchain Services.
                 </p>
               </div>
@@ -285,4 +289,4 @@ const TextareaField = ({ icon: Icon, ...props }: any) => (
   </div>
 );
 
-export default Waitlist;
+export default Whitelist;

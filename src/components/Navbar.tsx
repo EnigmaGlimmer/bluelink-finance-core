@@ -13,7 +13,7 @@ const Navbar = () => {
     { name: "About", href: "#about" },
     { name: "Features", href: "#features" },
     { name: "Presale", href: "#presale" },
-    { name: "Waitlist", href: "#Waitlist" },
+    { name: "Whitelist", href: "#Whitelist" },
     { name: "Tokenomics", href: "#tokenomics" },
     { name: "Roadmap", href: "#roadmap" },
     { name: "FAQ", href: "#faq" },
@@ -36,7 +36,7 @@ const Navbar = () => {
             <div className="flex items-center space-x-3">
               <a href="#">
               <img 
-                src="/lovable-uploads/73ed770f-97f5-48ce-82da-40ff54317af3.png" 
+                src="/image/73ed770f-97f5-48ce-82da-40ff54317af3.png" 
                 alt="BlueLink Logo" 
                 className="h-10 w-auto"
               />
