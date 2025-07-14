@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Shield, Globe, ArrowDown } from "lucide-react";
 import { useState } from "react";
 import PresaleModal from "./PresaleModal";
-import whitepaper from ".././assets/BlueLink_Whitepaper_v14.pdf";
+import whitepaper from ".././assets/BlueLink_Whitepaper.pdf";
 
 const Hero = () => {
   const [isPresaleModalOpen, setIsPresaleModalOpen] = useState(false);
