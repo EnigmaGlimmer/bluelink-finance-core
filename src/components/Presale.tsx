@@ -11,58 +11,58 @@ interface Countdown {
 
 const Presale = () => {
   const [startDate, setStartDate] = useState<Date | null>(null);
-  const [timeLeft, setTimeLeft] = useState<Countdown | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  // const [timeLeft, setTimeLeft] = useState<Countdown | null>(null);
+  // const [error, setError] = useState<string | null>(null);
 
   // Fetch presale start date from Apps Script once
-  useEffect(() => {
-    const fetchStartTime = async () => {
-      try {
-        const res = await fetch(
-          "https://script.google.com/macros/s/AKfycbzF4odPFmNowhULRSo9aC4LWdturHV-BC26PLuXsSwYWChq0oJWEjMLnTBEW2AT_0oeVg/exec"
-        );
-        const data = await res.json();
+  // useEffect(() => {
+  //   const fetchStartTime = async () => {
+  //     try {
+  //       const res = await fetch(
+  //         "https://script.google.com/macros/s/AKfycbzF4odPFmNowhULRSo9aC4LWdturHV-BC26PLuXsSwYWChq0oJWEjMLnTBEW2AT_0oeVg/exec"
+  //       );
+  //       const data = await res.json();
 
-        if (data?.Presale_start) {
-          setStartDate(new Date(data.Presale_start));
-        } else {
-          throw new Error("Invalid start time");
-        }
-      } catch (err) {
-        console.error("Countdown fetch error:", err);
-        setError("Unable to fetch presale countdown.");
-      }
-    };
+  //       if (data?.Presale_start) {
+  //         setStartDate(new Date(data.Presale_start));
+  //       } else {
+  //         throw new Error("Invalid start time");
+  //       }
+  //     } catch (err) {
+  //       console.error("Countdown fetch error:", err);
+  //       setError("Unable to fetch presale countdown.");
+  //     }
+  //   };
 
-    fetchStartTime();
-  }, []);
+  //   fetchStartTime();
+  // }, []);
 
-  // Local timer countdown based on presale start date
-  useEffect(() => {
-    if (!startDate) return;
+  // // Local timer countdown based on presale start date
+  // useEffect(() => {
+  //   if (!startDate) return;
 
-    const updateCountdown = () => {
-      const now = new Date().getTime();
-      const distance = startDate.getTime() - now;
+  //   const updateCountdown = () => {
+  //     const now = new Date().getTime();
+  //     const distance = startDate.getTime() - now;
 
-      if (distance <= 0) {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        return;
-      }
+  //     if (distance <= 0) {
+  //       setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  //       return;
+  //     }
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  //     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  //     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  //     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  //     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      setTimeLeft({ days, hours, minutes, seconds });
-    };
+  //     setTimeLeft({ days, hours, minutes, seconds });
+  //   };
 
-    updateCountdown(); // run immediately
-    const interval = setInterval(updateCountdown, 1000);
+  //   updateCountdown(); // run immediately
+  //   const interval = setInterval(updateCountdown, 1000);
 
-    return () => clearInterval(interval);
-  }, [startDate]);
+  //   return () => clearInterval(interval);
+  // }, [startDate]);
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -83,7 +83,7 @@ const Presale = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            BlueLink Token Presale
+            BlueLink Token Sale
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Join the future of decentralized finance. Get BLT tokens at exclusive presale prices
@@ -92,7 +92,7 @@ const Presale = () => {
         </div>
 
         {/* Countdown Timer */}
-        <div className="bg-white/80 backdrop-blur-lg rounded-3xl p-10 mb-16 max-w-4xl mx-auto border border-sky-200 shadow-xl animate-scale-in">
+        {/* <div className="bg-white/80 backdrop-blur-lg rounded-3xl p-10 mb-16 max-w-4xl mx-auto border border-sky-200 shadow-xl animate-scale-in">
           <h3 className="text-3xl font-bold text-gray-900 text-center mb-8">
             Presale Starts In:
           </h3>
@@ -125,7 +125,7 @@ const Presale = () => {
               ))}
             </div>
           )}
-        </div>
+        </div> */}
 
         {/* Sale Phases */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">

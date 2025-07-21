@@ -283,7 +283,7 @@ const TokenSale = () => {
                 return;
             }
 
-            // Calculate how many SHE tokens this amount would give
+            // Calculate how many BLT tokens this amount would give
             let estimatedTokens = 0;
             try {
                 if (payMethod === PaymentMethods.ETH.name) {
@@ -522,7 +522,7 @@ const TokenSale = () => {
                             <div className="flex flex-col gap-1 max-lg:text-sm max-md:text-xs">
                                 <div className="text-sm font-medium text-sky-900">Estimate to receive:</div>
                                 <div className="ammount-input">
-                                    <img src={Assets.bltIcon} className="w-6 h-6 max-[425px]:w-4 max-[425px]:h-4" alt="$SHE" />
+                                    <img src={Assets.bltIcon} className="w-6 h-6 max-[425px]:w-4 max-[425px]:h-4" alt="$BLT" />
                                     <input className="focus:outline-none w-full bg-transparent" placeholder="0" value={formatNumber(Number(estimatedAmount).toFixed(3))} readOnly />
                                 </div>
                             </div>

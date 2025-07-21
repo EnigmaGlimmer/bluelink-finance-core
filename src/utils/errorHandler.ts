@@ -25,7 +25,7 @@ export const ErrorCodes = {
     INVALID_ADDRESS: 'INVALID_ADDRESS',
     NETWORK_ERROR: 'NETWORK_ERROR',
     CONTRACT_ERROR: 'CONTRACT_ERROR',
-    NOT_ENOUGH_SHE: 'NOT_ENOUGH_SHE',
+    NOT_ENOUGH_BLT: 'NOT_ENOUGH_BLT',
     GAS_ERROR: 'GAS_ERROR',
     SLIPPAGE_ERROR: 'SLIPPAGE_ERROR',
     COOLDOWN_ERROR: 'COOLDOWN_ERROR',
@@ -45,7 +45,7 @@ const ERROR_MESSAGES = {
     [ErrorCodes.TOO_LOW_AMOUNT]: 'Purchase amount is too low',
     [ErrorCodes.NETWORK_ERROR]: 'Network error. Please check your connection and try again.',
     [ErrorCodes.CONTRACT_ERROR]: 'Contract error occurred. Please try again.',
-    [ErrorCodes.NOT_ENOUGH_SHE]: 'Not enough SHE tokens remaining in the sale',
+    [ErrorCodes.NOT_ENOUGH_BLT]: 'Not enough BLT tokens remaining in the sale',
     [ErrorCodes.GAS_ERROR]: 'Gas estimation failed. Please try again with a higher gas limit.',
     [ErrorCodes.SLIPPAGE_ERROR]: 'Slippage is too high. Please try again.',
     [ErrorCodes.COOLDOWN_ERROR]: 'Please wait one hour after your last purchase before buying again.',
@@ -79,10 +79,10 @@ const parseError = (error) => {
     }
 
     if (errorMessage.includes('NotEnoughTokensAvailable'.toLowerCase()) ||
-        errorMessage.includes('not enough SHE tokens'.toLowerCase()) ||
-        errorMessage.includes('not enough SHE in the sale'.toLowerCase()) ||
-        errorReason.includes('not enough SHE'.toLowerCase())) {
-        return new BlockchainError(ERROR_MESSAGES[ErrorCodes.NOT_ENOUGH_SHE], ErrorCodes.NOT_ENOUGH_SHE, error);
+        errorMessage.includes('not enough BLT tokens'.toLowerCase()) ||
+        errorMessage.includes('not enough BLT in the sale'.toLowerCase()) ||
+        errorReason.includes('not enough BLT'.toLowerCase())) {
+        return new BlockchainError(ERROR_MESSAGES[ErrorCodes.NOT_ENOUGH_BLT], ErrorCodes.NOT_ENOUGH_BLT, error);
     }
 
     // Insufficient allowance errors
@@ -242,9 +242,9 @@ export const withErrorHandling = (asyncFunction) => {
 
 // Specific error handler for buy operations
 export const handleBuyOperation = (asyncFunction) => {
-    return async (amount, minSheAmount, onStateChange, userAddress) => {
+    return async (amount, minBltAmount, onStateChange, userAddress) => {
         try {
-            return await asyncFunction(amount, minSheAmount, onStateChange, userAddress);
+            return await asyncFunction(amount, minBltAmount, onStateChange, userAddress);
         } catch (error) {
             Logger.error('Buy operation error:', error);
 

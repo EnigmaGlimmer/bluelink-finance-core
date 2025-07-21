@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ArrowRight } from "lucide-react";
-import whitepaper from ".././assets/BlueLink_Whitepaper.pdf";
+import whitepaper from ".././assets/docs/BlueLink_Whitepaper.pdf";
 import "@/assets/css/home/navbar.css";
 
 const Navbar = () => {

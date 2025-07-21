@@ -23,7 +23,7 @@ const Hero = () => {
       <div className="relative z-10 grid grid-cols-2 items-center">
         <div className="container mx-auto px-12 text-center">
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in leading-tight text-gray-900">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl text-sky-300 font-bold mb-6 animate-fade-in leading-tight text-gray-900">
             The Future of
             <span className="block bg-gradient-to-r from-blue-600 to-sky-200 bg-clip-text text-transparent">
               Digital Finance

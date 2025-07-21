@@ -65,12 +65,12 @@ export const getTokenAmountForEth = async (ethAmount: number): Promise<string> =
 
 export const buyWithUSDT = handleBuyOperation(async (
     usdtAmount: number,
-    minSheAmount: number,
+    minBltAmount: number,
     onStateChange?: (status: (typeof PurchaseStatus)[keyof typeof PurchaseStatus]) => void,
     userAddress?: Address
 ): Promise<Hex> => {
     const amountInUsdt = parseUnits(usdtAmount.toString(), 6);
-    const sheAmount = parseUnits(minSheAmount.toString(), 18);
+    const bltAmount = parseUnits(minBltAmount.toString(), 18);
 
     await approvePaymentToken(Contracts.USDT.address, Contracts.SALE.address, amountInUsdt, onStateChange, userAddress!);
 
@@ -79,7 +79,7 @@ export const buyWithUSDT = handleBuyOperation(async (
         address: Contracts.SALE.address,
         abi: Contracts.SALE.abi,
         functionName: "buyWithUSDT",
-        args: [amountInUsdt, sheAmount]
+        args: [amountInUsdt, bltAmount]
     });
 
     return writeContract(config, request);
@@ -87,12 +87,12 @@ export const buyWithUSDT = handleBuyOperation(async (
 
 export const buyWithUSDC = handleBuyOperation(async (
     usdcAmount: number,
-    minSheAmount: number,
+    minBltAmount: number,
     onStateChange?: (status: (typeof PurchaseStatus)[keyof typeof PurchaseStatus]) => void,
     userAddress?: Address
 ): Promise<Hex> => {
     const amountInUsdc = parseUnits(usdcAmount.toString(), 6);
-    const sheAmount = parseUnits(minSheAmount.toString(), 18);
+    const bltAmount = parseUnits(minBltAmount.toString(), 18);
 
     onStateChange?.(PurchaseStatus.APPROVING);
     await approvePaymentToken(Contracts.USDC.address, Contracts.SALE.address, amountInUsdc, onStateChange, userAddress!);
@@ -104,7 +104,7 @@ export const buyWithUSDC = handleBuyOperation(async (
         address: Contracts.SALE.address,
         abi: Contracts.SALE.abi,
         functionName: "buyWithUSDC",
-        args: [amountInUsdc, sheAmount]
+        args: [amountInUsdc, bltAmount]
     });
 
     return writeContract(config, request);
@@ -112,19 +112,19 @@ export const buyWithUSDC = handleBuyOperation(async (
 
 export const buyWithETH = handleBuyOperation(async (
     ethAmount: number,
-    minSheAmount: number,
+    minBltAmount: number,
     onStateChange?: (status: (typeof PurchaseStatus)[keyof typeof PurchaseStatus]) => void
 ): Promise<Hex> => {
     onStateChange?.(PurchaseStatus.PURCHASING);
     const amountInEth = parseUnits(ethAmount.toString(), 18);
-    const sheAmount = parseUnits(minSheAmount.toString(), 18);
+    const bltAmount = parseUnits(minBltAmount.toString(), 18);
 
     const { request } = await simulateContract(config, {
         address: Contracts.SALE.address,
         abi: Contracts.SALE.abi,
         functionName: "buyWithETH",
         value: amountInEth,
-        args: [sheAmount]
+        args: [bltAmount]
     });
 
     return writeContract(config, request);

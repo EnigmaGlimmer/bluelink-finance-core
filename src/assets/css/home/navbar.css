@@ -3,7 +3,7 @@
 @import "../_shared/typography.css";
 
 .connect-button {
-    @apply transition-animation radius-scale row-center gap-2 px-4 py-3 bg-sky-200 text-black font-medium h-fit max-md:text-xs
+    @apply transition-animation radius-scale row-center gap-2 px-4 py-3 bg-sky-200 text-sky-900 font-medium h-fit max-md:text-xs
 }
 
 .icon-chain {
