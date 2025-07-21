@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animation keyframes */
+@keyframes infinite-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes leftToRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes rightToLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Custom classes using @apply (if your setup supports it) */
+.transition-animation {
+    @apply cursor-pointer transition-all duration-300 ease-in-out hover:opacity-70 active:opacity-85;
+}
+
+.rotate-animation {
+    animation: infinite-rotate 10s linear infinite;
+}
+
+.ltr-animation {
+    animation: leftToRight 3s ease-in-out infinite;
+}
+
+.rtl-animation {
+    animation: rightToLeft 3s ease-in-out infinite;
+}

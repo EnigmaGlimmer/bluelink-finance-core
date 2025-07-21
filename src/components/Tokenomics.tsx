@@ -47,19 +47,19 @@ const Tokenomics = () => {
         {/* Token Overview */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
           <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-8 text-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in">
-            <h3 className="text-3xl font-bold mb-2">1B</h3>
+            <h3 className="text-3xl text-sky-900 font-bold mb-2">1B</h3>
             <p className="text-blue-100 font-medium">Total Supply</p>
           </div>
           <div className="bg-gradient-to-br from-sky-500 to-sky-600 rounded-2xl p-8 text-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in">
-            <h3 className="text-3xl font-bold mb-2">$BLT</h3>
+            <h3 className="text-3xl text-sky-900 font-bold mb-2">$BLT</h3>
             <p className="text-sky-100 font-medium">Token Symbol</p>
           </div>
           <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-8 text-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in">
-            <h3 className="text-3xl font-bold mb-2">3%</h3>
+            <h3 className="text-3xl text-sky-900 font-bold mb-2">3%</h3>
             <p className="text-purple-100 font-medium">Transaction Tax</p>
           </div>
           <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl p-8 text-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in">
-            <h3 className="text-3xl font-bold mb-2">ERC-20</h3>
+            <h3 className="text-3xl text-sky-900 font-bold mb-2">ERC-20</h3>
             <p className="text-emerald-100 font-medium">Initial Standard</p>
           </div>
         </div>

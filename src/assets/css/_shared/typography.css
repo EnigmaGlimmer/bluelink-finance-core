@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+    background-image: var(--primary-linear);
+    @apply text-6xl font-bold text-transparent bg-clip-text leading-tight max-xl:text-5xl max-lg:text-4xl;
+}
+
+h2 {
+    @apply text-5xl font-black text-primary max-xl:text-4xl max-lg:text-3xl;
+}
+
+h3 {
+    @apply text-3xl font-semibold text-primary max-xl:text-2xl max-lg:text-xl max-md:text-lg;
+}
+
+h4 {
+    @apply text-3xl font-bold text-primary max-lg:text-2xl max-md:text-xl;
+}
+
+@media (max-width: 425px) {
+    h1 {
+        @apply text-3xl;
+    }
+    h2 {
+        @apply text-2xl;
+    }
+    h3 {
+        @apply text-base;
+    }
+    h4 {
+        @apply text-lg;
+    }
+}

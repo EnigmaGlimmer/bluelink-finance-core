@@ -1,0 +1,94 @@
+@import "../_shared/animation.css";
+@import "../_shared/container.css";
+@import "../_shared/typography.css";
+
+.presale-container {
+    @apply relative mx-12 px-6 py-8 radius-scale bg-foreground/5 max-lg:mx-6 max-lg:px-3 max-lg:py-4 gap-3;
+}
+
+.presale-stat {
+    @apply flex flex-col gap-6 mb-8;
+}
+
+.presale-heading {
+    @apply font-black text-primary text-4xl max-lg:text-3xl max-md:text-2xl;
+}
+
+.presale-sections {
+    @apply grid grid-cols-4 gap-4 max-lg:grid-cols-2 max-lg:gap-2;
+}
+
+.presale-section {
+    @apply flex flex-col gap-2 p-4 radius-scale bg-background/50;
+}
+
+.presale-section-value {
+    @apply text-2xl font-semibold text-primary max-lg:text-xl max-md:text-lg;
+}
+
+.presale-section-label {
+    @apply text-[#D1D5DB] max-lg:text-sm max-md:text-xs;
+}
+
+.hover-item {
+    @apply absolute p-3 radius-scale bg-background border border-primary drop-shadow-[0px_0px_5px_rgba(12,181,176,0.3)] z-50 max-md:p-2;
+}
+
+.hover-item-label {
+    white-space: nowrap;
+    @apply text-sm max-lg:text-xs max-md:text-2xs;
+}
+
+.hover-item-value {
+    @apply text-base text-primary font-bold max-lg:text-sm max-md:text-xs;
+}
+
+.dot-item {
+    @apply relative w-5 h-5 xy-center;
+}
+
+.outer-ring {
+    @apply absolute w-full h-full rounded-full border-2 border-primary;
+}
+
+.inner-ring {
+    @apply bg-primary rounded-full;
+}
+
+@media (max-width: 425px) {
+    .presale-container {
+        @apply mx-4;
+    }
+
+    .presale-stat>p {
+        @apply text-xl;
+    }
+
+    .presale-stat {
+        @apply gap-3 mb-0;
+    }
+
+    .presale-heading {
+        @apply text-xl;
+    }
+
+    .presale-section {
+        @apply p-2 gap-0;
+    }
+
+    .presale-section-value {
+        @apply text-base;
+    }
+
+    .presale-section-label {
+        @apply text-2xs
+    }
+
+    .hover-item-label {
+        @apply text-3xs;
+    }
+
+    .hover-item-value {
+        @apply text-2xs;
+    }
+}
