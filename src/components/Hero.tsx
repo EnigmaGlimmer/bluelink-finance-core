@@ -14,16 +14,16 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-gradient-to-br from-sky-50 via-sky-100 to-sky-200"
+      className="relative min-h-screen pt-16 flex items-center justify-center overflow-hidden bg-gradient-to-br from-sky-50 via-sky-100 to-sky-200"
     >
       {/* Subtle animated elements */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-sky-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
-      <div className="relative z-10 grid grid-cols-2 items-center">
-        <div className="container mx-auto px-12 text-center">
+      <div className="relative z-10 max-md:max-w-lg max-md:my-12 flex flex-col max-md:gap-6 md:grid md:grid-cols-2 items-center">
+        <div className="container mx-auto px-4 lg:px-4 xl:px-12 text-center">
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl text-sky-300 font-bold mb-6 animate-fade-in leading-tight text-gray-900">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-sky-300 font-bold mb-3 md:mb-6 animate-fade-in leading-tight text-gray-900">
             The Future of
             <span className="block bg-gradient-to-r from-blue-600 to-sky-200 bg-clip-text text-transparent">
               Digital Finance
@@ -31,7 +31,7 @@ const Hero = () => {
           </h1>
 
           {/* Highlighted Tagline */}
-          <div className="mb-8 animate-fade-in delay-200">
+          <div className="mb-4 md:mb-8 animate-fade-in delay-200">
             <p className="text-xl md:text-2xl font-semibold text-blue-700 mb-2">
               <span className="text-blue-600 font-bold">Today's Success</span>,{" "}
               <span className="text-sky-600 font-bold">Tomorrow's Solution</span>
@@ -39,7 +39,7 @@ const Hero = () => {
           </div>
 
           {/* Professional Subtitle */}
-          <p className="text-sm md:text-base mb-12 max-w-4xl mx-auto text-gray-700 animate-fade-in delay-300 leading-relaxed">
+          <p className="text-sm md:text-base mb-4 md:mb-8 lg:mb-12 max-w-4xl mx-auto text-gray-700 animate-fade-in delay-300 leading-relaxed">
             <span className="text-blue-600 font-semibold">
               BlueLink Blockchain Services{" "}
             </span>{" "}
@@ -76,7 +76,7 @@ const Hero = () => {
         </div> */}
 
           {/* CTA Section */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in delay-1000">
+          <div className="flex flex-col lg:flex-row gap-3 lg:gap-6 justify-center items-center animate-fade-in delay-1000">
             <Button
               size="lg"
               onClick={() => scrollToSection("#Whitelist")}
@@ -89,7 +89,7 @@ const Hero = () => {
               href="https://app.solidproof.io/projects/bluelink"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center border-2 bg-white border-sky-200 text-sky-700 hover:bg-sky-50 px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 hover:border-sky-300 shadow-md"
+              className="whitespace-nowrap inline-flex items-center justify-center border-2 bg-white border-sky-200 text-sky-700 hover:bg-sky-50 px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 hover:border-sky-300 shadow-md"
             >
               Audit Report
               <ArrowDown className="ml-3 h-5 w-5" />
@@ -97,7 +97,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="mx-24">
+        <div className="w-fit md:mx-6 lg:mx-12 xl:mx-24">
           <TokenSale />
         </div>
       </div>
