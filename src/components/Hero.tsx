@@ -97,7 +97,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="xl:mx-24 lg:mx-12 md:mx-6 mx-4">
+        <div className="xl:mx-24 lg:mx-12 md:mx-6 mx-4 drop-shadow-[0px_12px_24px_rgba(12,74,110,0.3)]">
           <TokenSale />
         </div>
       </div>

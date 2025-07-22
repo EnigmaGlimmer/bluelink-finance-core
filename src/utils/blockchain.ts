@@ -249,8 +249,6 @@ export const getSaleStartTime = async (): Promise<number> => {
         functionName: "saleStartTime"
     });
 
-    console.log(result);
-
     return Number(result);
 };
 
@@ -261,8 +259,6 @@ export const getSaleEndTime = async (): Promise<number> => {
         functionName: "saleEndTime"
     });
     
-    console.log(result);
-
     return Number(result);
 };
 
