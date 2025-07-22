@@ -51,7 +51,7 @@ const TimeBar: React.FC<TimeBarProps> = ({ startTime, endTime, saleStatus }) => 
     }, [currentTime, startTime, endTime, saleStatus]);
 
     return (
-        <p className="text-2xl text-sky-900 font-medium max-lg:text-xl max-md:text-lg max-[425px]:text-base">
+        <p className="text-2xl text-sky-950 font-medium max-lg:text-xl max-md:text-lg max-[425px]:text-base">
             {message}
             {period && <span className="font-semibold text-sky-700 ml-2">{period}</span>}
         </p>

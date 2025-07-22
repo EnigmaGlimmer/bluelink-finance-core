@@ -1,6 +1,5 @@
 @import "../_shared/animation.css";
 @import "../_shared/container.css";
-@import "../_shared/typography.css";
 
 .tokensale-border {
     @apply border border-sky-500/10 bg-sky-100 backdrop-blur-3xl;
@@ -27,7 +26,7 @@
 }
 
 .ammount-input {
-    @apply w-full text-sky-900 flex gap-3 font-medium px-4 py-3 border border-sky-300/50 radius-scale transition-all duration-300 ease-in-out focus-within:border-sky-300 max-lg:text-sm;
+    @apply w-full text-sky-950 flex gap-3 font-medium px-4 py-3 border border-sky-300/50 radius-scale transition-all duration-300 ease-in-out focus-within:border-sky-300 max-lg:text-sm;
 }
 
 .payment-methods {
@@ -35,11 +34,11 @@
 }
 
 .payment-button {
-    @apply xy-center gap-2 px-3 py-2 rounded-lg text-base font-medium tracking-wide text-sky-900 tokensale-border transition-animation max-xl:text-sm;
+    @apply xy-center gap-2 px-3 py-2 rounded-lg text-base font-medium tracking-wide text-sky-950 tokensale-border transition-animation max-xl:text-sm;
 }
 
 .purchase-button {
-    @apply w-1/2 gap-2 px-6 py-2 bg-sky-900 text-sky-900 font-semibold disabled:text-white disabled:cursor-not-allowed rounded-lg text-xl tracking-wide transition-animation max-xl:text-base max-md:px-3 max-md:py-2;
+    @apply w-1/2 gap-2 px-6 py-2 bg-sky-950 text-sky-950 font-semibold disabled:text-white disabled:cursor-not-allowed rounded-lg text-xl tracking-wide transition-animation max-xl:text-base max-md:px-3 max-md:py-2;
 }
 
 .statistics {
@@ -47,7 +46,7 @@
 }
 
 .statistic-card {
-    @apply col-center text-center gap-2 py-6 radius-scale tokensale-border max-lg:text-sm;
+    @apply col-center text-center text-sky-900 gap-1 py-3 radius-scale tokensale-border max-lg:text-sm;
 }
 
 @media (max-width: 425px) {

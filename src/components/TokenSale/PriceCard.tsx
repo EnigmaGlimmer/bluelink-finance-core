@@ -12,7 +12,7 @@ const PriceCard: React.FC<PriceCardProps> = ({ label, price }) => {
                 {label}
             </p>
             <p className="text-xl text-sky-700 font-semibold max-xl:text-xl max-lg:text-base max-[425px]:text-sm">
-                <span className="text-sky-900 font-bold">$BLT</span> = ${price}
+                <span className="text-sky-950 font-bold">$BLT</span> = ${price}
             </p>
         </div>
     );

@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen pt-16 flex items-center justify-center overflow-hidden bg-gradient-to-br from-sky-50 via-sky-100 to-sky-200"
+      className="relative mt-16 py-16 flex items-center justify-center overflow-hidden bg-gradient-to-br from-sky-50 via-sky-100 to-sky-200"
     >
       {/* Subtle animated elements */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -97,7 +97,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="w-fit md:mx-6 lg:mx-12 xl:mx-24">
+        <div className="xl:mx-24 lg:mx-12 md:mx-6 mx-4">
           <TokenSale />
         </div>
       </div>

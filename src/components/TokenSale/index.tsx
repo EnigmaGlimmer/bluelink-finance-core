@@ -3,7 +3,7 @@ import { useAccount, usePublicClient, useBalance } from "wagmi";
 import useDebounce from "@/hooks/useDebounce";
 
 import PriceCard from "./PriceCard";
-// import StatisticCard from "./StatisticCard";
+import StatisticCard from "./StatisticCard";
 import TimeBar from "./TimeBar";
 import Progress from "./Progress";
 import {
@@ -445,13 +445,13 @@ const TokenSale = () => {
                         <PriceCard label="Next Price" price={nextPrice} />
                     </div>
 
-                    <p className="text-base text-sky-900 font-semibold max-lg:text-sm max-md:text-xs">
+                    <p className="text-base text-sky-950 font-semibold max-lg:text-sm max-md:text-xs">
                         Raised: <span className="font-semibold text-primary-400">${formatNumber(Number(totalFunds).toFixed(3))}</span>
                     </p>
 
                     <div className="flex flex-col gap-1">
                         <Progress value={soldOut} />
-                        <div className="between-center text-sm text-sky-900 font-medium max-lg:text-xs max-[425px]:text-[10px]">
+                        <div className="between-center text-sm text-sky-950 font-medium max-lg:text-xs max-[425px]:text-[10px]">
                             <p>Token Sold: <span className="text-primary-400">{formatNumberWithSuffix(Number(totalSold))}</span></p>
                             <p>Remaining: <span className="text-primary-400">{formatNumberWithSuffix(Number(initialAmount) - Number(totalSold))}</span></p>
                         </div>
@@ -504,7 +504,7 @@ const TokenSale = () => {
                         </div>
 
                         {/* Balance Display */}
-                        <div className="text-xs text-sky-900/80 flex justify-between items-center">
+                        <div className="text-xs text-sky-950/80 flex justify-between items-center">
                             <span>Available Balance:</span>
                             <span className="font-medium">
                                 {payMethod === PaymentMethods.ETH.name && ethBalance ?
@@ -520,7 +520,7 @@ const TokenSale = () => {
 
                         <div className="flex flex-col gap-1">
                             <div className="flex flex-col gap-1 max-lg:text-sm max-md:text-xs">
-                                <div className="text-sm font-medium text-sky-900">Estimate to receive:</div>
+                                <div className="text-sm font-medium text-sky-950">Estimate to receive:</div>
                                 <div className="ammount-input">
                                     <img src={Assets.bltIcon} className="w-6 h-6 max-[425px]:w-4 max-[425px]:h-4" alt="$BLT" />
                                     <input className="focus:outline-none w-full bg-transparent" placeholder="0" value={formatNumber(Number(estimatedAmount).toFixed(3))} readOnly />
@@ -561,20 +561,20 @@ const TokenSale = () => {
                 </div>
             </div>
 
-            {/* <div className="statistics">
+            <div className="statistics">
                 <StatisticCard
                     value={holders}
                     label="Token Holders"
                 />
                 <StatisticCard
-                    value={`$${formatNumberWithSuffix(Number(totalFunds).toFixed(3))}`}
+                    value={`$${formatNumberWithSuffix(Number(Number(totalFunds).toFixed(3)))}`}
                     label="Total Raised"
                 />
                 <StatisticCard
                     value={`${soldOut.toFixed(3)}%`}
                     label="Sold Out"
                 />
-            </div> */}
+            </div>
         </div>
     );
 };

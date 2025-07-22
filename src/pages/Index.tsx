@@ -6,16 +6,17 @@ import Roadmap from "@/components/Roadmap";
 import Features from "@/components/Features";
 import Presale from "@/components/Presale";
 import About from "@/components/About";
-import Team from "@/components/Team";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import Whitelist from "@/components/Whitelist";
+import SaleOverview from "@/components/SaleOverview";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
       <Hero />
+      <SaleOverview />
       <About />
       <Features />
       <Presale />
