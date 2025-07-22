@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative mt-16 py-16 flex items-center justify-center overflow-hidden bg-gradient-to-br from-sky-50 via-sky-100 to-sky-200"
+      className="relative mt-8 py-8 md:mt-12 md:py-12 xl:mt-16 xl:py-16 flex items-center justify-center overflow-hidden bg-gradient-to-br from-sky-50 via-sky-100 to-sky-200"
     >
       {/* Subtle animated elements */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
