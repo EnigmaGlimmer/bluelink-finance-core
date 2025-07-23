@@ -38,7 +38,7 @@ const Modal: React.FC<ModalProps> = ({
             />
 
             {/* Modal Content */}
-            <div className={`relative bg-background border border-foreground/20 rounded-xl p-6 max-w-md w-full mx-4 ${className}`}>
+            <div className={`relative bg-sky-100 border border-sky-950/30 rounded-xl p-6 max-w-md w-full mx-4 ${className}`}>
                 {children}
             </div>
         </div>
