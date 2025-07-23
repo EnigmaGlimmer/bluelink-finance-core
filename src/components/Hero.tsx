@@ -85,23 +85,24 @@ const Hero = () => {
               Join Whitelist
               <ArrowRight className="ml-3 h-5 w-5" />
             </Button>
-            <a
-              href="https://app.solidproof.io/projects/bluelink"
-              target="_blank"
+            <Button
+              size="lg"
               rel="noopener noreferrer"
-              className="whitespace-nowrap inline-flex items-center justify-center border-2 bg-white border-sky-200 text-sky-700 hover:bg-sky-50 px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 hover:border-sky-300 shadow-md"
+              className="whitespace-nowrap border-2 bg-white border-sky-200 text-sky-700 hover:bg-sky-50 px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 hover:border-sky-300 shadow-md"
             >
-              Audit Report
-              <ArrowDown className="ml-3 h-5 w-5" />
-            </a>
+              <a href="https://app.solidproof.io/projects/bluelink" target="_blank" className="inline-flex items-center justify-center">
+                Audit Report
+                <ArrowDown className="ml-3 h-5 w-5" />
+              </a>
+            </Button>
           </div>
         </div>
 
-        <div className="xl:mx-24 lg:mx-12 md:mx-6 mx-4 drop-shadow-[0px_12px_24px_rgba(12,74,110,0.3)]">
+        <div className="xl:mx-24 lg:mx-12 md:mx-6 mx-4 drop-shadow-[0px_12px_24px_rgba(12,74,110,0.8)]">
           <TokenSale />
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 

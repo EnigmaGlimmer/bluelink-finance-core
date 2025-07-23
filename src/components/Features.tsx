@@ -64,13 +64,6 @@ const Features = () => {
             </div>
           ))}
         </div>
-
-        {/* Regulatory Compliance Section */}
-  
-
-
-   
-
       </div>
     </section>
   );

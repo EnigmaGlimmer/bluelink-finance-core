@@ -43,7 +43,7 @@
 
 /* Custom classes using @apply (if your setup supports it) */
 .transition-animation {
-    @apply cursor-pointer transition-all duration-300 ease-in-out hover:opacity-70 active:opacity-85;
+    @apply cursor-pointer transition-all duration-500 ease-in-out;
 }
 
 .rotate-animation {

@@ -575,7 +575,7 @@ const TokenSale = () => {
                     label="Sold Out"
                 />
             </div>
-        </div>
+        </div >
     );
 };
 

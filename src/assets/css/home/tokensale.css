@@ -2,7 +2,7 @@
 @import "../_shared/container.css";
 
 .tokensale-border {
-    @apply border border-sky-500/10 bg-sky-100 backdrop-blur-3xl;
+    @apply border border-sky-500/30 bg-sky-100 backdrop-blur-3xl;
 }
 
 .sale-wrapper {
@@ -22,11 +22,11 @@
 }
 
 .price-card {
-    @apply flex flex-col justify-center gap-1.5 px-6 py-3 radius-scale text-white bg-transparent border border-sky-300/50 max-xl:px-4 max-xl:gap-1 max-lg:px-3;
+    @apply flex flex-col justify-center gap-1.5 px-6 py-3 radius-scale text-white bg-white/30 border border-sky-300/50 max-xl:px-4 max-xl:gap-1 max-lg:px-3;
 }
 
 .ammount-input {
-    @apply w-full text-sky-950 flex gap-3 font-medium px-4 py-3 border border-sky-300/50 radius-scale transition-all duration-300 ease-in-out focus-within:border-sky-300 max-lg:text-sm;
+    @apply w-full text-sky-950 flex gap-3 font-medium px-4 py-3 bg-white/30 border border-sky-300/50 radius-scale transition-all duration-300 ease-in-out focus-within:border-sky-300 max-lg:text-sm;
 }
 
 .payment-methods {
@@ -34,11 +34,11 @@
 }
 
 .payment-button {
-    @apply xy-center gap-2 px-3 py-2 rounded-lg text-base font-medium tracking-wide text-sky-950 tokensale-border transition-animation max-xl:text-sm;
+    @apply xy-center gap-2 px-3 py-2 rounded-lg text-base font-medium tracking-wide text-sky-950 bg-white/30 border border-sky-300/50 cursor-pointer transition-all duration-300 ease-in-out hover:bg-sky-950/10 active:bg-sky-950/30 max-xl:text-sm;
 }
 
 .purchase-button {
-    @apply w-1/2 gap-2 px-6 py-2 bg-sky-950 text-white font-semibold disabled:text-white/50 disabled:cursor-not-allowed rounded-lg text-xl tracking-wide transition-animation max-xl:text-base max-md:px-3 max-md:py-2;
+    @apply w-1/2 gap-2 px-6 py-2 bg-gradient-to-r from-sky-400 to-sky-500 text-white font-semibold transition-colors duration-300 ease-in-out hover:from-sky-500 hover:to-sky-600 disabled:from-sky-300 disabled:to-sky-300 disabled:text-white/50 disabled:cursor-not-allowed rounded-lg text-xl tracking-wide max-xl:text-base max-md:px-3 max-md:py-2;
 }
 
 .statistics {
@@ -78,7 +78,7 @@
     .payment-button {
         @apply p-2 gap-1 text-xs;
     }
-    
+
     .purchase-button {
         @apply text-sm
     }
