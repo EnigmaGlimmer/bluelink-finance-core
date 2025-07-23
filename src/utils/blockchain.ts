@@ -23,7 +23,7 @@ import Logger from "@/utils/Logger";
 
 // RainbowKit config
 export const config = getDefaultConfig({
-    appName: "SafeHaven Exchange",
+    appName: "Bluelink Blockchain",
     projectId: import.meta.env.VITE_PROJECT_ID || "9dc0750c4b599b1dd9aeb9413bc76f94",
     chains: [import.meta.env.VITE_CHAIN_ID === "sepolia" ? sepolia : mainnet],
 });

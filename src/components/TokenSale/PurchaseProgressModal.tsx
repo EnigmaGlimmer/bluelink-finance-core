@@ -31,7 +31,7 @@ const PurchaseProgressModal: React.FC<PurchaseProgressModalProps> = ({
             case PurchaseStatus.RESETTING:
                 return {
                     title: "Allowing Approval Reset Transaction",
-                    message: "Processing allowance reset for SHE token purchase",
+                    message: "Processing allowance reset for BLT token purchase",
                     icon: Assets.bltIcon,
                     showSpinner: true
                 };
@@ -45,14 +45,14 @@ const PurchaseProgressModal: React.FC<PurchaseProgressModalProps> = ({
             case PurchaseStatus.APPROVED:
                 return {
                     title: "Allowing Transaction",
-                    message: "Processing allowance for SHE token purchase",
+                    message: "Processing allowance for BLT token purchase",
                     icon: Assets.bltIcon,
                     showSpinner: true
                 };
             case PurchaseStatus.PURCHASING:
                 return {
                     title: "Processing Purchase",
-                    message: "Please confirm the transaction to spend gas fee in ETH to purchase SHE token.",
+                    message: "Please confirm the transaction to spend gas fee in ETH to purchase BLT token.",
                     icon: Assets.bltIcon,
                     showSpinner: true
                 };
