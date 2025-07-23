@@ -3,7 +3,7 @@ import { Assets } from "@/assets";
 import { PaymentMethods, PurchaseStatus } from "@/utils/constants";
 
 const LoadingSpinner = () => (
-    <div className="animate-spin w-8 h-8 border-2 border-primary-400 border-t-transparent rounded-full" />
+    <div className="animate-spin w-8 h-8 border-2 border-sky-950/80 border-t-transparent rounded-full" />
 );
 
 interface PurchaseProgressModalProps {
@@ -129,7 +129,7 @@ const PurchaseProgressModal: React.FC<PurchaseProgressModalProps> = ({
                         </div>
                         <button
                             onClick={onClose}
-                            className="cursor-pointer px-6 py-2 bg-primary-400 text-black rounded-lg font-medium hover:bg-primary-300 transition-colors"
+                            className="cursor-pointer px-6 py-2 bg-sky-900 text-black rounded-lg font-medium hover:bg-sky-700 transition-colors"
                         >
                             Close
                         </button>
