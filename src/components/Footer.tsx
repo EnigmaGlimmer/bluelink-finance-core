@@ -1,7 +1,8 @@
-import { Mail, MessageCircle, Twitter, Globe } from "lucide-react";
-import privacyPolicyPdf from "../assets/BlueLink_Privacy_Policy.pdf";
-import termsOfServices from "../assets/BlueLink_Terms_of_Service.pdf";
-import riskDisclosure from "../assets/BlueLink_Risk_Disclosure.pdf";
+import privacyPolicyPdf from "../assets/docs/BlueLink_Privacy_Policy.pdf";
+import termsOfServices from "../assets/docs/BlueLink_Terms_of_Service.pdf";
+import riskDisclosure from "../assets/docs/BlueLink_Risk_Disclosure.pdf";;
+import kyc from "../assets/docs/BlueLink_KYC&AML.pdf";
+
 import {
   RiTwitterLine,
   RiLinkedinLine,
@@ -10,6 +11,8 @@ import {
   RiTelegramLine,
   RiDiscordLine,
 } from "react-icons/ri";
+import { SlGlobe } from "react-icons/sl";
+
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-sky-50 via-sky-100 to-sky-200 text-gray-800">
@@ -19,7 +22,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center mb-4">
               <img
-                src="/image/73ed770f-97f5-48ce-82da-40ff54317af3.png"
+                src="/logo.png"
                 alt="BlueLink Logo"
                 className="h-8 w-auto mr-3"
               />
@@ -28,20 +31,14 @@ const Footer = () => {
               Redefining global finance through blockchain innovation and
               regulatory excellence.
             </p>
-            <p className="text-sm text-blue-600 font-semibold mb-4">
-              "Today's Success, Tomorrow's Solution"
+            <p className="text-sm text-sky-600 font-semibold mb-4">
+              Today's Success, Tomorrow's Solution
             </p>
             <p className="text-sm text-gray-600">
               🇻🇬 British Virgin Islands | Regulated & Compliant
             </p>
-          </div>
 
-          {/* Contact */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-600">
-              Let’s Build the Future Together
-            </h3>
-            <div className="flex flex-wrap gap-4 mb-4">
+            <div className="flex flex-wrap gap-4 mt-6">
               <a
                 href="https://x.com/Bluelink2025"
                 target="_blank"
@@ -93,9 +90,8 @@ const Footer = () => {
               <a
                 href="https://bluelinkblockchain.com"
                 target="_blank"
-                className="flex items-center text-sky-500 hover:text-blue-600 transition-colors"
               >
-                <Globe className="h-4 w-4 mr-2" />
+                <SlGlobe className="text-2xl text-sky-500 hover:text-teal-400 transition" />
               </a>
             </div>
           </div>
@@ -131,6 +127,14 @@ const Footer = () => {
             >
               Risk Disclosure
             </a>
+            <a
+              href={kyc}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-blue-600 text-sm transition-colors"
+            >
+              AML / KYC
+            </a>
           </div>
         </div>
 
@@ -147,7 +151,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </footer >
   );
 };
 

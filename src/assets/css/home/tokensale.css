@@ -1,0 +1,89 @@
+@import "../_shared/animation.css";
+@import "../_shared/container.css";
+
+.tokensale-border {
+    @apply border border-sky-500/30 bg-sky-100 backdrop-blur-3xl;
+}
+
+.sale-wrapper {
+    @apply flex flex-col gap-6;
+}
+
+.sale-form {
+    @apply tokensale-border flex flex-col gap-8 p-8 radius-scale max-lg:gap-6 max-md:gap-4 max-xl:p-6 max-lg:p-4;
+}
+
+.price-cards {
+    @apply grid grid-cols-2 gap-2 xl:gap-4;
+}
+
+.price-card {
+    @apply flex flex-col justify-center gap-1.5 px-6 py-3 radius-scale text-white bg-white/30 border border-sky-300/50 max-xl:px-4 max-xl:gap-1 max-lg:px-3;
+}
+
+.amount-input {
+    @apply w-full text-sky-950 flex items-center gap-2 lg:gap-3 font-medium px-4 py-3 max-lg:px-3 max-lg:py-2 bg-white/30 border border-sky-300/50 radius-scale transition-all duration-300 ease-in-out focus-within:border-sky-300 max-lg:text-sm max-md:text-xs;
+}
+
+.payment-methods {
+    @apply grid grid-cols-3 gap-2 xl:gap-4;
+}
+
+.payment-button {
+    @apply xy-center gap-2 px-3 py-2 rounded-lg text-base font-medium tracking-wide text-sky-950 bg-white/30 border border-sky-300/50 cursor-pointer transition-all duration-300 ease-in-out hover:bg-sky-950/10 active:bg-sky-950/30 max-xl:text-sm max-lg:text-xs;
+}
+
+.payment-button > img {
+    @apply w-4 h-4 lg:w-6 lg:h-6
+}
+
+.purchase-button {
+    @apply w-1/2 gap-2 px-6 py-2 bg-gradient-to-r from-sky-400 to-sky-500 text-white font-semibold transition-colors duration-300 ease-in-out hover:from-sky-500 hover:to-sky-600 disabled:from-sky-300 disabled:to-sky-300 disabled:text-white/50 disabled:cursor-not-allowed rounded-lg text-xl tracking-wide max-xl:text-base max-md:px-3 max-md:py-2;
+}
+
+.statistic-card {
+    @apply col-center text-center text-sky-900 gap-1 py-3 radius-scale tokensale-border max-lg:text-sm;
+}
+
+@media (max-width: 425px) {
+    .sale-form {
+        @apply p-4 gap-6;
+    }
+
+    .sale-badge {
+        @apply text-[8px] px-2 py-1;
+    }
+
+    .price-card {
+        border-radius: 10px;
+        @apply px-3 py-2 gap-1;
+    }
+
+    .ammount-input {
+        @apply text-xs px-3 py-2;
+    }
+
+    .payment-methods {
+        @apply gap-2;
+    }
+
+    .payment-button {
+        @apply p-2 gap-1 text-xs;
+    }
+
+    .purchase-button {
+        @apply text-sm
+    }
+
+    .payment-button>img {
+        @apply w-4 h-4;
+    }
+
+    .sale-wrapper {
+        @apply gap-4;
+    }
+
+    .statistic-card {
+        @apply p-2 gap-0;
+    }
+}

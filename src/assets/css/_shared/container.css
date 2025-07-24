@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.row-center {
+    @apply flex flex-row justify-center items-center;
+}
+
+.col-center {
+    @apply flex flex-col justify-center items-center;
+}
+
+.xy-center {
+    @apply flex justify-center items-center;
+}
+
+.between-center {
+    @apply flex justify-between items-center;
+}
+
+.radius-scale {
+    @apply rounded-md md:rounded-lg xl:rounded-xl;
+}
+
+.blur-effect {
+    @apply w-20 h-20 bg-primary shadow-[100px_100px_100px_rgba(0,0,0,0.3)] rounded-full blur-3xl;
+}

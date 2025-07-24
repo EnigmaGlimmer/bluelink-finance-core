@@ -1,0 +1,20 @@
+@import "../_shared/animation.css";
+@import "../_shared/container.css";
+
+.connect-button {
+    @apply transition-animation radius-scale row-center gap-2 px-4 py-3 bg-sky-200 text-sky-950 font-medium h-fit max-md:text-xs
+}
+
+.icon-chain {
+    @apply w-6 h-6;
+}
+
+@media (max-width: 425px) {
+    .icon-chain {
+        @apply w-4 h-4;
+    }
+
+    .connect-button {
+        @apply gap-1 px-3 py-2 text-[10px];
+    }
+}

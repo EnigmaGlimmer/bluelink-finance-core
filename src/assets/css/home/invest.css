@@ -1,0 +1,76 @@
+@import "../_shared/animation.css";
+@import "../_shared/container.css";
+
+.invest-header {
+    @apply w-full max-w-[1440px] between-center px-12 py-6 border-b border-sky-700 fixed z-50 top-0 backdrop-blur-xl max-lg:px-6 max-lg:py-4;
+}
+
+.invest-container {
+    @apply text-sky-700 w-screen max-w-[1440px] min-h-screen grid grid-cols-1 gap-8 mt-28 mb-8 px-12 max-lg:px-6 max-lg:mt-20;
+}
+
+.invest-container>div {
+    @apply flex flex-col gap-6 p-6 max-md:p-4 rounded-xl bg-sky-950/5 border border-white/10 max-md:gap-3;
+}
+
+.overview-grid {
+    @apply grid grid-cols-2 gap-4;
+}
+
+.value-grid {
+    @apply grid grid-cols-3 gap-3 max-lg:gap-2;
+}
+
+.transaction-table {
+    @apply min-w-full bg-none rounded-md shadow-md overflow-hidden max-md:text-xs;
+}
+
+.table-header>th {
+    @apply px-6 py-4 max-md:px-3 max-md:py-2 text-left text-sky-900 font-semibold bg-white/10;
+}
+
+.table-body {
+    @apply border-b border-white/10;
+}
+
+.table-body>td {
+    @apply px-6 py-4 text-sky-700 max-md:px-3 max-md:py-2;
+}
+
+.overview-section {
+    @apply w-auto flex flex-col gap-1 px-5 py-3 bg-sky-950/5 rounded-lg;
+}
+
+.overview-heading {
+    @apply text-lg max-lg:text-base max-md:text-sm max-sm:text-xs opacity-70;
+}
+
+.overview-label {
+    @apply text-xl max-lg:text-lg max-md:text-base max-sm:text-sm font-semibold truncate;
+}
+
+.value-section {
+    @apply w-auto flex flex-row justify-between text-lg max-lg:text-base max-md:text-sm;
+}
+
+@media (max-width:425px) {
+    .invest-header {
+        @apply px-4 py-3;
+    }
+
+    .invest-container {
+        @apply mt-16 px-4;
+    }
+
+    .invest-container>div {
+        @apply gap-2 rounded-md;
+    }
+
+    .overview-section {
+        @apply px-3 py-2 rounded-md;
+    }
+
+    .value-section {
+        @apply text-xs;
+    }
+}
