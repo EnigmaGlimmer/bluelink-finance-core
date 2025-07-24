@@ -61,7 +61,6 @@ const Navbar = () => {
                 href={whitepaper}
                 target="_blank"
                 rel="noopener noreferrer"
-                download
                 className="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-200"
               >
                 White Paper
@@ -194,7 +193,6 @@ const Navbar = () => {
                   href={whitepaper}
                   target="_blank"
                   rel="noopener noreferrer"
-                  download
                   className="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-200"
                 >
                   White Paper
