@@ -87,7 +87,17 @@ const Hero = () => {
             rel="noopener noreferrer"
             className="whitespace-nowrap border-2 bg-white border-sky-200 text-sky-700 hover:bg-sky-50 px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 hover:border-sky-300 shadow-md"
           >
-            <a href="https://app.solidproof.io/projects/bluelink" target="_blank" className="inline-flex items-center justify-center">
+            <a href="/BlueLink_Whitepaper.pdf" download className="inline-flex items-center justify-center">
+              White Paper
+              <ArrowDown className="ml-3 h-5 w-5" />
+            </a>
+          </Button>
+          <Button
+            size="lg"
+            rel="noopener noreferrer"
+            className="whitespace-nowrap border-2 bg-white border-sky-200 text-sky-700 hover:bg-sky-50 px-10 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 hover:border-sky-300 shadow-md"
+          >
+            <a href="https://app.solidproof.io/projects/bluelink" download className="inline-flex items-center justify-center">
               Audit Report
               <ArrowDown className="ml-3 h-5 w-5" />
             </a>
