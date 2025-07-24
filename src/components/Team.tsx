@@ -18,7 +18,7 @@ const Team = () => {
       role: "Chief Executive Officer",
       image: mykhailo,
       // bio: "Former Goldman Sachs VP with 15+ years in blockchain and fintech",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/mykhailo-semeniuk-aa6495340/",
       // twitter: "#"
     },
     {
@@ -26,31 +26,32 @@ const Team = () => {
       role: "Co-Founder",
       image: Demetri,
       // bio: "Ex-Ethereum core developer and blockchain architecture expert",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/demetrichstokes/",
       // github: "#"
+    },
+      {
+      name: "Celeste Paras",
+      role: "Chief Operating Officer & CMO",
+      image: Celeste,
+      // bio: "Regulatory expert with deep knowledge in global financial compliance",
+      linkedin: "https://www.linkedin.com/in/celesteparas/",
+      // twitter: "#"
     },
     {
       name: "Vladyslav Shevchenko",
       role: "Chief Financial Officer",
       image: Vlad,
       // bio: "Former JP Morgan Managing Director specializing in digital assets",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/vladyslav-shevchenko-19851105dev/",
       // twitter: "#"
     },
-    {
-      name: "Celeste Paras",
-      role: "Chief Operating Officer & CMO",
-      image: Celeste,
-      // bio: "Regulatory expert with deep knowledge in global financial compliance",
-      linkedin: "#",
-      // twitter: "#"
-    },
+  
     {
       name: "Takao Kato",
       role: "Chief Technology Officer",
       image: takao,
       // bio: "PhD in Cryptography, published researcher in blockchain scalability",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/takao-kato-a23456306/",
       // github: "#"
     },
     {
@@ -58,23 +59,15 @@ const Team = () => {
       role: "Legal Advisor",
       image: legal,
       // bio: "Strategic partnerships expert with Fortune 500 client relationships",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/cryptocurrencylawyer/",
       // twitter: "#"
     },
-        {
-      name: "Shahid Jamal",
-      role: "Legal Advisor",
-      image: legal,
-      // bio: "Strategic partnerships expert with Fortune 500 client relationships",
-      linkedin: "#",
-      // twitter: "#"
-    },
-        {
+     {
       name: "Caleb Lin",
       role: "Product Manager",
       image: caleb,
       // bio: "Strategic partnerships expert with Fortune 500 client relationships",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/caleb-zhiliang-lin-853420373/",
       // twitter: "#"
     },
         {
@@ -82,17 +75,17 @@ const Team = () => {
       role: "Business Development Manager",
       image: nikita,
       // bio: "Strategic partnerships expert with Fortune 500 client relationships",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/nikita-dwivedi-2b2151171/",
+      // twitter: "#"
+    },
+        {
+      name: "Andrew D.",
+      role: "Lead Blockchain Engineer",
+      image: andrew,
+      // bio: "Strategic partnerships expert with Fortune 500 client relationships",
+      linkedin: "https://www.linkedin.com/in/andrew-dyer-b6484a358/",
       // twitter: "#"
     }
-    //     {
-    //   name: "Andrew D.",
-    //   role: "Lead Blockchain Engineer",
-    //   image: andrew,
-    //   // bio: "Strategic partnerships expert with Fortune 500 client relationships",
-    //   linkedin: "#",
-    //   // twitter: "#"
-    // }
   ];
 
   return (
@@ -134,6 +127,7 @@ const Team = () => {
                   {member.linkedin && (
                     <a
                       href={member.linkedin}
+                      target="_blank"
                       className="p-2 rounded-full bg-slate-100 hover:bg-blue-100 text-slate-600 hover:text-blue-600 transition-colors duration-200"
                       aria-label={`${member.name} LinkedIn`}
                     >
