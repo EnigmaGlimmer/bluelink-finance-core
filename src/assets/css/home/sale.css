@@ -2,7 +2,7 @@
 @import "../_shared/container.css";
 
 .sale-container {
-    @apply mb-4 lg:mb-8 relative flex flex-col justify-center sm:grid sm:grid-cols-[2fr_3fr] items-center gap-2 lg:gap-4 xl:gap-6;
+    @apply mb-4 lg:mb-8 relative flex flex-col justify-center sm:grid sm:grid-cols-[3fr_2fr] items-center gap-2 lg:gap-4 xl:gap-6;
 }
 
 .sale-heading {

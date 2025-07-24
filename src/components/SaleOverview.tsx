@@ -85,11 +85,14 @@ const SaleOverview: React.FC = () => {
                 <TimeBar startTime={startTime} endTime={endTime} saleStatus={saleStatus} />
             </div>
             <div className="sale-container">
-                <div className="max-sm:w-fit drop-shadow-[0px_12px_24px_rgba(12,74,110,0.8)]">
+                <div className="hidden max-sm:block max-sm:w-fit drop-shadow-[0px_12px_24px_rgba(12,74,110,0.8)]">
                     <TokenSale />
                 </div>
                 <div className="w-full h-fit p-4 flex items-center">
                     <SaleChart />
+                </div>
+                <div className="block max-sm:hidden max-sm:w-fit drop-shadow-[0px_12px_24px_rgba(12,74,110,0.8)]">
+                    <TokenSale />
                 </div>
             </div>
             <div className="statistics">
