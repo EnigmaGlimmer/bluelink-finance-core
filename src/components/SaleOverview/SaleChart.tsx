@@ -49,11 +49,11 @@ const SaleGraph: React.FC<SaleGraphProps> = ({ width, height }) => {
     const [hoverX, setHoverX] = useState<number | null>(null);
     const [hoverY, setHoverY] = useState<number | null>(null);
 
-    const computeY = (x: number): number => 0.085 + 0.165 * (1 - Math.pow(1 - x / 100, 3));
+    const computeY = (x: number): number => 0.085 + 0.165 * (1 - Math.pow(1 - x / 150, 3));
 
     const decorate_line = useMemo<DataPoint[]>(() => {
         const newData: DataPoint[] = [];
-        for (let xValue = 0; xValue <= 100; xValue++) {
+        for (let xValue = 0; xValue <= 150; xValue++) {
             newData.push({ x: xValue, y: computeY(xValue) });
         }
         return newData;
@@ -77,7 +77,7 @@ const SaleGraph: React.FC<SaleGraphProps> = ({ width, height }) => {
         [boundsHeight]
     );
 
-    const xMax = d3.max(decorate_line, (d) => d.x) ?? 100;
+    const xMax = d3.max(decorate_line, (d) => d.x) ?? 150;
     const xScale = useMemo(() =>
         d3.scaleLinear().domain([0, xMax]).range([0, boundsWidth]),
         [boundsWidth, xMax]
@@ -107,7 +107,7 @@ const SaleGraph: React.FC<SaleGraphProps> = ({ width, height }) => {
         const xAxisGenerator = d3.axisBottom(xScale)
             .tickSize(-boundsHeight)
             .tickPadding(axisPadding)
-            .tickValues(d3.range(0, 101, 10));
+            .tickValues(d3.range(0, 151, 10));
 
         const xAxis = svgElement
             .append("g")
