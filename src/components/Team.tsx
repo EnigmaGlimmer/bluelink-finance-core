@@ -1,56 +1,90 @@
 
 import { Linkedin, Twitter, Github } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import mykhailo from "../assets/member/Mykhailo.png";
+import Demetri from "../assets/member/Demetrich.jpg";
+import Vlad from "../assets/member/Vladyslav.png";
+import Celeste from "../assets/member/Celeste.jpg";
+import takao from "../assets/member/Takao.png";
+import legal from "../assets/member/shahi.jpg";
+import caleb from "../assets/member/rose.png";
+import andrew from "../assets/member/Andrew.png";
+import nikita from "../assets/member/Nikita.png";
 
 const Team = () => {
   const teamMembers = [
     {
       name: "Mykhailo Semeniuk",
       role: "Chief Executive Officer",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=400&h=400&fit=crop&crop=face",
+      image: mykhailo,
       // bio: "Former Goldman Sachs VP with 15+ years in blockchain and fintech",
-      // linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/mykhailo-semeniuk-aa6495340/",
       // twitter: "#"
     },
     {
-      name: "",
+      name: "Demetrich Stokes",
       role: "Co-Founder",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+      image: Demetri,
       // bio: "Ex-Ethereum core developer and blockchain architecture expert",
-      // linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/demetrichstokes/",
       // github: "#"
+    },
+      {
+      name: "Celeste Paras",
+      role: "Chief Operating Officer & CMO",
+      image: Celeste,
+      // bio: "Regulatory expert with deep knowledge in global financial compliance",
+      linkedin: "https://www.linkedin.com/in/celesteparas/",
+      // twitter: "#"
     },
     {
       name: "Vladyslav Shevchenko",
       role: "Chief Financial Officer",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face",
+      image: Vlad,
       // bio: "Former JP Morgan Managing Director specializing in digital assets",
-      // linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/vladyslav-shevchenko-19851105dev/",
       // twitter: "#"
     },
+  
     {
-      name: "James Park",
-      role: "Chief Compliance Officer",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-      bio: "Regulatory expert with deep knowledge in global financial compliance",
-      linkedin: "#",
-      twitter: "#"
+      name: "Takao Kato",
+      role: "Chief Technology Officer",
+      image: takao,
+      // bio: "PhD in Cryptography, published researcher in blockchain scalability",
+      linkedin: "https://www.linkedin.com/in/takao-kato-a23456306/",
+      // github: "#"
     },
     {
-      name: "Dr. Amira Hassan",
-      role: "Head of Research",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
-      bio: "PhD in Cryptography, published researcher in blockchain scalability",
-      linkedin: "#",
-      github: "#"
+      name: "Shahid Jamal",
+      role: "Legal Advisor",
+      image: legal,
+      // bio: "Strategic partnerships expert with Fortune 500 client relationships",
+      linkedin: "https://www.linkedin.com/in/cryptocurrencylawyer/",
+      // twitter: "#"
     },
-    {
-      name: "Michael Thompson",
-      role: "VP of Business Development",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
-      bio: "Strategic partnerships expert with Fortune 500 client relationships",
-      linkedin: "#",
-      twitter: "#"
+     {
+      name: "Caleb Lin",
+      role: "Product Manager",
+      image: caleb,
+      // bio: "Strategic partnerships expert with Fortune 500 client relationships",
+      linkedin: "https://www.linkedin.com/in/caleb-zhiliang-lin-853420373/",
+      // twitter: "#"
+    },
+        {
+      name: "Nikita Dwivedi",
+      role: "Business Development Manager",
+      image: nikita,
+      // bio: "Strategic partnerships expert with Fortune 500 client relationships",
+      linkedin: "https://www.linkedin.com/in/nikita-dwivedi-2b2151171/",
+      // twitter: "#"
+    },
+        {
+      name: "Andrew D.",
+      role: "Lead Blockchain Engineer",
+      image: andrew,
+      // bio: "Strategic partnerships expert with Fortune 500 client relationships",
+      linkedin: "https://www.linkedin.com/in/andrew-dyer-b6484a358/",
+      // twitter: "#"
     }
   ];
 
@@ -71,35 +105,36 @@ const Team = () => {
         {/* Team Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {teamMembers.map((member, index) => (
-            <Card key={member.name} className="group hover:shadow-2xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm hover:bg-white animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+            <Card key={member.name} className="group rounded-xl hover:shadow-2xl transition-all duration-300 border-0 bg-sky-100 backdrop-blur-sm hover:bg-sky-100/80 animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
               <CardContent className="p-8 text-center">
                 {/* Profile Image */}
                 <div className="relative mb-6">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-blue-100 group-hover:border-blue-300 transition-colors duration-300"
+                    className="w-40 h-40 rounded-3xl mx-auto object-cover border-4 border-blue-200 group-hover:border-blue-300 transition-colors duration-300"
                   />
                   <div className="absolute inset-0 rounded-full bg-gradient-to-t from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
 
                 {/* Member Info */}
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{member.name}</h3>
-                <p className="text-blue-600 font-semibold mb-4">{member.role}</p>
+                <p className="text-sky-600 font-semibold mb-4">{member.role}</p>
                 <p className="text-slate-600 text-sm leading-relaxed mb-6">{member.bio}</p>
 
                 {/* Social Links */}
-                {/* <div className="flex justify-center space-x-4">
+                <div className="flex justify-center space-x-4">
                   {member.linkedin && (
                     <a
                       href={member.linkedin}
+                      target="_blank"
                       className="p-2 rounded-full bg-slate-100 hover:bg-blue-100 text-slate-600 hover:text-blue-600 transition-colors duration-200"
                       aria-label={`${member.name} LinkedIn`}
                     >
                       <Linkedin className="h-5 w-5" />
                     </a>
                   )}
-                  {member.twitter && (
+                  {/* {member.twitter && (
                     <a
                       href={member.twitter}
                       className="p-2 rounded-full bg-slate-100 hover:bg-blue-100 text-slate-600 hover:text-blue-600 transition-colors duration-200"
@@ -107,8 +142,8 @@ const Team = () => {
                     >
                       <Twitter className="h-5 w-5" />
                     </a>
-                  )}
-                  {member.github && (
+                  )} */}
+                  {/* {member.github && (
                     <a
                       href={member.github}
                       className="p-2 rounded-full bg-slate-100 hover:bg-blue-100 text-slate-600 hover:text-blue-600 transition-colors duration-200"
@@ -116,8 +151,8 @@ const Team = () => {
                     >
                       <Github className="h-5 w-5" />
                     </a>
-                  )}
-                </div> */}
+                  )} */}
+                </div>
               </CardContent>
             </Card>
           ))}

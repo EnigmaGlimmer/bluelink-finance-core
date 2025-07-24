@@ -22,6 +22,7 @@ const Index = () => {
       <Whitelist />
       <Tokenomics />
       <Roadmap />
+      <Team/>
       <FAQ />
       <Footer />
     </div>
