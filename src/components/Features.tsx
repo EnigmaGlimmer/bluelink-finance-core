@@ -48,13 +48,13 @@ const Features = () => {
               className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group"
             >
               <div className="flex items-start">
-                <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-200 transition-colors">
-                  <feature.icon className="h-6 w-6 text-blue-600" />
+                <div className="bg-blue-100 w-8 h-8 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-200 transition-colors">
+                  <feature.icon className="w-4 h-4 sm:h-6 sm:w-6 text-blue-600" />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                    <span className="bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-sm font-medium">
+                    <h3 className="text-base font-semibold text-gray-900 lg:text-lg sm:text-xl">{feature.title}</h3>
+                    <span className="bg-cyan-100 whitespace-nowrap text-cyan-700 px-3 py-1 rounded-full text-xs font-medium">
                       {feature.highlight}
                     </span>
                   </div>
@@ -64,13 +64,6 @@ const Features = () => {
             </div>
           ))}
         </div>
-
-        {/* Regulatory Compliance Section */}
-  
-
-
-   
-
       </div>
     </section>
   );
