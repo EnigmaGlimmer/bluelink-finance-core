@@ -8,7 +8,8 @@ import {
     type Chain
 } from "viem";
 import { sepolia, mainnet } from 'wagmi/chains';
-import { getDefaultConfig } from "@rainbow-me/rainbowkit";
+import { getDefaultConfig, getWalletConnectConnector } from "@rainbow-me/rainbowkit";
+import { trustWallet, metaMaskWallet, rainbowWallet, walletConnectWallet, coinbaseWallet} from "@rainbow-me/rainbowkit/wallets";
 import {
     readContract,
     writeContract,
@@ -27,6 +28,12 @@ export const config = getDefaultConfig({
     appName: "Bluelink Blockchain",
     projectId: import.meta.env.VITE_PROJECT_ID || "9dc0750c4b599b1dd9aeb9413bc76f94",
     chains: [import.meta.env.VITE_CHAIN_ID === "sepolia" ? sepolia : mainnet],
+    wallets: [
+        {
+            groupName: 'Recommended',
+            wallets: [trustWallet, metaMaskWallet, rainbowWallet, walletConnectWallet, coinbaseWallet],
+        }
+    ],
 });
 
 // Public client
