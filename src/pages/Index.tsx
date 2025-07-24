@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import Whitelist from "@/components/Whitelist";
 import SaleOverview from "@/components/SaleOverview";
 import PurchaseProgressModal from "@/components/TokenSale/PurchaseProgressModal";
+import Team from "@/components/Team";
 import { useModal } from "@/store/modalContext";
 import { PurchaseStatus, PaymentMethods } from "@/utils/constants";
 
