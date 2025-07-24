@@ -15,11 +15,11 @@ const Navbar = () => {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Features", href: "#features" },
-    { name: "Team", href: "#team" },
     { name: "Buy Now", href: "#buy" },
     { name: "Whitelist", href: "#Whitelist" },
     { name: "Tokenomics", href: "#tokenomics" },
     { name: "Roadmap", href: "#roadmap" },
+    { name: "Team", href: "#team" },
     { name: "FAQ", href: "#faq" },
   ];
 
