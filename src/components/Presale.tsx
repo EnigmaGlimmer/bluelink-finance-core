@@ -151,7 +151,7 @@ const Presale = () => {
               <div className="text-3xl font-bold text-blue-600">$0.085 → $0.25</div>
               <div className="text-sm text-gray-500">~$12.75M - $20M</div>
             </div>
-            <Button className="mt-6 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300" onClick={() => scrollToSection("#home")}>
+            <Button className="mt-6 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300" onClick={() => scrollToSection("#buy")}>
               Buy Now
             </Button>
           </div>

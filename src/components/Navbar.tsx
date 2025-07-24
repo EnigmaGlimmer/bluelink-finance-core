@@ -15,7 +15,8 @@ const Navbar = () => {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Features", href: "#features" },
-    { name: "Presale", href: "#presale" },
+    { name: "Team", href: "#team" },
+    { name: "Buy Now", href: "#buy" },
     { name: "Whitelist", href: "#Whitelist" },
     { name: "Tokenomics", href: "#tokenomics" },
     { name: "Roadmap", href: "#roadmap" },
@@ -57,14 +58,6 @@ const Navbar = () => {
                   {item.name}
                 </button>
               ))}
-              <a
-                href={whitepaper}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-200"
-              >
-                White Paper
-              </a>
             </div>
 
             <div className="xy-center gap-3 sm:gap-4">
@@ -189,14 +182,6 @@ const Navbar = () => {
                     {item.name}
                   </button>
                 ))}
-                <a
-                  href={whitepaper}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-200"
-                >
-                  White Paper
-                </a>
               </div>
             </div>
           )}

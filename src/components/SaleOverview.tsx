@@ -1,11 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import SaleSection from "./SaleSection";
-import SaleChart from "./SaleChart";
-import TokenSale from "../TokenSale";
-import TimeBar from "../TokenSale/TimeBar";
-import StatisticCard from "../TokenSale/StatisticCard";
+import SaleSection from "./SaleOverview/SaleSection";
+import SaleChart from "./SaleOverview/SaleChart";
+import TokenSale from "./TokenSale";
+import TimeBar from "./TokenSale/TimeBar";
+import StatisticCard from "./TokenSale/StatisticCard";
 
 import Logger from "@/utils/Logger";
 import { getSaleStartTime, getSaleEndTime } from "@/utils/blockchain";
@@ -80,7 +80,7 @@ const SaleOverview: React.FC = () => {
     const soldOut = Number(totalSold) > 0 ? Number(totalSold) / Number(initialAmount) * 100 : 0;
 
     return (
-        <div className="bg-opacity-10 bg-gradient-to-br from-sky-50 to-sky-100 px-2 sm:px-4 lg:px-6 xl:px-12 py-8 sm:py-12 lg:py-16 xl:py-24">
+        <section id="buy" className="bg-opacity-10 bg-gradient-to-br from-sky-50 to-sky-100 px-2 sm:px-4 lg:px-6 xl:px-12 py-8 sm:py-12 lg:py-16 xl:py-24">
             <div className="flex justify-center mb-8 lg:mb-12">
                 <TimeBar startTime={startTime} endTime={endTime} saleStatus={saleStatus} />
             </div>
@@ -122,7 +122,7 @@ const SaleOverview: React.FC = () => {
             >
                 <span className="text-lg font-medium">Your Bluelink Assets →</span>
             </div>
-        </div>
+        </section>
     );
 };
 

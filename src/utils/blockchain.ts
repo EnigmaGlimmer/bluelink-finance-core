@@ -31,7 +31,7 @@ export const config = getDefaultConfig({
 
 // Public client
 const publicClient = createPublicClient({
-    chain: mainnet,
+    chain: sepolia,
     transport: http()
 });
 
@@ -152,7 +152,7 @@ export const approvePaymentToken = async (
         abi: Contracts.TOKEN.abi,
         functionName: "approve",
         args: [spenderAddress, amount],
-        chain: mainnet, // or your chain variable
+        chain: sepolia, // or your chain variable
         account: userAddress, // or the correct account variable
     });
 
@@ -175,7 +175,7 @@ export const resetAllowance = async (
         abi: Contracts.TOKEN.abi,
         functionName: "approve",
         args: [spenderAddress, 0n],
-        chain: mainnet, // or your chain variable
+        chain: sepolia, // or your chain variable
         account: userAddress, // pass the correct user address
     });
 
@@ -291,7 +291,7 @@ export const releaseTokens = withErrorHandling(async (address: Address, userAddr
         abi: Contracts.VESTING.abi,
         functionName: "releaseTokens",
         args: [address],
-        chain: mainnet, // or your chain variable
+        chain: sepolia, // or your chain variable
         account: userAddress, // pass the correct user address
     });
 
