@@ -224,7 +224,7 @@ const Invest: React.FC = () => {
             <div className="invest-header">
                 <img
                     src="/logo.png"
-                    alt="SafeHaven Exchange"
+                    alt="Bluelink Blockchain"
                     className="transition-animation h-12 max-[425px]:h-9"
                     onClick={handleLogoClick}
                 />
