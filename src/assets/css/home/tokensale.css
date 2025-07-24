@@ -10,7 +10,7 @@
 }
 
 .sale-form {
-    @apply tokensale-border flex flex-col gap-8 p-8 radius-scale max-lg:gap-6 max-md:gap-4 max-xl:p-6 max-lg:p-4;
+    @apply tokensale-border flex flex-col gap-4 max-md:gap-2 p-8 radius-scale max-xl:p-6 max-lg:p-4;
 }
 
 .price-cards {
