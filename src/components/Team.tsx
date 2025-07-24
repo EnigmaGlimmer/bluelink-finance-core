@@ -103,10 +103,10 @@ const Team = () => {
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-2 sm:gap-x-6 sm:gap-y-4 md:gap-x-8 md:gap-y-5 lg:gap-x-12 lg:gap-y-6 max-w-7xl mx-auto">
           {teamMembers.map((member, index) => (
             <Card key={member.name} className="group rounded-xl hover:shadow-2xl transition-all duration-300 border-0 bg-sky-100 backdrop-blur-sm hover:bg-sky-100/80 animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
-              <CardContent className="p-8 text-center">
+              <CardContent className="p-6 text-center">
                 {/* Profile Image */}
                 <div className="relative mb-6">
                   <img
@@ -119,8 +119,8 @@ const Team = () => {
 
                 {/* Member Info */}
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{member.name}</h3>
-                <p className="text-sky-600 font-semibold mb-4">{member.role}</p>
-                <p className="text-slate-600 text-sm leading-relaxed mb-6">{member.bio}</p>
+                <p className="text-sky-600 font-semibold mb-2">{member.role}</p>
+                {/* <p className="text-slate-600 text-sm leading-relaxed mb-6">{member.bio}</p> */}
 
                 {/* Social Links */}
                 <div className="flex justify-center space-x-4">
