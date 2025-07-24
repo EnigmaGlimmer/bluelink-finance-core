@@ -435,6 +435,8 @@ const TokenSale = () => {
     return (
         <div className="sale-wrapper">
             <div className="sale-form">
+                <p className="text-sky-900 font-bold text-sm lg:text-base xl:text-lg">Early Access to BLT Tokens – Unlock BlueLink Services</p>
+
                 <div className="price-cards">
                     <PriceCard label="Current Price" price={tokenPrice} />
                     <PriceCard label="Next Price" price={nextPrice} />
