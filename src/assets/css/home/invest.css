@@ -6,7 +6,7 @@
 }
 
 .invest-container {
-    @apply text-sky-700 w-screen max-w-[1440px] min-h-screen grid grid-cols-2 max-md:grid-cols-1 gap-8 mt-28 mb-8 px-12 max-lg:px-6 max-lg:mt-20;
+    @apply text-sky-700 w-screen max-w-[1440px] min-h-screen grid grid-cols-1 gap-8 mt-28 mb-8 px-12 max-lg:px-6 max-lg:mt-20;
 }
 
 .invest-container>div {
@@ -14,11 +14,11 @@
 }
 
 .overview-grid {
-    @apply grid grid-cols-2 gap-4 max-sm:grid-cols-1;
+    @apply grid grid-cols-2 gap-4;
 }
 
 .value-grid {
-    @apply flex flex-col gap-3 max-lg:gap-2;
+    @apply grid grid-cols-3 gap-3 max-lg:gap-2;
 }
 
 .transaction-table {
@@ -46,7 +46,7 @@
 }
 
 .overview-label {
-    @apply text-xl max-lg:text-lg max-md:text-base max-sm:text-sm truncate;
+    @apply text-xl max-lg:text-lg max-md:text-base max-sm:text-sm font-semibold truncate;
 }
 
 .value-section {

@@ -328,41 +328,25 @@ const Invest: React.FC = () => {
                 data-aos-duration="3000"
                 className="invest-container"
             >
-                <div className="col-span-2 max-md:col-auto">
-                    <h4 className="text-3xl font-bold text-sky-900 max-lg:text-2xl max-md:text-xl">Overview</h4>
+                <div className="max-md:row-auto justify-center">
+                    <h4 className="text-3xl font-bold text-sky-900 max-lg:text-2xl max-md:text-xl">Vesting Overview</h4>
                     {isLoadingVesting ? (
                         <div className="text-center py-4">Loading vesting data...</div>
                     ) : vestingError ? (
                         <div className="text-red-500 text-sm py-2">{vestingError}</div>
                     ) : (
                         <div className="overview-grid">
-                            <OverviewSection heading="Wallet Address" label={address || "Not Connected"} />
-                            <OverviewSection heading="Invest Type" label="Pre Sale" />
-                            <OverviewSection
-                                heading="Total Allocated $BLT"
-                                label={vestingData ? `${vestingData.totalAmount.toLocaleString()} BLT` : "0 BLT"}
-                            />
-                            <OverviewSection
-                                heading="Unlock Status"
-                                label={vestingData ? vestingData.unlockStatus : "No Vesting"}
-                            />
-                        </div>
-                    )}
-                </div>
-
-                <div>
-                    <h4 className="text-3xl font-bold text-sky-900 max-lg:text-2xl max-md:text-xl">Schedule</h4>
-                    {isLoadingVesting ? (
-                        <div className="text-center py-4">Loading schedule...</div>
-                    ) : (
-                        <>
-                            <Progress value={getVestingProgress()} />
-                            <div className="value-grid">
-                                <ValueSection label="First Purchase Date" value={formatDate(vestingData?.startDate ?? null)} />
-                                <ValueSection label="Unlocking Begins" value={formatDate(vestingData?.cliffTime ?? null)} />
-                                <ValueSection label="Unlocking Complete" value={formatDate(vestingData?.endDate ?? null)} />
+                            <div className="col-span-2">
+                                <OverviewSection heading="Wallet Address" label={address || "Not Connected"} />
                             </div>
-                        </>
+                            <OverviewSection
+                                heading="Total Vested $BLT"
+                                label={vestingData ? `${vestingData.totalAmount.toLocaleString()} $BLT` : "0 $BLT"}
+                            />
+                            <OverviewSection heading="First Purchase Date" label={formatDate(vestingData?.startDate ?? null)} />
+                            <OverviewSection heading="Unlocking Starts" label={formatDate(vestingData?.cliffTime ?? null)} />
+                            <OverviewSection heading="Unlocking Ends" label={formatDate(vestingData?.endDate ?? null)} />
+                        </div>
                     )}
                 </div>
 
@@ -373,17 +357,17 @@ const Invest: React.FC = () => {
                     ) : (
                         <>
                             <div className="value-grid">
-                                <ValueSection
-                                    label="Tokens Unlocked"
-                                    value={vestingData ? `${vestingData.totalUnlocked.toLocaleString()} BLT` : "0 BLT"}
+                                <OverviewSection
+                                    heading="Amount Unlocked"
+                                    label={vestingData ? `${vestingData.totalUnlocked.toLocaleString()} $BLT` : "0 BLT"}
                                 />
-                                <ValueSection
-                                    label="Tokens Claimed"
-                                    value={vestingData ? `${vestingData.totalClaimed.toLocaleString()} BLT` : "0 BLT"}
+                                <OverviewSection
+                                    heading="Amount Claimed"
+                                    label={vestingData ? `${vestingData.totalClaimed.toLocaleString()} $BLT` : "0 BLT"}
                                 />
-                                <ValueSection
-                                    label="Available to Claim"
-                                    value={vestingData ? `${vestingData.availableToClaim.toLocaleString()} BLT` : "0 BLT"}
+                                <OverviewSection
+                                    heading="Available to Claim"
+                                    label={vestingData ? `${vestingData.availableToClaim.toLocaleString()} $BLT` : "0 BLT"}
                                 />
                             </div>
                             <div className="xy-center">
@@ -403,7 +387,7 @@ const Invest: React.FC = () => {
                     )}
                 </div>
 
-                <div className="col-span-2 max-md:col-auto">
+                <div>
                     <h4 className="text-3xl font-bold text-sky-900 max-lg:text-2xl max-md:text-xl">Transactions</h4>
                     {isLoadingTransactions ? (
                         <div className="text-center py-4">Loading transaction history...</div>

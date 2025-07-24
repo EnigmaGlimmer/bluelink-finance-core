@@ -1,6 +1,8 @@
 import privacyPolicyPdf from "../assets/docs/BlueLink_Privacy_Policy.pdf";
 import termsOfServices from "../assets/docs/BlueLink_Terms_of_Service.pdf";
-import riskDisclosure from "../assets/docs/BlueLink_Risk_Disclosure.pdf";
+import riskDisclosure from "../assets/docs/BlueLink_Risk_Disclosure.pdf";;
+import kyc from "../assets/docs/BlueLink_KYC&AML.pdf";
+
 import {
   RiTwitterLine,
   RiLinkedinLine,
@@ -124,6 +126,14 @@ const Footer = () => {
               className="text-gray-600 hover:text-blue-600 text-sm transition-colors"
             >
               Risk Disclosure
+            </a>
+            <a
+              href={kyc}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-blue-600 text-sm transition-colors"
+            >
+              AML / KYC
             </a>
           </div>
         </div>

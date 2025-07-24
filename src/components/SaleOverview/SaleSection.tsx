@@ -33,17 +33,14 @@ const SaleSection = () => {
     ];
 
     return (
-        <div className="sale-stat">
-            <p className="sale-heading">$BLT Presale</p>
-            <div className="sale-statuses">
-                {saleDetails.map((saleDetail, index) => (
-                    <StatusSection
-                        value={saleDetail.value}
-                        label={saleDetail.label}
-                        key={index}
-                    />
-                ))}
-            </div>
+        <div className="sale-statuses">
+            {saleDetails.map((saleDetail, index) => (
+                <StatusSection
+                    value={saleDetail.value}
+                    label={saleDetail.label}
+                    key={index}
+                />
+            ))}
         </div>
     );
 };

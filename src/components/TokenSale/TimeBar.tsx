@@ -31,7 +31,7 @@ const TimeBar: React.FC<TimeBarProps> = ({ startTime, endTime, saleStatus }) => 
                 const hours = Math.floor((timeLeft % (24 * 60 * 60)) / (60 * 60));
                 const minutes = Math.floor((timeLeft % (60 * 60)) / 60);
                 const seconds = timeLeft % 60;
-                setMessage("Sale Starts in: ");
+                setMessage("Sale Starts in ");
                 setPeriod(`${days}d ${hours}h ${minutes}m ${seconds}s`);
             } else if (saleStatus === SaleStatus.IN_PROGRESS) {
                 const timeLeft = endTime - currentTime;
@@ -39,7 +39,7 @@ const TimeBar: React.FC<TimeBarProps> = ({ startTime, endTime, saleStatus }) => 
                 const hours = Math.floor((timeLeft % (24 * 60 * 60)) / (60 * 60));
                 const minutes = Math.floor((timeLeft % (60 * 60)) / 60);
                 const seconds = timeLeft % 60;
-                setMessage("Sale Ends in: ");
+                setMessage("Sale Ends in ");
                 setPeriod(`${days}d ${hours}h ${minutes}m ${seconds}s`);
             } else {
                 setMessage("Sale Ended!");
@@ -51,7 +51,7 @@ const TimeBar: React.FC<TimeBarProps> = ({ startTime, endTime, saleStatus }) => 
     }, [currentTime, startTime, endTime, saleStatus]);
 
     return (
-        <p className="text-2xl text-sky-950 font-medium max-lg:text-xl max-md:text-lg max-[425px]:text-base">
+        <p className="text-4xl text-sky-950 font-medium max-lg:text-3xl max-md:text-2xl max-[425px]:text-xl">
             {message}
             {period && <span className="font-semibold text-sky-700 ml-2">{period}</span>}
         </p>

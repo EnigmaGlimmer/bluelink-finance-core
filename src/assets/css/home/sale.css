@@ -2,11 +2,7 @@
 @import "../_shared/container.css";
 
 .sale-container {
-    @apply relative mx-4 sm:mx-6 md:mx-12 my-24 px-3 sm:px-6 py-4 sm:py-8 radius-scale bg-opacity-10 bg-gradient-to-br from-sky-50 to-sky-100 gap-3;
-}
-
-.sale-stat {
-    @apply flex flex-col gap-3 sm:gap-6 mb-0 sm:mb-8;
+    @apply mb-4 lg:mb-8 relative flex flex-col justify-center sm:grid sm:grid-cols-[2fr_3fr] items-center gap-2 lg:gap-4 xl:gap-6;
 }
 
 .sale-heading {
@@ -14,11 +10,11 @@
 }
 
 .sale-statuses {
-    @apply grid grid-cols-2 p-2 gap-2 lg:grid-cols-4 lg:gap-4;
+    @apply grid grid-cols-2 gap-2 md:grid-cols-1 lg:gap-4;
 }
 
 .sale-status {
-    @apply flex flex-col gap-1 md:gap-2 p-2 md:p-4 radius-scale bg-white bg-sky-100 border border-sky-950/10;
+    @apply flex flex-col h-fit gap-1 md:gap-2 p-2 md:p-4 radius-scale bg-white bg-sky-100 border border-sky-950/10;
 }
 
 .status-value {
@@ -26,7 +22,7 @@
 }
 
 .status-label {
-    @apply text-[10px] sm:text-sm text-sky-500 font-semibold;
+    @apply whitespace-nowrap text-[10px] sm:text-sm text-sky-500 font-semibold;
 }
 
 .hover-item {
@@ -52,4 +48,8 @@
 
 .inner-ring {
     @apply bg-sky-950 rounded-full;
+}
+
+.statistics {
+    @apply grid grid-cols-2 sm:grid-cols-5 gap-3 max-[425px]:gap-2 drop-shadow-[0px_12px_24px_rgba(12,74,110,0.8)];
 }

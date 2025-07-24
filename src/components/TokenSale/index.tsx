@@ -435,17 +435,12 @@ const TokenSale = () => {
     return (
         <div className="sale-wrapper">
             <div className="sale-form">
-                <div className="price-details">
-                    <div className="flex justify-center mb-4">
-                        <TimeBar startTime={startTime} endTime={endTime} saleStatus={saleStatus} />
-                    </div>
+                <div className="price-cards">
+                    <PriceCard label="Current Price" price={tokenPrice} />
+                    <PriceCard label="Next Price" price={nextPrice} />
+                </div>
 
-                    <div className="price-cards">
-                        <PriceCard label="Current Price" price={tokenPrice} />
-                        <PriceCard label="Next Price" price={nextPrice} />
-                    </div>
-
-                    <p className="text-base text-sky-950 font-semibold max-lg:text-sm max-md:text-xs">
+                {/* <p className="text-base text-sky-950 font-semibold max-lg:text-sm max-md:text-xs">
                         Raised: <span className="font-semibold text-primary-400">${formatNumber(Number(totalFunds).toFixed(3))}</span>
                     </p>
 
@@ -455,8 +450,7 @@ const TokenSale = () => {
                             <p>Token Sold: <span className="text-primary-400">{formatNumberWithSuffix(Number(totalSold))}</span></p>
                             <p>Remaining: <span className="text-primary-400">{formatNumberWithSuffix(Number(initialAmount) - Number(totalSold))}</span></p>
                         </div>
-                    </div>
-                </div>
+                    </div> */}
 
                 <div className="flex flex-col gap-4 max-md:gap-2">
                     <div className="payment-methods">
@@ -475,10 +469,10 @@ const TokenSale = () => {
                         </button> */}
 
                     <div className="flex flex-col gap-2 max-md:gap-1">
-                        <div className="ammount-input">
+                        <div className="amount-input">
                             <img
                                 src={PaymentMethods[payMethod].icon}
-                                className="max-[425px]:w-4 max-[425px]:h-4"
+                                className="max-lg:w-4 max-lg:h-4"
                                 alt={payMethod}
                             />
                             <input
@@ -490,7 +484,7 @@ const TokenSale = () => {
                             <button
                                 onClick={handleMaxClick}
                                 disabled={isCalculatingMax}
-                                className={`px-4 py-1.5 text-xs font-semibold rounded-md transition-colors duration-200 shadow-sm ${isCalculatingMax
+                                className={`px-3 py-1 lg:px-4 lg:py-1.5 text-xs font-semibold rounded-md transition-colors duration-200 shadow-sm ${isCalculatingMax
                                     ? 'bg-sky-100 text-sky-300 cursor-not-allowed'
                                     : 'bg-gradient-to-r from-sky-400 to-sky-500 text-white hover:from-sky-500 hover:to-sky-600'
                                     }`}
@@ -521,8 +515,8 @@ const TokenSale = () => {
                         <div className="flex flex-col gap-1">
                             <div className="flex flex-col gap-1 max-lg:text-sm max-md:text-xs">
                                 <div className="text-sm font-medium text-sky-950">Estimate to receive:</div>
-                                <div className="ammount-input">
-                                    <img src={Assets.bltIcon} className="w-6 h-6 max-[425px]:w-4 max-[425px]:h-4" alt="$BLT" />
+                                <div className="amount-input">
+                                    <img src={Assets.bltIcon} className="w-6 h-6 max-lg:w-4 max-lg:h-4" alt="$BLT" />
                                     <input className="focus:outline-none w-full bg-transparent" placeholder="0" value={formatNumber(Number(estimatedAmount).toFixed(3))} readOnly />
                                 </div>
                             </div>
@@ -559,21 +553,6 @@ const TokenSale = () => {
                         </button>
                     </div>
                 </div>
-            </div>
-
-            <div className="statistics">
-                <StatisticCard
-                    value={holders}
-                    label="Token Holders"
-                />
-                <StatisticCard
-                    value={`$${formatNumberWithSuffix(Number(Number(totalFunds).toFixed(3)))}`}
-                    label="Total Raised"
-                />
-                <StatisticCard
-                    value={`${soldOut.toFixed(3)}%`}
-                    label="Sold Out"
-                />
             </div>
         </div >
     );

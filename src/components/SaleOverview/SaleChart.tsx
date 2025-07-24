@@ -43,7 +43,7 @@ interface DataPoint {
 
 const SaleGraph: React.FC<SaleGraphProps> = ({ width, height }) => {
     const screenWidth = useScreenWidth();
-    const textSize = screenWidth < 425 ? "10px" : width < 1024 ? "14px" : "16px";
+    const textSize = screenWidth < 425 ? "10px" : width < 1024 ? "12px" : "14px";
     const { totalSold, tokenPrice } = useTokenSale();
 
     const [hoverX, setHoverX] = useState<number | null>(null);
@@ -247,7 +247,7 @@ const SaleGraph: React.FC<SaleGraphProps> = ({ width, height }) => {
                 }}
             >
                 <DotItem radius={8} />
-                <p className={`absolute left-6 text-sky-950 font-semibold ${width < 425 ? "text-2xs" : "text-sm"}`}>
+                <p className={`absolute left-6 text-sky-950 font-semibold ${width < 425 ? "text-[10px]" : "text-sm"}`}>
                     {tokenPrice}
                 </p>
             </div>
@@ -257,28 +257,34 @@ const SaleGraph: React.FC<SaleGraphProps> = ({ width, height }) => {
 
 const SaleChart: React.FC = () => {
     const parentRef = useRef<HTMLDivElement>(null);
-    const screenWidth = useScreenWidth();
     const [parentWidth, setParentWidth] = useState(0);
 
     useEffect(() => {
-        const updateWidth = () => {
-            if (parentRef.current) {
-                setParentWidth(parentRef.current.offsetWidth);
-            }
-        };
-        updateWidth();
+        if (!parentRef.current) return;
 
-        window.addEventListener("resize", updateWidth);
-        return () => window.removeEventListener("resize", updateWidth);
+        const observer = new ResizeObserver(([entry]) => {
+            setParentWidth(entry.contentRect.width);
+        });
+
+        observer.observe(parentRef.current);
+
+        return () => {
+            observer.disconnect();
+        };
     }, []);
+
+    const height = parentWidth > 640 ? parentWidth * 0.5 : parentWidth * 0.75;
 
     return (
         <div className="relative xy-center w-full max-[425px]:-mx-3 max-[425px]:mt-2">
-            <div ref={parentRef} className="w-full">
-                <SaleGraph
-                    width={parentWidth}
-                    height={screenWidth > 768 ? parentWidth / 3 : parentWidth / 2}
-                />
+            <div
+                ref={parentRef}
+                className="w-full"
+                style={{ minHeight: height }} // ensure parent div can grow in height
+            >
+                {parentWidth > 0 && (
+                    <SaleGraph width={parentWidth} height={height} />
+                )}
             </div>
         </div>
     );

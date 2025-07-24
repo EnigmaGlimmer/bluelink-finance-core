@@ -111,7 +111,7 @@ const Navbar = () => {
                               className="connect-button w-full h-full"
                             >
                               Connect Wallet
-                              <ArrowRight className={`${isConnected && "hidden"}`} />
+                              <ArrowRight className={`w-3 h-3 lg:w-4 lg:h-4 xl:w-6 xl:h-6 ${isConnected && "hidden"}`} />
                             </button>
                           );
                         }

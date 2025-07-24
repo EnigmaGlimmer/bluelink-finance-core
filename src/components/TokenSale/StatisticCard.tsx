@@ -8,8 +8,8 @@ interface StatisticCardProps {
 const StatisticCard = ({ value, label }: StatisticCardProps) => {
     return (
         <div className="statistic-card">
-            <p className="text-base font-semibold text-sky-900 md:text-lg lg:text-xl xl:text-2xl">{value}</p>
-            <p className="font-medium max-[425px]:text-[10px]">{label}</p>
+            <p className="text-sm sm:text-base font-semibold text-sky-900 md:text-lg lg:text-xl xl:text-2xl">{value}</p>
+            <p className="font-medium max-sm:text-xs max-[425px]:text-[10px]">{label}</p>
         </div>
     );
 };
