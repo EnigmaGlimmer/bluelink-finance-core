@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Tokenomics from "@/components/Tokenomics";
@@ -14,14 +13,18 @@ import PurchaseProgressModal from "@/components/TokenSale/PurchaseProgressModal"
 import Team from "@/components/Team";
 import { useModal } from "@/store/modalContext";
 import { PurchaseStatus, PaymentMethods } from "@/utils/constants";
+import { useEffect } from "react";
 
 const Index = () => {
-  const {
-    showPurchaseModal,
-    purchaseStatus,
-    payMethod,
-    closePurchaseModal,
-  } = useModal();
+  const { showPurchaseModal, purchaseStatus, payMethod, closePurchaseModal } =
+    useModal();
+
+  useEffect(() => {
+    const element = document.querySelector("#buy");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -34,7 +37,7 @@ const Index = () => {
       <Whitelist />
       <Tokenomics />
       <Roadmap />
-      <Team/>
+      <Team />
       <FAQ />
       <Footer />
 
