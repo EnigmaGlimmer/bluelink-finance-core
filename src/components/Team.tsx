@@ -1,15 +1,15 @@
 
 import { Linkedin, Twitter, Github } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import mykhailo from "../assets/member/Mykhailo.png";
+import mykhailo from "../assets/member/Mykhailo.jpg";
 import Demetri from "../assets/member/Demetrich.jpg";
-import Vlad from "../assets/member/Vladyslav.png";
+import Vlad from "../assets/member/Vladyslav.jpg";
 import Celeste from "../assets/member/Celeste.jpg";
-import takao from "../assets/member/Takao.png";
+import takao from "../assets/member/Takao.jpg";
 import legal from "../assets/member/shahi.jpg";
-import caleb from "../assets/member/rose.png";
-import andrew from "../assets/member/Andrew.png";
-import nikita from "../assets/member/Nikita.png";
+import caleb from "../assets/member/rose.jpg";
+import andrew from "../assets/member/Andrew.jpg";
+import nikita from "../assets/member/Nikita.jpg";
 
 const Team = () => {
   const teamMembers = [
