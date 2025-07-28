@@ -89,7 +89,7 @@ const Whitelist = () => {
       form.append("social", formData.social.trim() || "Not provided");
 
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycby-REj6C_1_tSV8tQkVVodKy0NkltByvOHWNVArMUms5NSzKyNVTSnj07PFRmBQ8ahvyQ/exec",
+        import.meta.env.VITE_WHITELIST_GOOGLE_SCRIPT_URL,
         {
           method: "POST",
           body: form,

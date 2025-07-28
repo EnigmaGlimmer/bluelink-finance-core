@@ -34,11 +34,11 @@ const Modal: React.FC<ModalProps> = ({
             {/* Backdrop */}
             <div
                 className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-                onClick={preventClose ? undefined : onClose}
+                // onClick={preventClose ? undefined : onClose}
             />
 
             {/* Modal Content */}
-            <div className={`relative bg-sky-100 border border-sky-950/30 rounded-xl p-6 max-w-md w-full mx-4 ${className}`}>
+            <div className={`relative bg-sky-100 border border-sky-950/30 rounded-xl p-6 max-w-lg w-full mx-4 ${className}`}>
                 {children}
             </div>
         </div>
