@@ -25,6 +25,7 @@ import { formatNumber, formatNumberWithSuffix } from "@/utils/formatNumber";
 import { MAX_BLT_TOKENS, PaymentMethods, SaleStatus, MIN_BLT_TOKENS } from "@/utils/constants";
 
 import "@/assets/css/home/tokensale.css";
+import IPDetection from "./IPDetection";
 
 const TokenSale = () => {
     const { address } = useAccount();
@@ -435,7 +436,7 @@ const TokenSale = () => {
     return (
         <div className="sale-wrapper">
             <div className="sale-form">
-                <p className="text-sky-900 font-bold text-sm lg:text-base xl:text-lg mb-4 max-md:mb-2">Early Access to BLT Tokens – <span className="text-sky-500">Unlock BlueLink Services</span></p>
+                <p className="text-sky-900 font-semibold text-center text-sm lg:text-base xl:text-lg mb-4 max-md:mb-2">Early Access to BLT Tokens – <span className="text-sky-500">Unlock BlueLink Services</span></p>
 
                 <div className="price-cards">
                     <PriceCard label="Current Price" price={tokenPrice} />
@@ -554,9 +555,10 @@ const TokenSale = () => {
                             Purchase
                         </button>
                     </div>
+                    <IPDetection />
                 </div>
             </div>
-        </div >
+        </div>
     );
 };
 
