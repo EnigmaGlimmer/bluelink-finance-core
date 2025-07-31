@@ -23,7 +23,7 @@ const Footer = () => {
               <img
                 src="/logo.png"
                 alt="BlueLink Logo"
-                className="h-8 w-auto mr-3"
+                className="h-8 w-auto="
               />
             </div>
             <p className="text-gray-700 mb-4">
@@ -92,6 +92,9 @@ const Footer = () => {
               >
                 <SlGlobe className="text-2xl text-sky-500 hover:text-teal-400 transition" />
               </a>
+            </div>
+            <div className="text-xs font-semibold text-sky-900/80 mt-4">
+              1st Floor, Columbus Centre, P.O. Box 2283, Road Town, Tortola, British Virgin Islands
             </div>
           </div>
         </div>
