@@ -170,7 +170,7 @@ const Whitelist = () => {
             Join Our Exclusive Whitelist
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Be among the first to access BlueLink Blockchain Services ecosystem.
+            Be among the first to access BlueLink Blockchain Services Ltd ecosystem.
             Get early investor opportunities and exclusive updates.
           </p>
         </div>
@@ -214,7 +214,7 @@ const Whitelist = () => {
                   id="message"
                   label="Message *"
                   name="message"
-                  placeholder="Tell us about your interest in BlueLink Blockchain Services..."
+                  placeholder="Tell us about your interest in BlueLink Blockchain Services Ltd..."
                   value={formData.message}
                   onChange={handleInputChange}
                   disabled={isSubmitting}
@@ -243,7 +243,7 @@ const Whitelist = () => {
               <div className="mt-6 text-center animate-fade-in">
                 <p className="text-sm text-gray-500">
                   By joining our Whitelist, you agree to receive updates about
-                  BlueLink Blockchain Services.
+                  BlueLink Blockchain Services Ltd.
                 </p>
               </div>
             </CardContent>

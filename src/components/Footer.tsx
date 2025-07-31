@@ -102,7 +102,7 @@ const Footer = () => {
         {/* Legal Documents & Copyright */}
         <div className="border-t border-sky-300 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center animate-fade-in">
           <p className="text-gray-600 text-sm mb-4 md:mb-0">
-            © 2025 BlueLink Blockchain Services. All rights reserved.
+            © 2025 BlueLink Blockchain Services Ltd. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <a
