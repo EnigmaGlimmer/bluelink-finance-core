@@ -13,47 +13,46 @@ import nikita from "../assets/member/Nikita.jpg";
 
 const Team = () => {
   const teamMembers = [
-    {
-      name: "Mykhailo Semeniuk",
-      role: "Chief Executive Officer",
-      image: mykhailo,
-      // bio: "Former Goldman Sachs VP with 15+ years in blockchain and fintech",
-      linkedin: "https://www.linkedin.com/in/mykhailo-semeniuk-aa6495340/",
-      // twitter: "#"
-    },
+    // {
+    //   name: "Mykhailo Semeniuk",
+    //   role: "Chief Executive Officer",
+    //   image: mykhailo,
+    //   // bio: "Former Goldman Sachs VP with 15+ years in blockchain and fintech",
+    //   linkedin: "https://www.linkedin.com/in/mykhailo-semeniuk-aa6495340/",
+    //   // twitter: "#"
+    // },
     {
       name: "Demetrich Stokes",
-      role: "Co-Founder",
+      role: "Founder",
       image: Demetri,
       // bio: "Ex-Ethereum core developer and blockchain architecture expert",
       linkedin: "https://www.linkedin.com/in/demetrichstokes/",
       // github: "#"
     },
-      {
+    {
       name: "Celeste Paras",
-      role: "Chief Operating Officer & CMO",
+      role: "Chief Operating Officer & Chief Marketing Officer",
       image: Celeste,
       // bio: "Regulatory expert with deep knowledge in global financial compliance",
       linkedin: "https://www.linkedin.com/in/celesteparas/",
       // twitter: "#"
     },
-    {
-      name: "Vladyslav Shevchenko",
-      role: "Chief Financial Officer",
-      image: Vlad,
-      // bio: "Former JP Morgan Managing Director specializing in digital assets",
-      linkedin: "https://www.linkedin.com/in/vladyslav-shevchenko-19851105dev/",
-      // twitter: "#"
-    },
-  
-    {
-      name: "Takao Kato",
-      role: "Chief Technology Officer",
-      image: takao,
-      // bio: "PhD in Cryptography, published researcher in blockchain scalability",
-      linkedin: "https://www.linkedin.com/in/takao-kato-a23456306/",
-      // github: "#"
-    },
+    // {
+    //   name: "Vladyslav Shevchenko",
+    //   role: "Chief Financial Officer",
+    //   image: Vlad,
+    //   // bio: "Former JP Morgan Managing Director specializing in digital assets",
+    //   linkedin: "https://www.linkedin.com/in/vladyslav-shevchenko-19851105dev/",
+    //   // twitter: "#"
+    // },
+    // {
+    //   name: "Takao Kato",
+    //   role: "Chief Technology Officer",
+    //   image: takao,
+    //   // bio: "PhD in Cryptography, published researcher in blockchain scalability",
+    //   linkedin: "https://www.linkedin.com/in/takao-kato-a23456306/",
+    //   // github: "#"
+    // },
     {
       name: "Shahid Jamal",
       role: "Legal Advisor",
@@ -62,15 +61,15 @@ const Team = () => {
       linkedin: "https://www.linkedin.com/in/cryptocurrencylawyer/",
       // twitter: "#"
     },
-     {
-      name: "Caleb Lin",
-      role: "Product Manager",
-      image: caleb,
-      // bio: "Strategic partnerships expert with Fortune 500 client relationships",
-      linkedin: "https://www.linkedin.com/in/caleb-zhiliang-lin-853420373/",
-      // twitter: "#"
-    },
-        {
+    //  {
+    //   name: "Caleb Lin",
+    //   role: "Product Manager",
+    //   image: caleb,
+    //   // bio: "Strategic partnerships expert with Fortune 500 client relationships",
+    //   linkedin: "https://www.linkedin.com/in/caleb-zhiliang-lin-853420373/",
+    //   // twitter: "#"
+    // },
+    {
       name: "Nikita Dwivedi",
       role: "Business Development Manager",
       image: nikita,
@@ -78,14 +77,14 @@ const Team = () => {
       linkedin: "https://www.linkedin.com/in/nikita-dwivedi-2b2151171/",
       // twitter: "#"
     },
-        {
-      name: "Andrew D.",
-      role: "Lead Blockchain Engineer",
-      image: andrew,
-      // bio: "Strategic partnerships expert with Fortune 500 client relationships",
-      linkedin: "https://www.linkedin.com/in/andrew-dyer-b6484a358/",
-      // twitter: "#"
-    }
+    // {
+    //   name: "Andrew D.",
+    //   role: "Lead Blockchain Engineer",
+    //   image: andrew,
+    //   // bio: "Strategic partnerships expert with Fortune 500 client relationships",
+    //   linkedin: "https://www.linkedin.com/in/andrew-dyer-b6484a358/",
+    //   // twitter: "#"
+    // }
   ];
 
   return (
@@ -97,13 +96,13 @@ const Team = () => {
             Leadership Team
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            World-class experts driving the future of blockchain finance with decades of combined experience 
+            World-class experts driving the future of blockchain finance with decades of combined experience
             from leading financial institutions and technology companies.
           </p>
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-2 sm:gap-x-6 sm:gap-y-4 md:gap-x-8 md:gap-y-5 lg:gap-x-12 lg:gap-y-6 max-w-7xl mx-auto">
+        <div className="grid max-[512px]:grid-cols-1 grid-cols-2 max-w-4xl gap-x-4 gap-y-2 sm:gap-x-6 sm:gap-y-4 md:gap-x-8 md:gap-y-5 lg:gap-x-12 lg:gap-y-6 mx-auto">
           {teamMembers.map((member, index) => (
             <Card key={member.name} className="group rounded-xl hover:shadow-2xl transition-all duration-300 border-0 bg-sky-100 backdrop-blur-sm hover:bg-sky-100/80 animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
               <CardContent className="p-6 text-center">
@@ -159,7 +158,7 @@ const Team = () => {
         </div>
 
         {/* Call to Action */}
-       
+
       </div>
     </section>
   );
