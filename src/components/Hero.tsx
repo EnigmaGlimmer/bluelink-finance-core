@@ -38,7 +38,7 @@ const Hero = () => {
         {/* Professional Subtitle */}
         <p className="text-lg md:text-xl mb-12 max-w-4xl mx-auto text-gray-700 animate-fade-in delay-300 leading-relaxed">
           <span className="text-blue-600 font-semibold">
-            BlueLink Blockchain Services{" "}
+            BlueLink Blockchain Services Ltd{" "}
           </span>{" "}
           presents a regulated ecosystem combining exchange operations,
           tokenized stocks, and blockchain banking infrastructure powered by BLT

@@ -23,7 +23,7 @@ const Footer = () => {
               <img
                 src="/logo.png"
                 alt="BlueLink Logo"
-                className="h-8 w-auto mr-3"
+                className="h-8 w-auto="
               />
             </div>
             <p className="text-gray-700 mb-4">
@@ -93,13 +93,16 @@ const Footer = () => {
                 <SlGlobe className="text-2xl text-sky-500 hover:text-teal-400 transition" />
               </a>
             </div>
+            <div className="text-xs font-semibold text-sky-900/80 mt-4">
+              1st Floor, Columbus Centre, P.O. Box 2283, Road Town, Tortola, British Virgin Islands
+            </div>
           </div>
         </div>
 
         {/* Legal Documents & Copyright */}
         <div className="border-t border-sky-300 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center animate-fade-in">
           <p className="text-gray-600 text-sm mb-4 md:mb-0">
-            © 2025 BlueLink Blockchain Services. All rights reserved.
+            © 2025 BlueLink Blockchain Services Ltd. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <a
