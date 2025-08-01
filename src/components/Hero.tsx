@@ -47,23 +47,27 @@ const Hero = () => {
 
         {/* Key Metrics Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-5xl mx-auto">
-          <div className="bg-white/70 backdrop-blur-lg rounded-2xl p-8 border border-sky-200 animate-fade-in hover:bg-white/80 transition-all duration-300 hover:transform hover:scale-105 shadow-lg">
+          <div className="flex flex-col items-center justify-center bg-white/70 backdrop-blur-lg rounded-2xl p-8 border border-sky-200 animate-fade-in hover:bg-white/80 transition-all duration-300 hover:transform shadow-lg">
             <TrendingUp className="h-10 w-10 mx-auto mb-4 text-blue-600" />
             <div className="text-3xl font-bold text-gray-900 mb-2">$56M+</div>
             <div className="text-sm text-gray-600 uppercase tracking-wider">
               Target Raise
             </div>
           </div>
-          <div className="bg-white/70 backdrop-blur-lg rounded-2xl p-8 border border-sky-200 animate-fade-in hover:bg-white/80 transition-all duration-300 hover:transform hover:scale-105 shadow-lg">
+          <div className="bg-white/70 flex flex-col items-center justify-center backdrop-blur-lg rounded-2xl p-8 border border-sky-200 animate-fade-in hover:bg-white/80 transition-all duration-300 hover:transform shadow-lg">
             <Shield className="h-10 w-10 mx-auto mb-4 text-emerald-500" />
-            <div className="text-3xl font-bold text-gray-900 mb-2">
+            <div className="text-3xl font-bold text-gray-900 mb-4">
               Regulated
             </div>
-            <div className="text-sm text-gray-600 uppercase tracking-wider">
-              Dubai & BVI
+            <div
+              className="flex flex-row items-center justify-center w-fit bg-gradient-to-r from-sky-300/10 to-sky-400/10 text-sky-900 px-4 py-2 rounded-lg font-semibold uppercase tracking-wider text-sm animate-pulse cursor-pointer hover:scale-105 ring-2 ring-sky-300 transition-all duration-5000 shadow-lg"
+              onClick={() => window.open("https://www.bvifsc.vg/certificate-validation?qrCode=18590ACEDB&Submit=Submit", "_blank")}
+            >
+              BVI Registered
+              <ArrowRight className="ml-3 h-5 w-5" />
             </div>
           </div>
-          <div className="bg-white/70 backdrop-blur-lg rounded-2xl p-8 border border-sky-200 animate-fade-in hover:bg-white/80 transition-all duration-300 hover:transform hover:scale-105 shadow-lg">
+          <div className="flex flex-col items-center justify-center bg-white/70 backdrop-blur-lg rounded-2xl p-8 border border-sky-200 animate-fade-in hover:bg-white/80 transition-all duration-300 hover:transform shadow-lg">
             <Globe className="h-10 w-10 mx-auto mb-4 text-sky-500" />
             <div className="text-3xl font-bold text-gray-900 mb-2">Welcome</div>
             <div className="text-sm text-gray-600 uppercase tracking-wider">
