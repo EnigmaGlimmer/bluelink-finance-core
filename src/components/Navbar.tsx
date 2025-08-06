@@ -15,7 +15,7 @@ const Navbar = () => {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Features", href: "#features" },
-    { name: "Buy Now", href: "#buy" },
+    // { name: "Buy Now", href: "#buy" },
     { name: "Whitelist", href: "#Whitelist" },
     { name: "Tokenomics", href: "#tokenomics" },
     { name: "Roadmap", href: "#roadmap" },

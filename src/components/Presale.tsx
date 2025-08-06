@@ -64,6 +64,23 @@ const Presale = () => {
   //   return () => clearInterval(interval);
   // }, [startDate]);
 
+  // Fairlaunch phase logic
+  const startDateFairlaunch = new Date("2025-08-13T11:00:00Z").getTime();
+  const endDateFairlaunch = new Date("2025-08-20T11:00:00Z").getTime();
+  const [phaseFairlaunch, setPhaseFairlaunch] = useState<'before' | 'during' | 'after'>('before');
+
+  useEffect(() => {
+    const checkPhaseFairlaunch = () => {
+      const now = new Date().getTime();
+      if (now < startDateFairlaunch) setPhaseFairlaunch('before');
+      else if (now >= startDateFairlaunch && now < endDateFairlaunch) setPhaseFairlaunch('during');
+      else setPhaseFairlaunch('after');
+    };
+    checkPhaseFairlaunch();
+    const timer = setInterval(checkPhaseFairlaunch, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
@@ -159,13 +176,29 @@ const Presale = () => {
           <div className="bg-white/60 backdrop-blur-lg rounded-2xl p-8 text-center border border-sky-200 hover:bg-white/80 transition-all duration-300 animate-fade-in shadow-lg">
             <div className="text-gray-500 text-sm uppercase tracking-wider mb-3 font-semibold">Phase 3</div>
             <h4 className="text-2xl font-bold text-gray-900 mb-4">Public Sale (IDO)</h4>
-            <div className="space-y-3 text-gray-700">
-              <div className="text-lg">150M BLT</div>
-              <div className="text-3xl font-bold text-blue-600">$0.28</div>
-              <div className="text-sm text-gray-500">~$42M Target</div>
+            <div className="space-y-3 text-gray-700 mb-6">
+              <div className="text-lg">Aug 13 - Aug 20, 2025 (11:00 UTC)</div>
+              <div className="text-3xl font-bold text-blue-600">PinkSale FairLaunch</div>
+              <div className="text-sm text-gray-500">Liquidity: 51%</div>
             </div>
-            <div className="mt-6 bg-gray-400 text-white px-6 py-3 rounded-full text-sm font-semibold">
-              Coming Soon
+
+            {/* Example button for fairlaunch phase */}
+            <div className="flex justify-center">
+              <Button
+                disabled={phaseFairlaunch !== 'during'}
+                className={`px-8 py-3 rounded-xl shadow-lg font-semibold text-white ${phaseFairlaunch === 'before'
+                    ? 'bg-gray-400 cursor-not-allowed'
+                    : phaseFairlaunch === 'during'
+                      ? 'bg-blue-500 hover:bg-blue-600'
+                      : 'bg-gray-400 cursor-not-allowed'
+                  }`}
+              >
+                {phaseFairlaunch === 'before'
+                  ? 'Coming Soon'
+                  : phaseFairlaunch === 'during'
+                    ? 'Join Now'
+                    : 'Ended'}
+              </Button>
             </div>
           </div>
         </div>

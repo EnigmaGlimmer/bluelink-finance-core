@@ -59,12 +59,8 @@ const Hero = () => {
             <div className="text-3xl font-bold text-gray-900 mb-4">
               Regulated
             </div>
-            <div
-              className="flex flex-row items-center justify-center w-fit bg-gradient-to-r from-sky-300/10 to-sky-400/10 text-sky-900 px-4 py-2 rounded-lg font-semibold uppercase tracking-wider text-sm animate-pulse cursor-pointer hover:scale-105 ring-2 ring-sky-300 transition-all duration-5000 shadow-lg"
-              onClick={() => window.open("https://www.bvifsc.vg/certificate-validation?qrCode=18590ACEDB&Submit=Submit", "_blank")}
-            >
+            <div className="text-sm text-gray-600 uppercase tracking-wider">
               BVI Registered
-              <ArrowRight className="ml-3 h-5 w-5" />
             </div>
           </div>
           <div className="flex flex-col items-center justify-center bg-white/70 backdrop-blur-lg rounded-2xl p-8 border border-sky-200 animate-fade-in hover:bg-white/80 transition-all duration-300 hover:transform shadow-lg">
