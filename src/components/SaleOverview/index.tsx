@@ -1,11 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import SaleSection from "./SaleOverview/SaleSection";
-import SaleChart from "./SaleOverview/SaleChart";
-import TokenSale from "./TokenSale";
-import TimeBar from "./TokenSale/TimeBar";
-import StatisticCard from "./TokenSale/StatisticCard";
+import SaleSection from "./SaleSection";
+import SaleChart from "./SaleChart";
+import TokenSale from "../TokenSale";
+import TimeBar from "../TokenSale/TimeBar";
+import StatisticCard from "../TokenSale/StatisticCard";
 
 import Logger from "@/utils/Logger";
 import { getSaleStartTime, getSaleEndTime } from "@/utils/blockchain";

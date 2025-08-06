@@ -1,19 +1,23 @@
+import { useEffect } from "react";
+
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import FairLaunch from "@/components/Fairlaunch";
+// import SaleOverview from "@/components/SaleOverview";
 import Tokenomics from "@/components/Tokenomics";
 import Roadmap from "@/components/Roadmap";
 import Features from "@/components/Features";
-import Presale from "@/components/Presale";
+// import Presale from "@/components/Presale";
 import About from "@/components/About";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import Whitelist from "@/components/Whitelist";
-import SaleOverview from "@/components/SaleOverview";
-import PurchaseProgressModal from "@/components/TokenSale/PurchaseProgressModal";
 import Team from "@/components/Team";
+
+import PurchaseProgressModal from "@/components/TokenSale/PurchaseProgressModal";
+
 import { useModal } from "@/store/modalContext";
 import { PurchaseStatus, PaymentMethods } from "@/utils/constants";
-import { useEffect } from "react";
 
 const Index = () => {
   const { showPurchaseModal, purchaseStatus, payMethod, closePurchaseModal } =
@@ -30,10 +34,11 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Navbar />
       <Hero />
-      <SaleOverview />
+      <FairLaunch />
+      {/* <SaleOverview /> */}
       <About />
       <Features />
-      <Presale />
+      {/* <Presale /> */}
       <Whitelist />
       <Tokenomics />
       <Roadmap />
