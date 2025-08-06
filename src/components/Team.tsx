@@ -13,14 +13,14 @@ import nikita from "../assets/member/Nikita.jpg";
 
 const Team = () => {
   const teamMembers = [
-    // {
-    //   name: "Mykhailo Semeniuk",
-    //   role: "Chief Executive Officer",
-    //   image: mykhailo,
-    //   // bio: "Former Goldman Sachs VP with 15+ years in blockchain and fintech",
-    //   linkedin: "https://www.linkedin.com/in/mykhailo-semeniuk-aa6495340/",
-    //   // twitter: "#"
-    // },
+    {
+      name: "Mykhailo Semeniuk",
+      role: "Chief Executive Officer",
+      image: mykhailo,
+      // bio: "Former Goldman Sachs VP with 15+ years in blockchain and fintech",
+      linkedin: "https://www.linkedin.com/in/mykhailo-semeniuk-aa6495340/",
+      // twitter: "#"
+    },
     {
       name: "Demetrich Stokes",
       role: "Founder",
@@ -37,14 +37,14 @@ const Team = () => {
       linkedin: "https://www.linkedin.com/in/celesteparas/",
       // twitter: "#"
     },
-    // {
-    //   name: "Vladyslav Shevchenko",
-    //   role: "Chief Financial Officer",
-    //   image: Vlad,
-    //   // bio: "Former JP Morgan Managing Director specializing in digital assets",
-    //   linkedin: "https://www.linkedin.com/in/vladyslav-shevchenko-19851105dev/",
-    //   // twitter: "#"
-    // },
+    {
+      name: "Vladyslav Shevchenko",
+      role: "Chief Financial Officer",
+      image: Vlad,
+      // bio: "Former JP Morgan Managing Director specializing in digital assets",
+      linkedin: "https://www.linkedin.com/in/vladyslav-shevchenko-19851105dev/",
+      // twitter: "#"
+    },
     // {
     //   name: "Takao Kato",
     //   role: "Chief Technology Officer",
@@ -61,14 +61,14 @@ const Team = () => {
       linkedin: "https://www.linkedin.com/in/cryptocurrencylawyer/",
       // twitter: "#"
     },
-    //  {
-    //   name: "Caleb Lin",
-    //   role: "Product Manager",
-    //   image: caleb,
-    //   // bio: "Strategic partnerships expert with Fortune 500 client relationships",
-    //   linkedin: "https://www.linkedin.com/in/caleb-zhiliang-lin-853420373/",
-    //   // twitter: "#"
-    // },
+     {
+      name: "Caleb Lin",
+      role: "Product Manager",
+      image: caleb,
+      // bio: "Strategic partnerships expert with Fortune 500 client relationships",
+      linkedin: "https://www.linkedin.com/in/caleb-zhiliang-lin-853420373/",
+      // twitter: "#"
+    },
     {
       name: "Nikita Dwivedi",
       role: "Business Development Manager",
@@ -77,14 +77,14 @@ const Team = () => {
       linkedin: "https://www.linkedin.com/in/nikita-dwivedi-2b2151171/",
       // twitter: "#"
     },
-    // {
-    //   name: "Andrew D.",
-    //   role: "Lead Blockchain Engineer",
-    //   image: andrew,
-    //   // bio: "Strategic partnerships expert with Fortune 500 client relationships",
-    //   linkedin: "https://www.linkedin.com/in/andrew-dyer-b6484a358/",
-    //   // twitter: "#"
-    // }
+    {
+      name: "Andrew D.",
+      role: "Lead Blockchain Engineer",
+      image: andrew,
+      // bio: "Strategic partnerships expert with Fortune 500 client relationships",
+      linkedin: "https://www.linkedin.com/in/andrew-dyer-b6484a358/",
+      // twitter: "#"
+    }
   ];
 
   return (
