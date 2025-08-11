@@ -85,7 +85,7 @@ const FairLaunch = () => {
                                 <RiTelegramLine className="text-2xl text-sky-500 hover:text-teal-400 transition" />
                             </a>
                             <a
-                                href="https://discord.com/invite/jG8wGzpF"
+                                href="https://discord.gg/GNMtz5Jz"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Discord"
