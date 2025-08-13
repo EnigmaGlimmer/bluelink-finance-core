@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import CountdownTimer from './CountdownTimer';
@@ -12,6 +14,8 @@ import { ExternalLink, Shield, Users, Lock, CheckCircle, Globe, Search } from 'l
 import { Assets } from '@/assets';
 
 const FairLaunch = () => {
+    const navigate = useNavigate();
+
     const features = [
         {
             icon: <Users className="h-5 w-5" />,
@@ -34,6 +38,10 @@ const FairLaunch = () => {
             description: "Fully certified by SolidProof"
         }
     ];
+
+    const handleInvestClick = () => {
+        navigate("/vesting");
+    };
 
     return (
         <div className="min-h-screen bg-background relative overflow-hidden bg-opacity-10 bg-gradient-to-br from-sky-50 to-sky-100">
@@ -196,6 +204,13 @@ const FairLaunch = () => {
                             <p className="text-xs text-slate-600">{feature.description}</p>
                         </Card>
                     ))}
+                </div>
+
+                <div
+                    className="text-center mt-4 md:mt-8 xl:mt-12 text-sky-900 cursor-pointer hover:text-sky-500 transition-colors"
+                    onClick={handleInvestClick}
+                >
+                    <span className="text-lg font-medium">Your Bluelink Assets →</span>
                 </div>
             </div>
         </div >
