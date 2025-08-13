@@ -24,7 +24,7 @@ const Index = () => {
     useModal();
 
   useEffect(() => {
-    const element = document.querySelector("#buy");
+    const element = document.querySelector("#pinksale");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
