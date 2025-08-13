@@ -44,7 +44,7 @@ const FairLaunch = () => {
     };
 
     return (
-        <div className="min-h-screen bg-background relative overflow-hidden bg-opacity-10 bg-gradient-to-br from-sky-50 to-sky-100">
+        <div id="pinksale" className="min-h-screen bg-background relative overflow-hidden bg-opacity-10 bg-gradient-to-br from-sky-50 to-sky-100 py-8">
             {/* Background gradient */}
             <div className="absolute inset-0 bg-gradient-hero opacity-30" />
 
