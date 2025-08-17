@@ -1,0 +1,25 @@
+@import "../_shared/animation.css";
+@import "../_shared/container.css";
+
+.whitelist-btn {
+    @apply w-fit flex items-center gap-3 px-5 py-3 rounded-lg transition-all duration-300 ease-in-out cursor-pointer relative overflow-hidden border border-sky-300/40 text-sky-900 bg-gradient-to-tr from-sky-500/10 to-sky-700/10;
+    text-decoration: none;
+}
+
+.whitelist-btn:hover {
+    @apply translate-x-1 border-sky-400/60 shadow-lg shadow-sky-200/30 bg-gradient-to-tr from-sky-500/15 to-sky-700/15;
+}
+
+.whitelist-btn::before {
+    content: '';
+    @apply absolute top-0 left-[-100%] w-full h-full;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transition: left 0.5s ease;
+}
+
+.whitelist-btn:hover::before {
+    left: 100%;
+}

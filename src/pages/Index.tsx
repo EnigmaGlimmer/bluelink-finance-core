@@ -11,7 +11,6 @@ import Features from "@/components/Features";
 import About from "@/components/About";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
-import Whitelist from "@/components/Whitelist";
 import Team from "@/components/Team";
 
 import PurchaseProgressModal from "@/components/TokenSale/PurchaseProgressModal";
@@ -39,7 +38,6 @@ const Index = () => {
       <About />
       <Features />
       {/* <Presale /> */}
-      <Whitelist />
       <Tokenomics />
       <Roadmap />
       <Team />

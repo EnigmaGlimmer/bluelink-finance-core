@@ -1,17 +1,17 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
-import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import CountdownTimer from './CountdownTimer';
+import { Card } from "@/components/ui/card";
+import CountdownTimer from "./CountdownTimer";
 
 import {
     RiTwitterLine,
     RiTelegramLine,
     RiDiscordLine,
 } from "react-icons/ri";
-import { ExternalLink, Shield, Users, Lock, CheckCircle, Globe, Search } from 'lucide-react';
+import { FiArrowRight } from "react-icons/fi";
+import { ExternalLink, Shield, Users, Lock, CheckCircle, Globe, Search } from "lucide-react";
 
-import { Assets } from '@/assets';
+import { Assets } from "@/assets";
 
 const FairLaunch = () => {
     const navigate = useNavigate();
@@ -58,7 +58,7 @@ const FairLaunch = () => {
                 <div className="text-center mb-12">
                     <Card className="inline-block p-6 bg-gradient-to-br from-sky-50 to-sky-50 backdrop-blur-sm border-sky-200/50 shadow-xl max-w-md mx-auto">
                         <div className="flex items-center justify-center gap-2 mb-4">
-                            <img src={Assets.pinkIcon} className='w-8 h-8' />
+                            <img src={Assets.pinkIcon} className="w-8 h-8" />
                             <h3 className="text-xl font-bold text-sky-800">
                                 Join FairLaunch
                             </h3>
@@ -210,7 +210,10 @@ const FairLaunch = () => {
                     className="text-center mt-4 md:mt-8 xl:mt-12 text-sky-900 cursor-pointer hover:text-sky-500 transition-colors"
                     onClick={handleInvestClick}
                 >
-                    <span className="text-lg font-medium">Your Bluelink Assets →</span>
+                    <span className="text-lg font-semibold flex items-center justify-center gap-2">
+                        Your Bluelink Assets
+                        <FiArrowRight className="w-4 h-4" />
+                    </span>
                 </div>
             </div>
         </div >
