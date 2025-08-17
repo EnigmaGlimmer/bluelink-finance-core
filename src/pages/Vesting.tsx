@@ -18,12 +18,10 @@ import { getErrorMessage } from "@/utils/errorHandler";
 import { waitForTransactionReceipt } from "wagmi/actions";
 import { Contracts } from "@/utils/constants";
 
-import Progress from "@/components/TokenSale/Progress";
-import ValueSection from "@/components/Invest/ValueSection";
-import OverviewSection from "@/components/Invest/OverviewSection";
-import TransactionTable from "@/components/Invest/TransactionTable";
+import OverviewSection from "@/components/Vesting/OverviewSection";
+import TransactionTable from "@/components/Vesting/TransactionTable";
 
-import "@/assets/css/home/invest.css";
+import "@/assets/css/home/vesting.css";
 
 // Define types for vesting data and transactions
 
@@ -57,7 +55,7 @@ const formatDate = (date: Date | null): string => {
     return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
 };
 
-const Invest: React.FC = () => {
+const Vesting: React.FC = () => {
     const navigate = useNavigate();
 
     const [isConnected, setConnected] = useState(false);
@@ -221,11 +219,11 @@ const Invest: React.FC = () => {
 
     return (
         <div className="col-center bg-gradient-to-br from-sky-50 via-sky-100 to-sky-200">
-            <div className="invest-header">
+            <div className="vesting-header">
                 <img
                     src="/logo.png"
                     alt="Bluelink Blockchain"
-                    className="transition-animation h-12 max-[425px]:h-9"
+                    className="transition-animation h-10"
                     onClick={handleLogoClick}
                 />
 
@@ -326,7 +324,7 @@ const Invest: React.FC = () => {
             <div
                 data-aos="fade-up"
                 data-aos-duration="3000"
-                className="invest-container"
+                className="vesting-container"
             >
                 <div className="max-md:row-auto justify-center">
                     <h4 className="text-3xl font-bold text-sky-900 max-lg:text-2xl max-md:text-xl">Vesting Overview</h4>
@@ -406,4 +404,4 @@ const Invest: React.FC = () => {
     );
 };
 
-export default Invest;
+export default Vesting;

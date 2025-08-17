@@ -5,7 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { WagmiProvider } from "wagmi";
 import Index from "./pages/Index";
-import Invest from "./pages/Invest";
+import Vesting from "./pages/Vesting";
+import Whitelist from "./pages/Whitelist";
 import NotFound from "./pages/NotFound";
 import { ModalProvider, useModal } from "./store/modalContext";
 import { darkTheme, RainbowKitProvider } from "@rainbow-me/rainbowkit";
@@ -28,7 +29,8 @@ const App = () => (
               <BrowserRouter>
                 <Routes>
                   <Route path="/" element={<Index />} />
-                  <Route path="/vesting" element={<Invest />} />
+                  <Route path="/vesting" element={<Vesting />} />
+                  <Route path="/whitelist" element={<Whitelist />} />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Routes>

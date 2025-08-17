@@ -1,13 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Shield, Globe, ArrowDown } from "lucide-react";
 
 const Hero = () => {
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const navigate = useNavigate();
 
   return (
     <section
@@ -76,8 +73,8 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row gap-3 lg:gap-6 justify-center items-center animate-fade-in delay-1000">
           <Button
             size="lg"
-            onClick={() => scrollToSection("#Whitelist")}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-3000 hover:scale-105 animate-pulse ring-2 ring-blue-400/50"
+            onClick={() => { navigate("/whitelist") }}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-3000 hover:scale-105 animate-pulse ring-4 ring-blue-400/50"
           >
             Join Whitelist
             <ArrowRight className="ml-3 h-5 w-5" />

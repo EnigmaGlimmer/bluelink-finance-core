@@ -1,4 +1,4 @@
-import "@/assets/css/home/invest.css";
+import "@/assets/css/home/vesting.css";
 
 interface Transaction {
     date: string;

@@ -1,14 +1,13 @@
 
 import { useState, useEffect } from "react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { Button } from "@/components/ui/button";
-import { Menu, X, ArrowRight } from "lucide-react";
-import whitepaper from ".././assets/docs/BlueLink_Whitepaper.pdf";
+import { Menu, X } from "lucide-react";
+import { FiArrowUpRight } from "react-icons/fi";
+
 import "@/assets/css/home/navbar.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isPresaleModalOpen, setIsPresaleModalOpen] = useState(false);
   const [isConnected, setConnected] = useState(false);
 
   const navItems = [
@@ -16,7 +15,7 @@ const Navbar = () => {
     { name: "About", href: "#about" },
     { name: "Features", href: "#features" },
     // { name: "Buy Now", href: "#buy" },
-    { name: "Whitelist", href: "#Whitelist" },
+    // { name: "Whitelist", href: "#Whitelist" },
     { name: "Tokenomics", href: "#tokenomics" },
     { name: "Roadmap", href: "#roadmap" },
     { name: "Team", href: "#team" },
@@ -104,7 +103,7 @@ const Navbar = () => {
                               className="connect-button w-full h-full"
                             >
                               Connect Wallet
-                              <ArrowRight className={`w-3 h-3 lg:w-4 lg:h-4 xl:w-6 xl:h-6 ${isConnected && "hidden"}`} />
+                              <FiArrowUpRight className={`${isConnected ? "hidden" : ""}`} />
                             </button>
                           );
                         }
