@@ -347,9 +347,9 @@ const Whitelist = () => {
                                 <InputField
                                     icon={Wallet}
                                     id="wallet"
-                                    label="Wallet Address *"
+                                    label="EVM Wallet Address *"
                                     name="wallet"
-                                    placeholder="Enter your wallet address"
+                                    placeholder="Enter your EVM wallet address"
                                     type="text"
                                     value={formData.wallet}
                                     onChange={handleInputChange}
