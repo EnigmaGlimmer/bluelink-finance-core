@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { isAddress } from "viem";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -103,6 +104,16 @@ const Whitelist = () => {
             return false;
         }
 
+        if (!isAddress(formData.wallet.trim())) {
+            toast({
+                title: "Invalid Wallet",
+                description: "Please enter a valid EVM wallet address.",
+                variant: "destructive",
+                duration: 2000
+            });
+            return false;
+        }
+
         if (!formData.social.trim()) {
             toast({
                 title: "Social Required",
@@ -150,6 +161,7 @@ const Whitelist = () => {
                 throw new Error(result.message || "Unknown error");
             }
         } catch (error) {
+            console.log(error);
             toast({
                 title: "Success!",
                 description:
@@ -283,7 +295,7 @@ const Whitelist = () => {
                     </p>
                 </div>
 
-                <div className="row-center gap-4 mb-8">
+                <div className="row-center gap-4 mb-8 max-sm:grid max-sm:grid-cols-2">
                     <div className="whitelist-btn" onClick={() => { window.open("https://www.bluelinkblockchain.com/", "_blank") }}>
                         Website
                     </div>
