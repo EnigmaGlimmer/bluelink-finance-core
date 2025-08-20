@@ -28,7 +28,7 @@ const SaleOverview: React.FC = () => {
         triggerRefresh
     } = useTokenSale();
 
-    const handleInvestClick = () => {
+    const handleVestingClick = () => {
         navigate("/vesting");
     };
 
@@ -121,7 +121,7 @@ const SaleOverview: React.FC = () => {
             </div>
             <div
                 className="text-center mt-4 md:mt-8 xl:mt-12 text-sky-900 cursor-pointer hover:text-sky-500 transition-colors"
-                onClick={handleInvestClick}
+                onClick={handleVestingClick}
             >
                 <span className="text-lg font-medium">Your Bluelink Assets →</span>
             </div>
