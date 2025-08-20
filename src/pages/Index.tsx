@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import FairLaunch from "@/components/Fairlaunch";
+// import FairLaunch from "@/components/Fairlaunch";
 // import SaleOverview from "@/components/SaleOverview";
 import Tokenomics from "@/components/Tokenomics";
 import Roadmap from "@/components/Roadmap";
@@ -33,7 +33,7 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Navbar />
       <Hero />
-      <FairLaunch />
+      {/* <FairLaunch /> */}
       {/* <SaleOverview /> */}
       <About />
       <Features />

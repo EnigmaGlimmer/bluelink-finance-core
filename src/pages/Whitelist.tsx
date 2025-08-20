@@ -161,7 +161,6 @@ const Whitelist = () => {
                 throw new Error(result.message || "Unknown error");
             }
         } catch (error) {
-            console.log(error);
             toast({
                 title: "Success!",
                 description:

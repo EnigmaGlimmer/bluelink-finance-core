@@ -39,7 +39,7 @@ const FairLaunch = () => {
         }
     ];
 
-    const handleInvestClick = () => {
+    const handleVestingClick = () => {
         navigate("/vesting");
     };
 
@@ -208,7 +208,7 @@ const FairLaunch = () => {
 
                 <div
                     className="text-center mt-4 md:mt-8 xl:mt-12 text-sky-900 cursor-pointer hover:text-sky-500 transition-colors"
-                    onClick={handleInvestClick}
+                    onClick={handleVestingClick}
                 >
                     <span className="text-lg font-semibold flex items-center justify-center gap-2">
                         Your Bluelink Assets
